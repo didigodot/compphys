@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    139567,       3970]
-NotebookOptionsPosition[    136021,       3850]
-NotebookOutlinePosition[    136747,       3877]
-CellTagsIndexPosition[    136660,       3872]
+NotebookDataLength[     91608,       2406]
+NotebookOptionsPosition[     87542,       2270]
+NotebookOutlinePosition[     88265,       2297]
+CellTagsIndexPosition[     88179,       2292]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -362,7 +362,7 @@ Cell[BoxData[
       Editable->False]}]}], "}"}], "}"}]], "Output",
  CellChangeTimes->{
   3.587918284785747*^9, 3.587918629548196*^9, {3.587918850291596*^9, 
-   3.5879188734175787`*^9}, 3.587919216013397*^9}]
+   3.5879188734175787`*^9}, 3.587919216013397*^9, 3.588676590860964*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -967,7 +967,8 @@ Cell[BoxData[
        "]"}],
       False,
       Editable->False]}]}], "}"}], "}"}]], "Output",
- CellChangeTimes->{{3.588504479488935*^9, 3.588504493934868*^9}}]
+ CellChangeTimes->{{3.588504479488935*^9, 3.588504493934868*^9}, 
+   3.588597326173194*^9, 3.5886750235587997`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1025,7 +1026,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.588091623306911*^9, 3.588091630305698*^9}, 
    3.588091748894022*^9, 3.588342053840929*^9, 3.5883524804036016`*^9, 
    3.588493536133438*^9, {3.588502667796821*^9, 3.588502674013459*^9}, 
-   3.588504283840466*^9, 3.588504456068284*^9, 3.5885044954406*^9}]
+   3.588504283840466*^9, 3.588504456068284*^9, 3.5885044954406*^9, 
+   3.5885973246513844`*^9, 3.588675027493517*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1085,7 +1087,8 @@ Cell[BoxData[
    3.5880758775831423`*^9, 3.588091611593697*^9, 3.588091752963945*^9, {
    3.588342055963382*^9, 3.588342057805705*^9}, 3.5883524825633297`*^9, 
    3.5884935330297747`*^9, 3.5885026756989193`*^9, 3.5885042854467297`*^9, 
-   3.5885044577391663`*^9, 3.588504497176629*^9}]
+   3.5885044577391663`*^9, 3.588504497176629*^9, 3.588597317093297*^9, 
+   3.5886750325111933`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1241,6 +1244,16 @@ Cell[BoxData[
      RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.5883432238051157`*^9, 3.588343288342846*^9}, {
   3.588495255074684*^9, 3.588495255574127*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+  "This", " ", "is", " ", "a", " ", "table", " ", "of", " ", "starting", " ", 
+   "conditions", " ", "in", " ", "the", " ", "form", " ", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"x", ",", "v"}], "}"}], "."}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.5886760801857243`*^9, 3.588676099796633*^9}}],
 
 Cell[CellGroupData[{
 
@@ -1641,6 +1654,11 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"define", " ", "x", " ", "and", " ", "v"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.5886762670457287`*^9, 3.588676294605158*^9}}],
+
+Cell[BoxData[
  RowBox[{
   RowBox[{"xg", "[", 
    RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
@@ -1651,27 +1669,6 @@ Cell[BoxData[
      RowBox[{"a", ",", "b"}], "]"}], "]"}]}]}]], "Input",
  CellChangeTimes->{{3.588343390681876*^9, 3.5883434518324537`*^9}, {
   3.588343532815988*^9, 3.588343542134845*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"xg", "[", 
-  RowBox[{"0.5", ",", "0.5"}], "]"}]], "Input",
- CellChangeTimes->{{3.588343543943652*^9, 3.58834354662228*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  TagBox[
-   RowBox[{"InterpolatingFunction", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"{", 
-       RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], "]"}],
-   
-   False,
-   Editable->False], "[", "t", "]"}]], "Output",
- CellChangeTimes->{3.588343547138335*^9, 3.588506555977248*^9}]
-}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -1768,1938 +1765,196 @@ Cell[BoxData[
   3.588092000407956*^9, 3.5880920762948723`*^9}, {3.588342098532864*^9, 
   3.588342174818046*^9}}],
 
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "[", "t", "]"}], "/.", 
+      RowBox[{"First", "[", "s", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"v", "[", "t", "]"}], "/.", 
+      RowBox[{"First", "[", "s", "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "[", "t", "]"}], "/.", 
+      RowBox[{"First", "[", "s1", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"v", "[", "t", "]"}], "/.", 
+      RowBox[{"First", "[", "s1", "]"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "[", "t", "]"}], "/.", 
+      RowBox[{"First", "[", "s2", "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"v", "[", "t", "]"}], "/.", 
+      RowBox[{"First", "[", "s2", "]"}]}]}], "}"}]}], "}"}]], "Input",
+ CellChangeTimes->{{3.588676024967662*^9, 3.5886760279805326`*^9}, 
+   3.588679086907585*^9}],
+
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"table", "=", " ", 
-  RowBox[{"Table", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
+ RowBox[{"r1", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"RandomReal", "[", 
+    RowBox[{
+     RowBox[{"{", 
       RowBox[{
-       RowBox[{"x", "[", "t", "]"}], "/.", 
-       RowBox[{"First", "[", 
-        RowBox[{"f", "[", 
-         RowBox[{"a", ",", "b"}], "]"}], "]"}]}], ",", 
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+     RowBox[{"{", "3", "}"}]}], "]"}], "*", "2"}]}]], "Input",
+ CellChangeTimes->{{3.58867893449963*^9, 3.588678935683465*^9}, 
+   3.5886794260064783`*^9, {3.588679478106881*^9, 3.5886794980687733`*^9}, 
+   3.5886795525786*^9, {3.588680155236899*^9, 3.588680172961344*^9}, {
+   3.588680207199994*^9, 3.588680215182478*^9}, 3.5886802613052073`*^9, {
+   3.588680464042388*^9, 3.588680464288609*^9}, {3.5886805978935423`*^9, 
+   3.5886805980774384`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "0.05740530751163231`"}], ",", "0.6492622984486873`", ",", 
+   "1.901983706019423`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.5886794270401497`*^9, 3.588679444827519*^9}, {
+   3.588679481407906*^9, 3.5886794984036427`*^9}, 3.588679573316105*^9, 
+   3.58868018023853*^9, 3.588680220477949*^9, 3.588680261737267*^9, 
+   3.588680468767249*^9, {3.5886805758164988`*^9, 3.5886806016089897`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"r2", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"RandomReal", "[", 
+    RowBox[{
+     RowBox[{"{", 
       RowBox[{
-       RowBox[{"v", "[", "t", "]"}], "/.", 
-       RowBox[{"First", "[", 
-        RowBox[{"f", "[", 
-         RowBox[{"a", ",", "b"}], "]"}], "]"}]}]}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"a", ",", 
-      RowBox[{"-", "2"}], ",", "2", ",", "0.5"}], "}"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"b", ",", 
-      RowBox[{"-", "2"}], ",", "2", ",", "0.5"}], "}"}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.588504065977663*^9, 3.5885041066497917`*^9}, {
-  3.588504157034295*^9, 3.588504184857099*^9}}],
+       RowBox[{"-", "1"}], ",", "1"}], "}"}], ",", 
+     RowBox[{"{", "3", "}"}]}], "]"}], "*", "2"}]}]], "Input",
+ CellChangeTimes->{{3.588679555879716*^9, 3.588679563312036*^9}, {
+   3.5886801750258102`*^9, 3.588680177393249*^9}, {3.588680209224102*^9, 
+   3.5886802181841383`*^9}, 3.58868026520735*^9, {3.588680465881119*^9, 
+   3.58868046642465*^9}, {3.58868059939799*^9, 3.588680599569046*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "0.07307824131078267`"}], ",", "0.813339142688922`", ",", 
+   RowBox[{"-", "0.8302295260746915`"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.5886795640732594`*^9, 3.588680177911641*^9, {3.588680209678719*^9, 
+   3.588680218537221*^9}, 3.5886802663333406`*^9, 3.588680466747517*^9, {
+   3.5886805736234293`*^9, 3.588680600027751*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"pos", " ", "=", " ", 
+  RowBox[{"Transpose", "[", 
+   RowBox[{"{", 
+    RowBox[{"r1", ",", "r2"}], "}"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.588680191487589*^9, 3.588680193794509*^9}, {
+  3.588680282199638*^9, 3.5886802827655687`*^9}, {3.588680493416232*^9, 
+  3.5886804954464893`*^9}}],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{
    RowBox[{"{", 
     RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
+     RowBox[{"-", "0.05740530751163231`"}], ",", 
+     RowBox[{"-", "0.07307824131078267`"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
+    RowBox[{"0.6492622984486873`", ",", "0.813339142688922`"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}], ",", 
-       RowBox[{
-        TagBox[
-         RowBox[{"InterpolatingFunction", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"{", 
-             RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
-          "]"}],
-         False,
-         Editable->False], "[", "t", "]"}]}], "}"}]}], "}"}]}], 
-  "}"}]], "Output",
- CellChangeTimes->{
-  3.588504107365416*^9, {3.588504163633192*^9, 3.588504186021109*^9}, 
-   3.588504350448436*^9, 3.588504550624346*^9, 3.588504765525011*^9, {
-   3.588508311413546*^9, 3.588508313799245*^9}}]
+    RowBox[{"1.901983706019423`", ",", 
+     RowBox[{"-", "0.8302295260746915`"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.588680606489133*^9, 3.588680732824683*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Animate", "[", "\[IndentingNewLine]", "\t", 
-  RowBox[{
-   RowBox[{"Graphics", "[", 
-    RowBox[{
+ RowBox[{"makePoints", " ", "=", " ", 
+  RowBox[{"Function", "[", 
+   RowBox[{
+    RowBox[{"{", "a", "}"}], ",", 
+    RowBox[{"NDSolve", "[", 
      RowBox[{
-     "Point", "[", "\[IndentingNewLine]", "\t\t\t  ", "table", 
-      "\[IndentingNewLine]", "\t\t\t", "]"}], "\t\t", "\[IndentingNewLine]", 
-     "\t\t", ",", 
-     RowBox[{"PlotRange", "->", 
       RowBox[{"{", 
        RowBox[{
-        RowBox[{"{", 
+        RowBox[{
          RowBox[{
-          RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
-        RowBox[{"{", 
+          RowBox[{"v", "'"}], "[", "t", "]"}], "\[Equal]", 
          RowBox[{
-          RowBox[{"-", "2"}], ",", "2"}], "}"}]}], "}"}]}]}], 
-    "\[IndentingNewLine]", "\t\t       ", "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"t", ",", "0", ",", "6"}], "}"}], ",", 
-   RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
-  "\t      ", "]"}]], "Input",
- CellChangeTimes->{{3.588074637330965*^9, 3.5880746895375357`*^9}, {
-   3.588074790665276*^9, 3.5880748186224737`*^9}, {3.58807499423944*^9, 
-   3.588075009235519*^9}, {3.5880750720123796`*^9, 3.588075109963634*^9}, {
-   3.588075140572011*^9, 3.5880751510902643`*^9}, {3.5880751920354958`*^9, 
-   3.588075199465419*^9}, {3.588075241376258*^9, 3.588075243544292*^9}, {
-   3.588075287022749*^9, 3.588075303157693*^9}, {3.588075359600671*^9, 
-   3.588075368606781*^9}, {3.58807540176836*^9, 3.588075490521167*^9}, {
-   3.588075606503313*^9, 3.588075673799241*^9}, {3.5880757053020897`*^9, 
-   3.5880757079802094`*^9}, {3.588075802886723*^9, 3.588075858747384*^9}, {
-   3.5880759872858553`*^9, 3.58807598808781*^9}, {3.588076363126726*^9, 
-   3.588076368716297*^9}, {3.588076413918076*^9, 3.588076426006418*^9}, {
-   3.5880916443395567`*^9, 3.588091644841011*^9}, {3.588091785518599*^9, 
-   3.58809178661481*^9}, {3.58809237291903*^9, 3.58809238792668*^9}, {
-   3.588341744589388*^9, 3.588341746123835*^9}, {3.588341845140389*^9, 
-   3.5883418927112494`*^9}, {3.5883419302507257`*^9, 3.588342029718926*^9}, {
-   3.588343307234894*^9, 3.58834330920266*^9}, {3.5883434834576607`*^9, 
-   3.588343491106679*^9}, {3.588343523217091*^9, 3.588343526725131*^9}, {
-   3.588343631286807*^9, 3.588343701068048*^9}, {3.588493786130596*^9, 
-   3.588493786817506*^9}, {3.588494903626824*^9, 3.588494904698079*^9}, {
-   3.588494945962556*^9, 3.588494974679491*^9}, 3.588503994401877*^9, {
-   3.5885042037377663`*^9, 3.5885042052395153`*^9}, 3.588504300687914*^9, {
-   3.588504339150929*^9, 3.588504372388698*^9}, {3.588504899701625*^9, 
-   3.588504913372054*^9}, 3.588504946220675*^9, {3.588505208337875*^9, 
-   3.5885052130956573`*^9}, {3.5885084874463043`*^9, 3.58850848832609*^9}}],
+          RowBox[{"-", "4"}], 
+          RowBox[{"x", "[", "t", "]"}]}]}], ",", " ", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+         RowBox[{"v", "[", "t", "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"x", "[", "0", "]"}], "\[Equal]", 
+         RowBox[{"a", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"v", "[", "0", "]"}], "\[Equal]", " ", 
+         RowBox[{"a", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "v"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.5886786613844213`*^9, 3.588678673723634*^9}, {
+   3.588678756178337*^9, 3.588678792774379*^9}, {3.588678904814117*^9, 
+   3.588678950763277*^9}, {3.5886789823994637`*^9, 3.58867902782962*^9}, {
+   3.588679501128972*^9, 3.588679506411488*^9}, {3.588679567676189*^9, 
+   3.5886795692909718`*^9}, {3.5886796555137777`*^9, 
+   3.5886796617290583`*^9}, {3.5886797090909224`*^9, 3.588679709956087*^9}, {
+   3.588679809218173*^9, 3.588679810474515*^9}, {3.588680090161525*^9, 
+   3.5886801012728443`*^9}, {3.588680306303602*^9, 3.588680348016885*^9}, {
+   3.58868068782024*^9, 3.588680696080426*^9}, 3.58868077610573*^9}],
 
 Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`t$$ = 0, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`t$$], 0, 6}}, Typeset`size$$ = {450., {222., 228.}}, 
-    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`t$1748725$$ = 0}, 
-    DynamicBox[Manipulate`ManipulateBoxes[
-     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`t$$, $CellContext`t$1748725$$, 0]}, 
-      "OtherVariables" :> {
-       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Graphics[
-        Point[$CellContext`table], PlotRange -> {{-2, 2}, {-2, 2}}], 
-      "Specifications" :> {{$CellContext`t$$, 0, 6, AnimationRunning -> False,
-          AppearanceElements -> {
-          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
-           "DirectionButton"}}}, 
-      "Options" :> {
-       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
-        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
-        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{505., {267., 274.}},
-     SingleEvaluation->True],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "Animate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.588343701596759*^9, {3.588352472529354*^9, 3.588352491793282*^9}, {
-   3.588493542234447*^9, 3.588493567839571*^9}, 3.588493789328508*^9, 
-   3.588494906156458*^9, {3.5884949574399157`*^9, 3.5884949754764*^9}, 
-   3.5885039953904963`*^9, 3.5885042057104807`*^9, {3.588504301439402*^9, 
-   3.5885043457426558`*^9}, 3.588504452167712*^9, 3.588504947806476*^9, 
-   3.5885052140361023`*^9, 3.58850848872589*^9}]
+ RowBox[{"Function", "[", 
+  RowBox[{
+   RowBox[{"{", "a", "}"}], ",", 
+   RowBox[{"NDSolve", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["v", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+        RowBox[{
+         RowBox[{"-", "4"}], " ", 
+         RowBox[{"x", "[", "t", "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["x", "\[Prime]",
+          MultilineFunction->None], "[", "t", "]"}], "\[Equal]", 
+        RowBox[{"v", "[", "t", "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"x", "[", "0", "]"}], "\[Equal]", 
+        RowBox[{"a", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}],
+        ",", 
+       RowBox[{
+        RowBox[{"v", "[", "0", "]"}], "\[Equal]", 
+        RowBox[{
+        "a", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}]}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "v"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]}], "]"}]], "Output",
+ CellChangeTimes->{3.5886806967004747`*^9, 3.5886807770768538`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3723,33 +1978,18 @@ Cell[BoxData[
      RowBox[{"Epilog", "\[Rule]", 
       RowBox[{"{", 
        RowBox[{"Red", ",", 
-        RowBox[{"Point", "[", "\[IndentingNewLine]", "\t\t\t  ", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
+        RowBox[{"Point", "[", 
+         RowBox[{"pos", ",", "\[IndentingNewLine]", "\t\t\t ", 
+          RowBox[{"{", 
+           RowBox[{
             RowBox[{
-             RowBox[{
-              RowBox[{"x", "[", "t", "]"}], "/.", 
-              RowBox[{"First", "[", "s", "]"}]}], ",", 
-             RowBox[{
-              RowBox[{"v", "[", "t", "]"}], "/.", 
-              RowBox[{"First", "[", "s", "]"}]}]}], "}"}], ",", 
-           RowBox[{"{", 
+             RowBox[{"x", "[", "t", "]"}], "/.", 
+             RowBox[{"First", "[", 
+              RowBox[{"makePoints", "[", "pos", "]"}], "]"}]}], ",", 
             RowBox[{
-             RowBox[{
-              RowBox[{"x", "[", "t", "]"}], "/.", 
-              RowBox[{"First", "[", "s1", "]"}]}], ",", 
-             RowBox[{
-              RowBox[{"v", "[", "t", "]"}], "/.", 
-              RowBox[{"First", "[", "s1", "]"}]}]}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"x", "[", "t", "]"}], "/.", 
-              RowBox[{"First", "[", "s2", "]"}]}], ",", 
-             RowBox[{
-              RowBox[{"v", "[", "t", "]"}], "/.", 
-              RowBox[{"First", "[", "s2", "]"}]}]}], "}"}]}], "}"}], 
+             RowBox[{"v", "[", "t", "]"}], "/.", 
+             RowBox[{"First", "[", 
+              RowBox[{"makePoints", "[", "pos", "]"}], "]"}]}]}], "}"}]}], 
          "\[IndentingNewLine]", "\t\t\t", "]"}], ",", " ", 
         RowBox[{"PlotRange", "->", 
          RowBox[{"{", 
@@ -3768,28 +2008,30 @@ Cell[BoxData[
       RowBox[{"4", "/", "2"}], "Pi"}]}], "}"}], ",", 
    RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "\[IndentingNewLine]", 
   "\t      ", "]"}]], "Input",
- CellChangeTimes->{{3.588505255286828*^9, 3.5885052602368917`*^9}, {
-  3.5885052958137197`*^9, 3.588505328709536*^9}, {3.588505405684578*^9, 
-  3.588505439793706*^9}, {3.5885055197740707`*^9, 3.58850555213358*^9}, {
-  3.5885056552748203`*^9, 3.588505664649029*^9}, {3.588505695472547*^9, 
-  3.588505737254079*^9}, {3.588505973435697*^9, 3.588506063663884*^9}, {
-  3.5885063364313593`*^9, 3.588506336852168*^9}, {3.588506372860779*^9, 
-  3.588506375251573*^9}}],
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQB2IQvUn35ZX2Pa8c501pvwqi/3H+ugmiW7eI3QPRAi+2
+PgfRXGk/X4Nog6M/voJoLzeWXyA65PQLtg4gfeOICAeIlpZ/zw2isxQ1BEG0
+9ce1eiC6y+6rJYjedJY3BkR/c5EG0w3dsxNA9GOeF2D6iEuA220gbeqi5AGi
+a959SQXRd7M3ZILoILmybXeAdMr+SXtANFOK5EEQ/bPF7ySI9prufhZEczxd
+cxFETw/Zeg1EZzhcuQWiG5yFfoLotarvfoHoD1/NWe4C6aqlbqwgOuUqpyCI
+vjHJSQREe/V3NoDoTWttm0D0sojuLhCdtVGlB0TLfvk4EUQf4IyeDaZf2iwG
+0VqzH2wA0Tt+rtwJorP7vfeAaAC6Ktn5
+  "]],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`t$$ = 4.601710468905005, Typeset`show$$ = 
-    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{$CellContext`t$$ = 0, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {
     450., {221., 227.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`t$142389$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`t$1279808$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`t$$, $CellContext`t$142389$$, 0]}, 
+        Hold[$CellContext`t$$, $CellContext`t$1279808$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -3797,26 +2039,16 @@ Cell[BoxData[
          Typeset`skipInitDone$$}, "Body" :> 
       StreamPlot[{$CellContext`v, (-4) $CellContext`x}, {$CellContext`x, -5, 
          5}, {$CellContext`v, -5, 5}, Epilog -> {Red, 
-          Point[{{
-             ReplaceAll[
-              $CellContext`x[$CellContext`t$$], 
-              First[$CellContext`s]], 
-             ReplaceAll[
-              $CellContext`v[$CellContext`t$$], 
-              First[$CellContext`s]]}, {
-             ReplaceAll[
-              $CellContext`x[$CellContext`t$$], 
-              First[$CellContext`s1]], 
-             ReplaceAll[
-              $CellContext`v[$CellContext`t$$], 
-              First[$CellContext`s1]]}, {
-             ReplaceAll[
-              $CellContext`x[$CellContext`t$$], 
-              First[$CellContext`s2]], 
-             ReplaceAll[
-              $CellContext`v[$CellContext`t$$], 
-              First[$CellContext`s2]]}}], PlotRange -> {{-5, 5}, {-5, 5}}, 
-          AspectRatio -> 1}], 
+          Point[$CellContext`pos, {
+            ReplaceAll[
+             $CellContext`x[$CellContext`t$$], 
+             First[
+              $CellContext`makePoints[$CellContext`pos]]], 
+            ReplaceAll[
+             $CellContext`v[$CellContext`t$$], 
+             First[
+              $CellContext`makePoints[$CellContext`pos]]]}], 
+          PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 1}], 
       "Specifications" :> {{$CellContext`t$$, 0, 2 Pi, AnimationRunning -> 
          False, AppearanceElements -> {
           "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
@@ -3836,8 +2068,7 @@ Cell[BoxData[
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{
-  3.588505738307283*^9, {3.5885059746871767`*^9, 3.58850603252981*^9}, 
-   3.58850606411093*^9, 3.588506337318626*^9, 3.588506375975477*^9}]
+  3.588681095942049*^9, {3.5886811687989693`*^9, 3.588681186941414*^9}}]
 }, Open  ]],
 
 Cell[BoxData[" "], "Input",
@@ -3846,10 +2077,199 @@ Cell[BoxData[" "], "Input",
 
 Cell[BoxData[""], "Input",
  CellChangeTimes->{{3.588076400782949*^9, 3.588076405148827*^9}, 
-   3.5880769461960382`*^9}]
+   3.5880769461960382`*^9}],
+
+Cell[BoxData[
+ RowBox[{"i", " ", "=", " ", 
+  RowBox[{"Interpretation", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"a", "=", "5"}], ",", 
+      RowBox[{"b", "=", "5"}]}], "}"}], ",", 
+    RowBox[{"Panel", "[", 
+     RowBox[{"Grid", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<Initial conditions\>\"", ",", "Bold"}], "]"}], ",", 
+          "SpanFromLeft"}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<x0:\>\"", ",", 
+          RowBox[{"InputField", "[", 
+           RowBox[{
+            RowBox[{"Dynamic", "[", "a", "]"}], ",", 
+            RowBox[{"FieldSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"20", ",", "Infinity"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "Infinity"}], "}"}]}], "}"}]}]}], "]"}]}], 
+         "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<v0:\>\"", ",", 
+          RowBox[{"InputField", "[", 
+           RowBox[{"Dynamic", "[", "b", "]"}], "]"}]}], "}"}]}], "}"}], "]"}],
+      "]"}], ",", 
+    RowBox[{"s", " ", "=", " ", 
+     RowBox[{"NDSolve", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"v", "'"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{
+           RowBox[{"-", "4"}], 
+           RowBox[{"x", "[", "t", "]"}]}]}], ",", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{"v", "[", "t", "]"}]}], ",", " ", 
+         RowBox[{
+          RowBox[{"x", "[", "0", "]"}], "\[Equal]", " ", "a"}], ",", " ", 
+         RowBox[{
+          RowBox[{"v", "[", "0", "]"}], "\[Equal]", "b"}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "v"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.588677135747405*^9, 3.588677222075376*^9}, {
+  3.588677276469153*^9, 3.588677331644412*^9}, {3.5886773806120768`*^9, 
+  3.588677398591031*^9}, {3.588677450160804*^9, 3.58867745156666*^9}, {
+  3.5886774872040358`*^9, 3.588677490602532*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  DynamicModuleBox[{$CellContext`a$$ = 5, $CellContext`b$$ = 5}, 
+   InterpretationBox[
+    PanelBox[
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Initial conditions\"\>",
+          StripOnInput->False,
+          FontWeight->Bold], "\[SpanFromLeft]"},
+        {"\<\"x0:\"\>", 
+         InputFieldBox[Dynamic[$CellContext`a$$],
+          FieldSize->{{20, 
+             DirectedInfinity[1]}, {1, 
+             DirectedInfinity[1]}}]},
+        {"\<\"v0:\"\>", 
+         InputFieldBox[Dynamic[$CellContext`b$$]]}
+       },
+       AutoDelete->False,
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]],
+    $CellContext`s = 
+    NDSolve[{Derivative[
+        1][$CellContext`v][$CellContext`t] == (-4) \
+$CellContext`x[$CellContext`t], 
+       Derivative[
+        1][$CellContext`x][$CellContext`t] == $CellContext`v[$CellContext`t], \
+$CellContext`x[0] == $CellContext`a$$, $CellContext`v[
+        0] == $CellContext`b$$}, {$CellContext`x, $CellContext`v}, \
+{$CellContext`t, 0, 10}]],
+   DynamicModuleValues:>{}],
+  Setting[#, {0}]& ]], "Input",
+ CellChangeTimes->{{3.588677494103292*^9, 3.588677494751574*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "\[Rule]", 
+     TagBox[
+      RowBox[{"InterpolatingFunction", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
+       "]"}],
+      False,
+      Editable->False]}], ",", 
+    RowBox[{"v", "\[Rule]", 
+     TagBox[
+      RowBox[{"InterpolatingFunction", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
+       "]"}],
+      False,
+      Editable->False]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.588677495255842*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ TagBox[
+  DynamicModuleBox[{$CellContext`a$$ = 5, $CellContext`b$$ = 5}, 
+   InterpretationBox[
+    PanelBox[
+     TagBox[GridBox[{
+        {
+         StyleBox["\<\"Initial conditions\"\>",
+          StripOnInput->False,
+          FontWeight->Bold], "\[SpanFromLeft]"},
+        {"\<\"x0:\"\>", 
+         InputFieldBox[Dynamic[$CellContext`a$$],
+          FieldSize->{{20, 
+             DirectedInfinity[1]}, {1, 
+             DirectedInfinity[1]}}]},
+        {"\<\"v0:\"\>", 
+         InputFieldBox[Dynamic[$CellContext`b$$]]}
+       },
+       AutoDelete->False,
+       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+      "Grid"]],
+    $CellContext`s = 
+    NDSolve[{Derivative[
+        1][$CellContext`v][$CellContext`t] == (-4) \
+$CellContext`x[$CellContext`t], 
+       Derivative[
+        1][$CellContext`x][$CellContext`t] == $CellContext`v[$CellContext`t], \
+$CellContext`x[0] == $CellContext`a$$, $CellContext`v[
+        0] == $CellContext`b$$}, {$CellContext`x, $CellContext`v}, \
+{$CellContext`t, 0, 10}]],
+   DynamicModuleValues:>{}],
+  Setting[#, {0}]& ]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"x", "\[Rule]", 
+     TagBox[
+      RowBox[{"InterpolatingFunction", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
+       "]"}],
+      False,
+      Editable->False]}], ",", 
+    RowBox[{"v", "\[Rule]", 
+     TagBox[
+      RowBox[{"InterpolatingFunction", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"0.`", ",", "10.`"}], "}"}], "}"}], ",", "\<\"<>\"\>"}], 
+       "]"}],
+      False,
+      Editable->False]}]}], "}"}], "}"}]], "Output",
+ CellChangeTimes->{3.5886774576958*^9}]
+}, Open  ]]
 },
-WindowSize->{1414, 1101},
-WindowMargins->{{-4, Automatic}, {Automatic, 0}},
+WindowSize->{775, 844},
+WindowMargins->{{6, Automatic}, {Automatic, 2}},
 PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
 ShowSelection->True,
 Magnification:>1.25 Inherited,
@@ -3863,15 +2283,15 @@ StyleDefinitions->"Default.nb"
 (*CellTagsOutline
 CellTagsIndex->{
  "Info3587904428-5196612"->{
-  Cell[7438, 193, 2884, 47, 89, "Print",
+  Cell[7438, 193, 2884, 47, 127, "Print",
    CellTags->"Info3587904428-5196612"],
-  Cell[10325, 242, 2123, 50, 141, "Print",
+  Cell[10325, 242, 2123, 50, 217, "Print",
    CellTags->"Info3587904428-5196612"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"Info3587904428-5196612", 136472, 3864}
+ {"Info3587904428-5196612", 87990, 2284}
  }
 *)
 (*NotebookFileOutline
@@ -3879,99 +2299,115 @@ Notebook[{
 Cell[557, 20, 420, 10, 208, "Input"],
 Cell[980, 32, 168, 3, 35, "Input"],
 Cell[CellGroupData[{
-Cell[1173, 39, 1137, 27, 57, "Input"],
+Cell[1173, 39, 1137, 27, 78, "Input"],
 Cell[2313, 68, 1622, 33, 577, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3972, 106, 1157, 30, 120, "Input"],
+Cell[3972, 106, 1157, 30, 141, "Input"],
 Cell[5132, 138, 1924, 37, 577, "Output"]
 }, Open  ]],
 Cell[7071, 178, 261, 6, 38, "Input"],
 Cell[CellGroupData[{
 Cell[7357, 188, 56, 1, 35, "Input"],
 Cell[CellGroupData[{
-Cell[7438, 193, 2884, 47, 89, "Print",
+Cell[7438, 193, 2884, 47, 127, "Print",
  CellTags->"Info3587904428-5196612"],
-Cell[10325, 242, 2123, 50, 141, "Print",
+Cell[10325, 242, 2123, 50, 217, "Print",
  CellTags->"Info3587904428-5196612"]
 }, Open  ]]
 }, Open  ]],
 Cell[12475, 296, 270, 7, 57, "Input"],
 Cell[CellGroupData[{
-Cell[12770, 307, 1284, 29, 35, "Input"],
-Cell[14057, 338, 784, 26, 36, "Output"]
+Cell[12770, 307, 1284, 29, 78, "Input"],
+Cell[14057, 338, 806, 26, 57, "Output"]
 }, Open  ]],
-Cell[14856, 367, 192, 4, 35, "Input"],
+Cell[14878, 367, 192, 4, 35, "Input"],
 Cell[CellGroupData[{
-Cell[15073, 375, 614, 14, 35, "Input"],
-Cell[15690, 391, 2875, 54, 119, "Output"]
+Cell[15095, 375, 614, 14, 35, "Input"],
+Cell[15712, 391, 2875, 54, 119, "Output"]
 }, Open  ]],
-Cell[18580, 448, 186, 3, 46, "Input"],
-Cell[18769, 453, 171, 4, 35, "Input"],
+Cell[18602, 448, 186, 3, 46, "Input"],
+Cell[18791, 453, 171, 4, 35, "Input"],
 Cell[CellGroupData[{
-Cell[18965, 461, 970, 26, 35, "Input"],
-Cell[19938, 489, 761, 26, 36, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[20736, 520, 398, 11, 35, "Input"],
-Cell[21137, 533, 22584, 377, 468, "Output"]
+Cell[18987, 461, 970, 26, 78, "Input"],
+Cell[19960, 489, 761, 26, 57, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[43758, 915, 1117, 28, 35, "Input"],
-Cell[44878, 945, 709, 24, 36, "Output"]
+Cell[20758, 520, 398, 11, 35, "Input"],
+Cell[21159, 533, 22584, 377, 468, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[45624, 974, 825, 24, 35, "Input"],
-Cell[46452, 1000, 921, 27, 36, "Output"]
+Cell[43780, 915, 1117, 28, 57, "Input"],
+Cell[44900, 945, 759, 25, 57, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[47410, 1032, 873, 25, 35, "Input"],
-Cell[48286, 1059, 983, 28, 36, "Output"]
+Cell[45696, 975, 825, 24, 57, "Input"],
+Cell[46524, 1001, 971, 28, 57, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[49306, 1092, 1146, 32, 36, "Input"],
-Cell[50455, 1126, 2407, 77, 78, "Output"]
-}, Open  ]],
-Cell[52877, 1206, 346, 7, 36, "Input"],
-Cell[53226, 1215, 918, 27, 36, "Input"],
-Cell[CellGroupData[{
-Cell[54169, 1246, 421, 12, 36, "Input"],
-Cell[54593, 1260, 4291, 149, 120, "Output"]
+Cell[47532, 1034, 873, 25, 57, "Input"],
+Cell[48408, 1061, 1033, 29, 57, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[58921, 1414, 114, 3, 35, "Input"],
-Cell[59038, 1419, 5790, 194, 162, "Output"]
+Cell[49478, 1095, 1146, 32, 57, "Input"],
+Cell[50627, 1129, 2407, 77, 141, "Output"]
+}, Open  ]],
+Cell[53049, 1209, 346, 7, 57, "Input"],
+Cell[53398, 1218, 918, 27, 78, "Input"],
+Cell[54319, 1247, 345, 8, 57, "Input"],
+Cell[CellGroupData[{
+Cell[54689, 1259, 421, 12, 36, "Input"],
+Cell[55113, 1273, 4291, 149, 204, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[64865, 1618, 285, 7, 35, "Input"],
-Cell[65153, 1627, 407, 12, 36, "Output"]
-}, Open  ]],
-Cell[65575, 1642, 364, 10, 36, "Input"],
-Cell[CellGroupData[{
-Cell[65964, 1656, 147, 3, 36, "Input"],
-Cell[66114, 1661, 333, 11, 36, "Output"]
-}, Open  ]],
-Cell[66462, 1675, 487, 13, 57, "Input"],
-Cell[CellGroupData[{
-Cell[66974, 1692, 485, 13, 35, "Input"],
-Cell[67462, 1707, 211, 4, 35, "Output"]
-}, Open  ]],
-Cell[67688, 1714, 1168, 33, 35, "Input"],
-Cell[68859, 1749, 859, 19, 120, "Input"],
-Cell[CellGroupData[{
-Cell[69743, 1772, 806, 23, 35, "Input"],
-Cell[70552, 1797, 54645, 1807, 1716, "Output"]
+Cell[59441, 1427, 114, 3, 35, "Input"],
+Cell[59558, 1432, 5790, 194, 288, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[125234, 3609, 2563, 46, 162, "Input"],
-Cell[127800, 3657, 2287, 44, 595, "Output"]
+Cell[65385, 1631, 285, 7, 35, "Input"],
+Cell[65673, 1640, 407, 12, 36, "Output"]
+}, Open  ]],
+Cell[66095, 1655, 179, 3, 35, "Input"],
+Cell[66277, 1660, 364, 10, 36, "Input"],
+Cell[66644, 1672, 487, 13, 57, "Input"],
+Cell[CellGroupData[{
+Cell[67156, 1689, 485, 13, 35, "Input"],
+Cell[67644, 1704, 211, 4, 35, "Output"]
+}, Open  ]],
+Cell[67870, 1711, 1168, 33, 78, "Input"],
+Cell[69041, 1746, 859, 19, 141, "Input"],
+Cell[69903, 1767, 897, 28, 78, InheritFromParent],
+Cell[CellGroupData[{
+Cell[70825, 1799, 637, 14, 35, "Input"],
+Cell[71465, 1815, 447, 8, 35, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[130124, 3706, 2770, 70, 162, "Input"],
-Cell[132897, 3778, 2862, 61, 559, "Output"]
+Cell[71949, 1828, 533, 12, 35, "Input"],
+Cell[72485, 1842, 392, 8, 35, "Output"]
 }, Open  ]],
-Cell[135774, 3842, 120, 2, 35, "Input"],
-Cell[135897, 3846, 120, 2, 35, "Input"]
+Cell[CellGroupData[{
+Cell[72914, 1855, 316, 7, 35, "Input"],
+Cell[73233, 1864, 465, 12, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73735, 1881, 1659, 40, 99, "Input"],
+Cell[75397, 1923, 1152, 33, 78, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76586, 1961, 2195, 57, 204, "Input"],
+Cell[78784, 2020, 2414, 50, 559, "Output"]
+}, Open  ]],
+Cell[81213, 2073, 120, 2, 35, "Input"],
+Cell[81336, 2077, 120, 2, 35, "Input"],
+Cell[81459, 2081, 2331, 62, 162, "Input"],
+Cell[CellGroupData[{
+Cell[83815, 2147, 1183, 32, 111, InheritFromParent],
+Cell[85001, 2181, 685, 24, 57, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[85723, 2210, 1117, 31, 111, "Input"],
+Cell[86843, 2243, 683, 24, 57, "Output"]
+}, Open  ]]
 }
 ]
 *)
