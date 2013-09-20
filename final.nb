@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     18163,        423]
-NotebookOptionsPosition[     17577,        398]
-NotebookOutlinePosition[     17964,        415]
-CellTagsIndexPosition[     17921,        412]
+NotebookDataLength[     18783,        435]
+NotebookOptionsPosition[     18197,        410]
+NotebookOutlinePosition[     18584,        427]
+CellTagsIndexPosition[     18541,        424]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -137,22 +137,27 @@ Cell[BoxData[
        RowBox[{"Epilog", "\[Rule]", 
         RowBox[{"{", 
          RowBox[{"Red", ",", 
-          RowBox[{"Point", "[", "\[IndentingNewLine]", "\t", 
-           RowBox[{"{", " ", 
+          RowBox[{"Point", "[", 
+           RowBox[{"Table", "[", "\[IndentingNewLine]", "\t", 
             RowBox[{
-             RowBox[{
-              RowBox[{"x", "[", "t", "]"}], "/.", 
-              RowBox[{"First", "[", 
-               RowBox[{"makePoints", "[", 
-                RowBox[{"pos", "[", 
-                 RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}], ",", 
-             RowBox[{
-              RowBox[{"v", "[", "t", "]"}], "/.", 
-              RowBox[{"First", "[", 
-               RowBox[{"makePoints", "[", 
-                RowBox[{"pos", "[", 
-                 RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}]}], "}"}], 
-           "\[IndentingNewLine]", "\t\t\t", "]"}], ",", " ", 
+             RowBox[{"{", " ", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"x", "[", "t", "]"}], "/.", 
+                RowBox[{"First", "[", 
+                 RowBox[{"makePoints", "[", 
+                  RowBox[{"pos", "[", 
+                   RowBox[{"[", "c", "]"}], "]"}], "]"}], "]"}]}], ",", 
+               RowBox[{
+                RowBox[{"v", "[", "t", "]"}], "/.", 
+                RowBox[{"First", "[", 
+                 RowBox[{"makePoints", "[", 
+                  RowBox[{"pos", "[", 
+                   RowBox[{"[", "c", "]"}], "]"}], "]"}], "]"}]}]}], "}"}], 
+             "\[IndentingNewLine]", "\t\t\t", ",", 
+             RowBox[{"{", 
+              RowBox[{"c", ",", "1", ",", "3"}], "}"}]}], "]"}], "]"}], ",", 
+          " ", 
           RowBox[{"PlotRange", "->", 
            RowBox[{"{", 
             RowBox[{
@@ -195,7 +200,8 @@ Cell[BoxData[
    3.5886865528248796`*^9, 3.58868656153614*^9}, {3.588686598901229*^9, 
    3.5886866782024612`*^9}, 3.5886867224118357`*^9, {3.5886867573046703`*^9, 
    3.588686768847704*^9}, {3.5886868302999487`*^9, 3.588686833760396*^9}, {
-   3.588686870854545*^9, 3.588686895435088*^9}}],
+   3.588686870854545*^9, 3.588686895435088*^9}, {3.5886872848071203`*^9, 
+   3.5886873305753927`*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -218,19 +224,19 @@ Cell[BoxData[
              TagBox[
               StyleBox[
                
-               DynamicModuleBox[{$CellContext`t$$ = 0.9418116888882481, 
+               DynamicModuleBox[{$CellContext`t$$ = 1.27576088832864, 
                 Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
                 Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, 
                 Typeset`animvar$$ = 1, Typeset`name$$ = "\"untitled\"", 
                 Typeset`specs$$ = {{
                   Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {
                 450., {221., 227.}}, Typeset`update$$ = 0, Typeset`initDone$$,
-                 Typeset`skipInitDone$$ = True, $CellContext`t$49633$$ = 0}, 
+                 Typeset`skipInitDone$$ = True, $CellContext`t$99446$$ = 0}, 
                 
                 DynamicBox[Manipulate`ManipulateBoxes[
                  1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
                   "ControllerVariables" :> {
-                    Hold[$CellContext`t$$, $CellContext`t$49633$$, 0]}, 
+                    Hold[$CellContext`t$$, $CellContext`t$99446$$, 0]}, 
                   "OtherVariables" :> {
                    Typeset`show$$, Typeset`bookmarkList$$, 
                     Typeset`bookmarkMode$$, Typeset`animator$$, 
@@ -239,19 +245,21 @@ Cell[BoxData[
                     Typeset`skipInitDone$$}, "Body" :> 
                   StreamPlot[{$CellContext`v, (-4) $CellContext`x}, \
 {$CellContext`x, -5, 5}, {$CellContext`v, -5, 5}, Epilog -> {Red, 
-                    Point[{
+                    Point[
+                    Table[{
                     ReplaceAll[
                     $CellContext`x[$CellContext`t$$], 
                     First[
                     $CellContext`makePoints[
-                    Part[$CellContext`pos, 1]]]], 
+                    Part[$CellContext`pos, $CellContext`c]]]], 
                     ReplaceAll[
                     $CellContext`v[$CellContext`t$$], 
                     First[
                     $CellContext`makePoints[
-                    Part[$CellContext`pos, 1]]]]}], 
-                    PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 1}], 
-                  "Specifications" :> {{$CellContext`t$$, 0, 2 Pi, 
+                    
+                    Part[$CellContext`pos, $CellContext`c]]]]}, \
+{$CellContext`c, 1, 3}]], PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 1}],
+                   "Specifications" :> {{$CellContext`t$$, 0, 2 Pi, 
                     AnimationRunning -> False, 
                     AppearanceElements -> {
                     "ProgressSlider", "PlayPauseButton", 
@@ -281,12 +289,12 @@ Cell[BoxData[
                 "\"untitled\"", Typeset`specs$$ = {{
                   Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {
                 450., {221., 227.}}, Typeset`update$$ = 0, Typeset`initDone$$,
-                 Typeset`skipInitDone$$ = True, $CellContext`t$49650$$ = 0}, 
+                 Typeset`skipInitDone$$ = True, $CellContext`t$99788$$ = 0}, 
                 
                 DynamicBox[Manipulate`ManipulateBoxes[
                  1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
                   "ControllerVariables" :> {
-                    Hold[$CellContext`t$$, $CellContext`t$49650$$, 0]}, 
+                    Hold[$CellContext`t$$, $CellContext`t$99788$$, 0]}, 
                   "OtherVariables" :> {
                    Typeset`show$$, Typeset`bookmarkList$$, 
                     Typeset`bookmarkMode$$, Typeset`animator$$, 
@@ -295,19 +303,21 @@ Cell[BoxData[
                     Typeset`skipInitDone$$}, "Body" :> 
                   StreamPlot[{$CellContext`v, (-4) $CellContext`x}, \
 {$CellContext`x, -5, 5}, {$CellContext`v, -5, 5}, Epilog -> {Red, 
-                    Point[{
+                    Point[
+                    Table[{
                     ReplaceAll[
                     $CellContext`x[$CellContext`t$$], 
                     First[
                     $CellContext`makePoints[
-                    Part[$CellContext`pos, 1]]]], 
+                    Part[$CellContext`pos, $CellContext`c]]]], 
                     ReplaceAll[
                     $CellContext`v[$CellContext`t$$], 
                     First[
                     $CellContext`makePoints[
-                    Part[$CellContext`pos, 1]]]]}], 
-                    PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 1}], 
-                  "Specifications" :> {{$CellContext`t$$, 0, 2 Pi, 
+                    
+                    Part[$CellContext`pos, $CellContext`c]]]]}, \
+{$CellContext`c, 1, 3}]], PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 1}],
+                   "Specifications" :> {{$CellContext`t$$, 0, 2 Pi, 
                     AnimationRunning -> False, 
                     AppearanceElements -> {
                     "ProgressSlider", "PlayPauseButton", 
@@ -348,18 +358,19 @@ Cell[BoxData[
     MenuView[{$CellContext`n Manipulate[
         StreamPlot[{$CellContext`v, (-4) $CellContext`x}, {$CellContext`x, -5,
            5}, {$CellContext`v, -5, 5}, Epilog -> {Red, 
-           Point[{
-             ReplaceAll[
-              $CellContext`x[$CellContext`t], 
-              First[
-               $CellContext`makePoints[
-                Part[$CellContext`pos, 1]]]], 
-             ReplaceAll[
-              $CellContext`v[$CellContext`t], 
-              First[
-               $CellContext`makePoints[
-                Part[$CellContext`pos, 1]]]]}], 
-           PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 
+           Point[
+            Table[{
+              ReplaceAll[
+               $CellContext`x[$CellContext`t], 
+               First[
+                $CellContext`makePoints[
+                 Part[$CellContext`pos, $CellContext`c]]]], 
+              ReplaceAll[
+               $CellContext`v[$CellContext`t], 
+               First[
+                $CellContext`makePoints[
+                 Part[$CellContext`pos, $CellContext`c]]]]}, {$CellContext`c, 
+              1, 3}]], PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 
            1}], {$CellContext`t, 0, 2 Pi, AnimationRunning -> False, 
          AppearanceElements -> {
           "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
@@ -369,18 +380,19 @@ Cell[BoxData[
       0, 2 Manipulate[
         StreamPlot[{$CellContext`v, (-4) $CellContext`x}, {$CellContext`x, -5,
            5}, {$CellContext`v, -5, 5}, Epilog -> {Red, 
-           Point[{
-             ReplaceAll[
-              $CellContext`x[$CellContext`t], 
-              First[
-               $CellContext`makePoints[
-                Part[$CellContext`pos, 1]]]], 
-             ReplaceAll[
-              $CellContext`v[$CellContext`t], 
-              First[
-               $CellContext`makePoints[
-                Part[$CellContext`pos, 1]]]]}], 
-           PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 
+           Point[
+            Table[{
+              ReplaceAll[
+               $CellContext`x[$CellContext`t], 
+               First[
+                $CellContext`makePoints[
+                 Part[$CellContext`pos, $CellContext`c]]]], 
+              ReplaceAll[
+               $CellContext`v[$CellContext`t], 
+               First[
+                $CellContext`makePoints[
+                 Part[$CellContext`pos, $CellContext`c]]]]}, {$CellContext`c, 
+              1, 3}]], PlotRange -> {{-5, 5}, {-5, 5}}, AspectRatio -> 
            1}], {$CellContext`t, 0, 2 Pi, AnimationRunning -> False, 
          AppearanceElements -> {
           "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
@@ -393,7 +405,7 @@ Cell[BoxData[
   3.588686490357511*^9, 3.588686607571373*^9, 3.588686639188594*^9, 
    3.588686723589571*^9, {3.5886867581676073`*^9, 3.588686769741412*^9}, {
    3.588686830860695*^9, 3.588686834166613*^9}, {3.58868687805822*^9, 
-   3.58868689585113*^9}}]
+   3.58868689585113*^9}, {3.5886873156127462`*^9, 3.588687331108899*^9}}]
 }, Open  ]]
 },
 WindowSize->{740, 752},
@@ -422,8 +434,8 @@ Cell[2074, 61, 247, 5, 36, "Output"]
 }, Open  ]],
 Cell[2336, 69, 1832, 43, 99, "Input"],
 Cell[CellGroupData[{
-Cell[4193, 116, 3964, 81, 246, "Input"],
-Cell[8160, 199, 9401, 196, 651, "Output"]
+Cell[4193, 116, 4212, 87, 246, "Input"],
+Cell[8408, 205, 9773, 202, 651, "Output"]
 }, Open  ]]
 }
 ]
