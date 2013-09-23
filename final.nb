@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     14689,        329]
-NotebookOptionsPosition[     14182,        307]
-NotebookOutlinePosition[     14570,        324]
-CellTagsIndexPosition[     14527,        321]
+NotebookDataLength[     14722,        329]
+NotebookOptionsPosition[     14215,        307]
+NotebookOutlinePosition[     14603,        324]
+CellTagsIndexPosition[     14560,        321]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -239,17 +239,17 @@ Cell[BoxData[{
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`t$$ = 0, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+   DynamicModuleBox[{$CellContext`t$$ = 0.8129890441894532, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`t$$], 0, 1}}, Typeset`size$$ = {450., {221., 227.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`t$2259233$$ = 0}, 
+    True, $CellContext`t$4820$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`t$$, $CellContext`t$2259233$$, 0]}, 
+        Hold[$CellContext`t$$, $CellContext`t$4820$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -302,7 +302,7 @@ Cell[BoxData[
    3.5888137170180063`*^9}, {3.588814481373748*^9, 3.5888145461600227`*^9}, {
    3.588814631847836*^9, 3.58881464396808*^9}, {3.5888147297521152`*^9, 
    3.588814749381538*^9}, 3.5888149167562838`*^9, {3.588814957496999*^9, 
-   3.588814975072398*^9}}]
+   3.588814975072398*^9}, 3.588890442563912*^9}]
 }, Open  ]]
 },
 WindowSize->{1205, 1328},
@@ -329,7 +329,7 @@ Cell[774, 27, 5695, 99, 120, "Input",
 Cell[6472, 128, 170, 2, 35, "Input"],
 Cell[CellGroupData[{
 Cell[6667, 134, 4096, 102, 288, "Input"],
-Cell[10766, 238, 3400, 66, 593, "Output"]
+Cell[10766, 238, 3433, 66, 593, "Output"]
 }, Open  ]]
 }
 ]
