@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     21852,        472]
-NotebookOptionsPosition[     21268,        447]
-NotebookOutlinePosition[     21656,        464]
-CellTagsIndexPosition[     21613,        461]
+NotebookDataLength[     24309,        518]
+NotebookOptionsPosition[     23849,        498]
+NotebookOutlinePosition[     24225,        514]
+CellTagsIndexPosition[     24182,        511]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -29,19 +29,6 @@ Cell[TextData[{
  CellChangeTimes->{{3.588697750183693*^9, 3.588697767698658*^9}, {
   3.588945768976294*^9, 3.588945778845153*^9}, {3.5891106444927063`*^9, 
   3.589110650490286*^9}}],
-
-Cell[CellGroupData[{
-
-Cell["\<\
-Todo : have fun with taylor series.\
-\>", "Subsubsection",
- CellChangeTimes->{{3.5892827365986443`*^9, 3.589282761998473*^9}, 
-   3.5892832560832148`*^9, {3.589283811277206*^9, 3.589283825756482*^9}, 
-   3.589285050320631*^9, {3.589285607735155*^9, 3.589285613951541*^9}}],
-
-Cell["F = -kx", "Item",
- CellChangeTimes->{{3.589282222682437*^9, 3.589282235553513*^9}, 
-   3.5892850503215437`*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -142,29 +129,57 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{
+ RowBox[{"\[IndentingNewLine]", "\t", 
   RowBox[{"(*", 
-   RowBox[{"Feed", " ", "points", " ", "to", " ", 
-    RowBox[{"NDSolve", ".", " ", "You"}], " ", "can", " ", "change", " ", 
-    "the", " ", "set", " ", "of", " ", "differential", " ", "equations", " ", 
-    
-    RowBox[{"here", "."}]}], "*)"}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]", 
+   RowBox[{
+   "Thinking", " ", "about", " ", "changing", " ", "the", " ", "way", " ", 
+    "I", " ", "feed", " ", "functions", " ", "to", " ", "be", " ", "more", 
+    " ", "like", " ", 
+    RowBox[{"DrD", "'"}], "s", " ", "version"}], "*)"}], 
+  "\[IndentingNewLine]", "\t", 
   RowBox[{
    RowBox[{
-    RowBox[{"makePoints", " ", "=", " ", 
+    RowBox[{"constF", "[", "a_", "]"}], ":=", "a"}], "\[IndentingNewLine]", 
+   "\t", 
+   RowBox[{
+    RowBox[{"hookF", "[", 
+     RowBox[{"k_", ",", "x_"}], "]"}], ":=", 
+    RowBox[{
+     RowBox[{"-", "k"}], "*", "x"}]}], "\[IndentingNewLine]", "\t", 
+   RowBox[{
+    RowBox[{"sinF", "[", 
+     RowBox[{"f0_", ",", "l_"}], "]"}], ":=", " ", 
+    RowBox[{"f0", "*", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"2", "Pi", " ", 
+       RowBox[{"x", "/", "l"}]}], "]"}]}]}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"a", ":", " ", 
+     RowBox[{"list", " ", "of", " ", "points", "\[IndentingNewLine]", 
+      RowBox[{"c", ":", " ", 
+       RowBox[{"speed", " ", "of", " ", "light", "\[IndentingNewLine]", 
+        RowBox[{"m", ":", " ", 
+         RowBox[{"mass", "\[IndentingNewLine]", 
+          RowBox[{"f", ":", " ", 
+           RowBox[{"force", " ", "function", " ", "\[IndentingNewLine]", 
+            RowBox[{"tf", ":", " ", 
+             RowBox[{"time", " ", "range"}]}]}]}]}]}]}]}]}]}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"(*", "Relativistic", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"relPoints", " ", "=", " ", 
      RowBox[{"Function", "[", 
       RowBox[{
        RowBox[{"{", 
-        RowBox[{"a", ",", "c", ",", "m", ",", " ", "dp"}], "}"}], ",", 
+        RowBox[{"a", ",", "c", ",", "m", ",", " ", "f", ",", "tf"}], "}"}], 
+       ",", 
        RowBox[{"NDSolve", "[", 
         RowBox[{
          RowBox[{"{", 
           RowBox[{
            RowBox[{
             RowBox[{
-             RowBox[{"p", "'"}], "[", "t", "]"}], "\[Equal]", "dp"}], ",", 
-           " ", 
+             RowBox[{"p", "'"}], "[", "t", "]"}], "\[Equal]", "f"}], ",", " ", 
            RowBox[{
             RowBox[{
              RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
@@ -192,14 +207,48 @@ Cell[BoxData[
          RowBox[{"{", 
           RowBox[{"x", ",", "p"}], "}"}], ",", 
          RowBox[{"{", 
-          RowBox[{"t", ",", "0", ",", "10"}], "}"}]}], "]"}]}], "]"}]}], 
+          RowBox[{"t", ",", "0", ",", "tf"}], "}"}]}], "]"}]}], "]"}]}], 
     ";"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", "Newtonian", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"newtPoints", " ", "=", " ", 
+     RowBox[{"Function", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"a", ",", "c", ",", "m", ",", " ", "f", ",", "tf"}], "}"}], 
+       ",", 
+       RowBox[{"NDSolve", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"p", "'"}], "[", "t", "]"}], "\[Equal]", "f"}], ",", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+            RowBox[{
+             RowBox[{"p", "[", "t", "]"}], "/", "m"}]}], ",", 
+           RowBox[{
+            RowBox[{"x", "[", "0", "]"}], "\[Equal]", 
+            RowBox[{"a", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"p", "[", "0", "]"}], "\[Equal]", 
+            RowBox[{"a", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "p"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"t", ",", "0", ",", "tf"}], "}"}]}], "]"}]}], "]"}]}], 
+    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
    RowBox[{"(*", 
     RowBox[{"Animate", " ", "the", " ", "flow", " ", "of", " ", "points"}], 
     "*)"}], "\[IndentingNewLine]", 
    RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"Animate", "[", "\[IndentingNewLine]", 
+     RowBox[{"Animate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{"Show", "[", "\[IndentingNewLine]", 
         RowBox[{
@@ -217,7 +266,7 @@ Cell[BoxData[
                   RowBox[{"p", "/", 
                    RowBox[{"(", 
                     RowBox[{"m", "*", "c"}], ")"}]}], ")"}], "^", "2"}]}], 
-               "]"}]}], ",", "spm"}], "}"}], ",", 
+               "]"}]}], ",", "forces"}], "}"}], ",", 
            RowBox[{"{", 
             RowBox[{"x", ",", 
              RowBox[{"-", "Domain"}], ",", "Domain"}], "}"}], ",", 
@@ -240,20 +289,19 @@ Cell[BoxData[
                  RowBox[{
                   RowBox[{"x", "[", "t", "]"}], "/.", 
                   RowBox[{"First", "[", 
-                   RowBox[{"makePoints", "[", 
+                   RowBox[{"relPoints", "[", 
                     RowBox[{
                     RowBox[{"pos", "[", 
                     RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
-                    "Momentum"}], "]"}], "]"}]}], ",", " ", 
+                    "force", ",", "10"}], "]"}], "]"}]}], ",", " ", 
                  RowBox[{
                   RowBox[{"p", "[", "t", "]"}], "/.", 
                   RowBox[{"First", "[", 
-                   RowBox[{"makePoints", "[", 
+                   RowBox[{"relPoints", "[", 
                     RowBox[{
                     RowBox[{"pos", "[", 
                     RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
-                    "Momentum"}], "]"}], "]"}]}]}], "}"}], 
-               "\[IndentingNewLine]", "\t\t\t", ",", 
+                    "force", ",", "10"}], "]"}], "]"}]}]}], "}"}], " ", ",", 
                RowBox[{"{", 
                 RowBox[{"f", ",", "1", ",", "20"}], "}"}]}], "]"}], "]"}], 
             ",", 
@@ -285,7 +333,7 @@ Cell[BoxData[
         RowBox[{"m", ",", "2", ",", "\"\<Mass\>\""}], "}"}], ",", "1", ",", 
        "100"}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"Momentum", ",", 
+      RowBox[{"force", ",", 
        RowBox[{"{", 
         RowBox[{
          RowBox[{
@@ -295,7 +343,7 @@ Cell[BoxData[
           RowBox[{"x", "[", "t", "]"}], "]"}]}], "}"}], ",", 
        RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"spm", ",", 
+      RowBox[{"forces", ",", 
        RowBox[{"{", 
         RowBox[{
          RowBox[{
@@ -303,9 +351,9 @@ Cell[BoxData[
          RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", 
        RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"Domain", ",", " ", "4", ",", "30"}], "}"}], ",", 
+      RowBox[{"Domain", ",", "1", ",", "30"}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"Range", ",", "4", ",", "30"}], "}"}]}], "]"}]}]}]], "Input",
+      RowBox[{"Range", ",", "1", ",", "30"}], "}"}]}], "]"}]}]}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{
   3.588811361656171*^9, {3.588811527003598*^9, 3.588811531402719*^9}, {
@@ -352,45 +400,50 @@ Cell[BoxData[
    3.5892847751095257`*^9, 3.589284810296968*^9}, {3.589284848129573*^9, 
    3.589285050324006*^9}, {3.589285245032855*^9, 3.589285303291214*^9}, {
    3.589285350125739*^9, 3.589285355275301*^9}, {3.58928541274988*^9, 
-   3.58928542181448*^9}}],
+   3.58928542181448*^9}, {3.5895427434685907`*^9, 3.5895427528041244`*^9}, {
+   3.5895429386687555`*^9, 3.589543113293743*^9}, {3.589543188090021*^9, 
+   3.5895431900491333`*^9}, {3.58954325135664*^9, 3.589543275472019*^9}, {
+   3.5895433677752986`*^9, 3.5895434198372765`*^9}, {3.5895435621934185`*^9, 
+   3.5895437910145063`*^9}, {3.589543872389106*^9, 3.589543946567236*^9}, {
+   3.5895439805752954`*^9, 3.5895439874237075`*^9}, {3.589544066125846*^9, 
+   3.5895441281203547`*^9}, {3.5895441701468287`*^9, 3.589544186948058*^9}, {
+   3.5895442293801327`*^9, 3.589544230066534*^9}, {3.5895442637937927`*^9, 
+   3.589544321373494*^9}, {3.5895443547107525`*^9, 3.589544397876028*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`c$$ = 1, $CellContext`Domain$$ = 
-    4, $CellContext`m$$ = 
-    2, $CellContext`Momentum$$ = (-4) $CellContext`x[$CellContext`t], 
-    Range$$ = 5.25, $CellContext`spm$$ = (-4) $CellContext`x, Typeset`show$$ =
-     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
+    1, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+$CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
+    1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`c$$], 1, "Speed of Light"}, 1, 300000000}, {{
        Hold[$CellContext`m$$], 2, "Mass"}, 1, 100}, {
-      Hold[$CellContext`Momentum$$], {(-4) $CellContext`x[$CellContext`t], 1, 
-       
+      Hold[$CellContext`force$$], {(-4) $CellContext`x[$CellContext`t], 1, 
        Sin[
         $CellContext`x[$CellContext`t]]}}, {
-      Hold[$CellContext`spm$$], {(-4) $CellContext`x, 1, 
+      Hold[$CellContext`forces$$], {(-4) $CellContext`x, 1, 
        Sin[$CellContext`x]}}, {
-      Hold[$CellContext`Domain$$], 4, 30}, {
-      Hold[Range$$], 4, 30}}, Typeset`size$$ = {505., {266., 273.}}, 
+      Hold[$CellContext`Domain$$], 1, 30}, {
+      Hold[Range$$], 1, 30}}, Typeset`size$$ = {509., {264., 271.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`c$3595934$$ = 0, $CellContext`m$3595935$$ = 
-    0, $CellContext`Momentum$3595936$$ = 0, $CellContext`spm$3595937$$ = 
-    0, $CellContext`Domain$3595938$$ = 0, Range$3595939$$ = 0}, 
+    True, $CellContext`c$832174$$ = 0, $CellContext`m$832175$$ = 
+    0, $CellContext`force$832176$$ = 0, $CellContext`forces$832177$$ = 
+    0, $CellContext`Domain$832178$$ = 0, Range$832179$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`c$$ = 1, $CellContext`Domain$$ = 
-        4, $CellContext`m$$ = 
-        2, $CellContext`Momentum$$ = (-4) $CellContext`x[$CellContext`t], 
-        Range$$ = 4, $CellContext`spm$$ = (-4) $CellContext`x}, 
-      "ControllerVariables" :> {
-        Hold[$CellContext`c$$, $CellContext`c$3595934$$, 0], 
-        Hold[$CellContext`m$$, $CellContext`m$3595935$$, 0], 
-        Hold[$CellContext`Momentum$$, $CellContext`Momentum$3595936$$, 0], 
-        Hold[$CellContext`spm$$, $CellContext`spm$3595937$$, 0], 
-        Hold[$CellContext`Domain$$, $CellContext`Domain$3595938$$, 0], 
-        Hold[Range$$, Range$3595939$$, 0]}, 
+        1, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+$CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
+        1}, "ControllerVariables" :> {
+        Hold[$CellContext`c$$, $CellContext`c$832174$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$832175$$, 0], 
+        Hold[$CellContext`force$$, $CellContext`force$832176$$, 0], 
+        Hold[$CellContext`forces$$, $CellContext`forces$832177$$, 0], 
+        Hold[$CellContext`Domain$$, $CellContext`Domain$832178$$, 0], 
+        Hold[Range$$, Range$832179$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -399,7 +452,7 @@ Cell[BoxData[
         Show[
          StreamDensityPlot[{($CellContext`p/$CellContext`m$$)/Sqrt[
            1 + ($CellContext`p/($CellContext`m$$ $CellContext`c$$))^2], \
-$CellContext`spm$$}, {$CellContext`x, -$CellContext`Domain$$, \
+$CellContext`forces$$}, {$CellContext`x, -$CellContext`Domain$$, \
 $CellContext`Domain$$}, {$CellContext`p, -Range$$, Range$$}], 
          Graphics[{PointSize -> Large, Red, 
            Point[
@@ -407,30 +460,29 @@ $CellContext`Domain$$}, {$CellContext`p, -Range$$, Range$$}],
               ReplaceAll[
                $CellContext`x[$CellContext`t], 
                First[
-                $CellContext`makePoints[
+                $CellContext`relPoints[
                  
                  Part[$CellContext`pos, $CellContext`f], $CellContext`c$$, \
-$CellContext`m$$, $CellContext`Momentum$$]]], 
+$CellContext`m$$, $CellContext`force$$, 10]]], 
               ReplaceAll[
                $CellContext`p[$CellContext`t], 
                First[
-                $CellContext`makePoints[
+                $CellContext`relPoints[
                  
                  Part[$CellContext`pos, $CellContext`f], $CellContext`c$$, \
-$CellContext`m$$, $CellContext`Momentum$$]]]}, {$CellContext`f, 1, 20}]], 
+$CellContext`m$$, $CellContext`force$$, 10]]]}, {$CellContext`f, 1, 20}]], 
            PlotRange -> {{-4, 4}, {-4, 4}}, AspectRatio -> 
            GoldenRatio}]], {$CellContext`t, 0, 1}, AnimationRunning -> False],
        "Specifications" :> {{{$CellContext`c$$, 1, "Speed of Light"}, 1, 
          300000000}, {{$CellContext`m$$, 2, "Mass"}, 1, 
-         100}, {$CellContext`Momentum$$, {(-4) $CellContext`x[$CellContext`t],
-           1, 
+         100}, {$CellContext`force$$, {(-4) $CellContext`x[$CellContext`t], 1, 
           Sin[
            $CellContext`x[$CellContext`t]]}, ControlType -> 
-         PopupMenu}, {$CellContext`spm$$, {(-4) $CellContext`x, 1, 
+         PopupMenu}, {$CellContext`forces$$, {(-4) $CellContext`x, 1, 
           Sin[$CellContext`x]}, ControlType -> 
-         PopupMenu}, {$CellContext`Domain$$, 4, 30}, {Range$$, 4, 30}}, 
+         PopupMenu}, {$CellContext`Domain$$, 1, 30}, {Range$$, 1, 30}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{560., {405., 412.}},
+     ImageSizeCache->{568., {411., 418.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -440,16 +492,14 @@ $CellContext`m$$, $CellContext`Momentum$$]]]}, {$CellContext`f, 1, 20}]],
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.589285308377616*^9, 3.58928535591955*^9, 
-  3.589285423211801*^9}]
-}, Open  ]]
+ CellChangeTimes->{{3.589544296897051*^9, 3.5895443220598955`*^9}, {
+  3.589544357627958*^9, 3.5895443982036295`*^9}}]
 }, Open  ]]
 },
-WindowSize->{1434, 854},
-WindowMargins->{{-11, Automatic}, {Automatic, 0}},
+WindowSize->{1453, 1522},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 Magnification:>1.25 Inherited,
-FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
-2013)",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (November 13, 2010)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -463,16 +513,12 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 442, 10, 133, "Input"],
+Cell[557, 20, 442, 10, 121, "Input"],
+Cell[1002, 32, 5801, 94, 102, "Input"],
 Cell[CellGroupData[{
-Cell[1024, 34, 282, 5, 43, "Subsubsection"],
-Cell[1309, 41, 117, 2, 37, "Item"],
-Cell[1429, 45, 5801, 94, 99, "Input"],
-Cell[CellGroupData[{
-Cell[7255, 143, 9673, 211, 393, "Input",
+Cell[6828, 130, 12715, 280, 696, "Input",
  InitializationCell->True],
-Cell[16931, 356, 4309, 87, 837, "Output"]
-}, Open  ]]
+Cell[19546, 412, 4287, 83, 849, "Output"]
 }, Open  ]]
 }
 ]
