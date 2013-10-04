@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     37819,        823]
-NotebookOptionsPosition[     37150,        797]
-NotebookOutlinePosition[     37616,        815]
-CellTagsIndexPosition[     37573,        812]
+NotebookDataLength[     59024,       1307]
+NotebookOptionsPosition[     57927,       1268]
+NotebookOutlinePosition[     58394,       1286]
+CellTagsIndexPosition[     58351,       1283]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,13 +22,14 @@ Cell[TextData[{
  StyleBox["Animating flow in ", "Title"],
  StyleBox["relativistic", "Title",
   FontColor->RGBColor[0, 1, 0]],
- StyleBox[" phase space\nLAGGY AS FUCK ", "Title"],
+ StyleBox[" phase space\n(currently laggy as fuck)", "Title"],
  StyleBox["\nDidi Park - Computational Physics, Period 6", "Subtitle"]
 }], "Input",
  CellFrame->{{0, 0}, {2, 0}},
  CellChangeTimes->{{3.588697750183693*^9, 3.588697767698658*^9}, {
   3.588945768976294*^9, 3.588945778845153*^9}, {3.5891106444927063`*^9, 
-  3.589110650490286*^9}, {3.5895462185573893`*^9, 3.589546220423092*^9}}],
+  3.589110650490286*^9}, {3.5895462185573893`*^9, 3.589546220423092*^9}, {
+  3.589886217707094*^9, 3.589886226171111*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -61,6 +62,7 @@ Cell[BoxData[
      RowBox[{"Transpose", "[", 
       RowBox[{"{", " ", 
        RowBox[{"r1", ",", "r2"}], "}"}], "]"}]}], ";"}], " "}]}]], "Input",
+ InitializationCell->True,
  CellChangeTimes->{{3.588505255286828*^9, 3.5885052602368917`*^9}, {
    3.5885052958137197`*^9, 3.588505328709536*^9}, {3.588505405684578*^9, 
    3.588505439793706*^9}, {3.5885055197740707`*^9, 3.58850555213358*^9}, {
@@ -125,8 +127,6 @@ Cell[BoxData[
    3.5888133183670807`*^9, 3.5888133189567337`*^9}, {3.588940880190585*^9, 
    3.5889409395195417`*^9}, {3.58894596411272*^9, 3.588945976452168*^9}, 
    3.589285050322036*^9}],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", "\t", 
@@ -240,117 +240,7 @@ Cell[BoxData[
           RowBox[{"x", ",", "p"}], "}"}], ",", 
          RowBox[{"{", 
           RowBox[{"t", ",", "0", ",", "tf"}], "}"}]}], "]"}]}], "]"}]}], 
-    ";"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{"Animate", " ", "the", " ", "flow", " ", "of", " ", "points"}], 
-    "*)"}], "\[IndentingNewLine]", 
-   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"Animate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"Show", "[", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"StreamDensityPlot", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"p", "/", "m"}], ")"}], "/", 
-              RowBox[{"Sqrt", "[", 
-               RowBox[{"1", "+", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"p", "/", 
-                   RowBox[{"(", 
-                    RowBox[{"m", "*", "c"}], ")"}]}], ")"}], "^", "2"}]}], 
-               "]"}]}], ",", "forces"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"x", ",", 
-             RowBox[{"-", "Domain"}], ",", "Domain"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"p", ",", 
-             RowBox[{"-", "Range"}], ",", "Range"}], "}"}]}], "]"}], ",", 
-         "\[IndentingNewLine]", 
-         RowBox[{"Graphics", "[", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"PointSize", "\[Rule]", "Large"}], ",", "Red", ",", 
-            "\[IndentingNewLine]", "\t\t", 
-            RowBox[{"Point", "[", "\[IndentingNewLine]", "\t\t", 
-             RowBox[{"Table", "[", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"x", "[", "t", "]"}], "/.", 
-                  RowBox[{"First", "[", 
-                   RowBox[{"relPoints", "[", 
-                    RowBox[{
-                    RowBox[{"pos", "[", 
-                    RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
-                    "force", ",", "10"}], "]"}], "]"}]}], ",", " ", 
-                 RowBox[{
-                  RowBox[{"p", "[", "t", "]"}], "/.", 
-                  RowBox[{"First", "[", 
-                   RowBox[{"relPoints", "[", 
-                    RowBox[{
-                    RowBox[{"pos", "[", 
-                    RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
-                    "force", ",", "10"}], "]"}], "]"}]}]}], "}"}], " ", ",", 
-               RowBox[{"{", 
-                RowBox[{"f", ",", "1", ",", "20"}], "}"}]}], "]"}], "]"}], 
-            ",", 
-            RowBox[{"PlotRange", "->", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "}"}]}], " ", ",", 
-            RowBox[{"AspectRatio", "\[Rule]", "GoldenRatio"}]}], "}"}], 
-          "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
-       RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], 
-      "\[IndentingNewLine]", "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"c", ",", "1", ",", "\"\<Speed of Light\>\""}], "}"}], ",", 
-       "1", ",", 
-       RowBox[{"3", "*", 
-        RowBox[{"10", "^", "8"}]}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"m", ",", "2", ",", "\"\<Mass\>\""}], "}"}], ",", "1", ",", 
-       "100"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"force", ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"-", "4"}], 
-          RowBox[{"x", "[", "t", "]"}]}], ",", "1", ",", 
-         RowBox[{"Sin", "[", 
-          RowBox[{"x", "[", "t", "]"}], "]"}]}], "}"}], ",", 
-       RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"forces", ",", 
-       RowBox[{"{", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"-", "4"}], "x"}], ",", "1", ",", 
-         RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", 
-       RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"Domain", ",", "1", ",", "30"}], "}"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"Range", ",", "1", ",", "30"}], "}"}]}], "]"}]}]}]], "Input",
+    ";"}]}]}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{
   3.588811361656171*^9, {3.588811527003598*^9, 3.588811531402719*^9}, {
@@ -407,17 +297,141 @@ Cell[BoxData[
    3.5895442293801327`*^9, 3.589544230066534*^9}, {3.5895442637937927`*^9, 
    3.589544321373494*^9}, {3.5895443547107525`*^9, 3.589544324870776*^9}, {
    3.5895443777450037`*^9, 3.589544442799773*^9}, {3.589544484358501*^9, 
-   3.589544492964809*^9}}],
+   3.589544492964809*^9}, {3.589886915367498*^9, 3.589886932788157*^9}}],
+
+Cell[TextData[StyleBox["Relativistic Alone", "Section"]], "Input",
+ CellChangeTimes->{{3.589886937340765*^9, 3.589886947093112*^9}},
+ FormatType->"TextForm"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Animate", " ", "the", " ", "flow", " ", "of", " ", "points"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Animate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Show", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"StreamDensityPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"p", "/", "m"}], ")"}], "/", 
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"1", "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"p", "/", 
+                  RowBox[{"(", 
+                   RowBox[{"m", "*", "c"}], ")"}]}], ")"}], "^", "2"}]}], 
+              "]"}]}], ",", "forces"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", 
+            RowBox[{"-", "Domain"}], ",", "Domain"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"p", ",", 
+            RowBox[{"-", "Range"}], ",", "Range"}], "}"}], ",", 
+          RowBox[{"Axes", "\[Rule]", "True"}], ",", " ", 
+          RowBox[{"AxesLabel", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "p"}], "}"}]}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"PointSize", "\[Rule]", "Large"}], ",", "Red", ",", 
+           "\[IndentingNewLine]", "\t\t", 
+           RowBox[{"Point", "[", "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x", "[", "t", "]"}], "/.", 
+                 RowBox[{"First", "[", 
+                  RowBox[{"relPoints", "[", 
+                   RowBox[{
+                    RowBox[{"pos", "[", 
+                    RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
+                    "force", ",", "10"}], "]"}], "]"}]}], ",", " ", 
+                RowBox[{
+                 RowBox[{"p", "[", "t", "]"}], "/.", 
+                 RowBox[{"First", "[", 
+                  RowBox[{"relPoints", "[", 
+                   RowBox[{
+                    RowBox[{"pos", "[", 
+                    RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
+                    "force", ",", "10"}], "]"}], "]"}]}]}], "}"}], " ", ",", 
+              RowBox[{"{", 
+               RowBox[{"f", ",", "1", ",", "20"}], "}"}]}], "]"}], "]"}], ",", 
+           RowBox[{"PlotRange", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "}"}]}], " ", ",", 
+           RowBox[{"AspectRatio", "\[Rule]", "GoldenRatio"}]}], "}"}], 
+         "]"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+      RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], 
+     "\[IndentingNewLine]", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"c", ",", "1", ",", "\"\<Speed of Light\>\""}], "}"}], ",", 
+      "1", ",", 
+      RowBox[{"3", "*", 
+       RowBox[{"10", "^", "8"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"m", ",", "2", ",", "\"\<Mass\>\""}], "}"}], ",", "1", ",", 
+      "100"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"force", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "4"}], 
+         RowBox[{"x", "[", "t", "]"}]}], ",", "1", ",", 
+        RowBox[{"Sin", "[", 
+         RowBox[{"x", "[", "t", "]"}], "]"}]}], "}"}], ",", 
+      RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"forces", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "4"}], "x"}], ",", "1", ",", 
+        RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", 
+      RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"Domain", ",", "1", ",", "30"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"Range", ",", "1", ",", "30"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.589889146161948*^9, 3.589889207511627*^9}, {
+  3.589889462673994*^9, 3.589889466081127*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`c$$ = 1, $CellContext`Domain$$ = 
-    1, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
-$CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
-    1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
-    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+   DynamicModuleBox[{$CellContext`c$$ = 6.7*^7, $CellContext`Domain$$ = 
+    17.2, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+$CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 
+    61.300000000000004`, Range$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`c$$], 1, "Speed of Light"}, 1, 300000000}, {{
        Hold[$CellContext`m$$], 2, "Mass"}, 1, 100}, {
       Hold[$CellContext`force$$], {(-4) $CellContext`x[$CellContext`t], 1, 
@@ -426,23 +440,23 @@ $CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ =
       Hold[$CellContext`forces$$], {(-4) $CellContext`x, 1, 
        Sin[$CellContext`x]}}, {
       Hold[$CellContext`Domain$$], 1, 30}, {
-      Hold[Range$$], 1, 30}}, Typeset`size$$ = {505., {261., 268.}}, 
+      Hold[Range$$], 1, 30}}, Typeset`size$$ = {505., {264., 271.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`c$187614$$ = 0, $CellContext`m$187615$$ = 
-    0, $CellContext`force$187616$$ = 0, $CellContext`forces$187617$$ = 
-    0, $CellContext`Domain$187618$$ = 0, Range$187619$$ = 0}, 
+    True, $CellContext`c$418076$$ = 0, $CellContext`m$418077$$ = 
+    0, $CellContext`force$418078$$ = 0, $CellContext`forces$418079$$ = 
+    0, $CellContext`Domain$418080$$ = 0, Range$418081$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`c$$ = 1, $CellContext`Domain$$ = 
         1, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
 $CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
         1}, "ControllerVariables" :> {
-        Hold[$CellContext`c$$, $CellContext`c$187614$$, 0], 
-        Hold[$CellContext`m$$, $CellContext`m$187615$$, 0], 
-        Hold[$CellContext`force$$, $CellContext`force$187616$$, 0], 
-        Hold[$CellContext`forces$$, $CellContext`forces$187617$$, 0], 
-        Hold[$CellContext`Domain$$, $CellContext`Domain$187618$$, 0], 
-        Hold[Range$$, Range$187619$$, 0]}, 
+        Hold[$CellContext`c$$, $CellContext`c$418076$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$418077$$, 0], 
+        Hold[$CellContext`force$$, $CellContext`force$418078$$, 0], 
+        Hold[$CellContext`forces$$, $CellContext`forces$418079$$, 0], 
+        Hold[$CellContext`Domain$$, $CellContext`Domain$418080$$, 0], 
+        Hold[Range$$, Range$418081$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -452,7 +466,8 @@ $CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ =
          StreamDensityPlot[{($CellContext`p/$CellContext`m$$)/Sqrt[
            1 + ($CellContext`p/($CellContext`m$$ $CellContext`c$$))^2], \
 $CellContext`forces$$}, {$CellContext`x, -$CellContext`Domain$$, \
-$CellContext`Domain$$}, {$CellContext`p, -Range$$, Range$$}], 
+$CellContext`Domain$$}, {$CellContext`p, -Range$$, Range$$}, Axes -> True, 
+          AxesLabel -> {$CellContext`x, $CellContext`p}], 
          Graphics[{PointSize -> Large, Red, 
            Point[
             Table[{
@@ -481,7 +496,7 @@ $CellContext`m$$, $CellContext`force$$, 10]]]}, {$CellContext`f, 1, 20}]],
           Sin[$CellContext`x]}, ControlType -> 
          PopupMenu}, {$CellContext`Domain$$, 1, 30}, {Range$$, 1, 30}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{560., {400., 407.}},
+     ImageSizeCache->{560., {403., 410.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -491,16 +506,25 @@ $CellContext`m$$, $CellContext`force$$, 10]]]}, {$CellContext`f, 1, 20}]],
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{{3.589544296897051*^9, 3.5895443220598955`*^9}, {
-   3.589544357627958*^9, 3.589544268519397*^9}, {3.589544385910503*^9, 
-   3.589544393817069*^9}, {3.589544434670682*^9, 3.5895444432515383`*^9}, 
-   3.589544495227476*^9}]
+ CellChangeTimes->{
+  3.589886925472987*^9, {3.589889151585925*^9, 3.589889170597192*^9}, 
+   3.589889209290941*^9, 3.5898894673755503`*^9}]
 }, Open  ]],
+
+Cell[TextData[{
+ StyleBox["Comparison\n", "Section"],
+ StyleBox["Advanced manipulate.\n", "Text"],
+ StyleBox["ControlActive", "ItemNumbered"]
+}], "Input",
+ CellChangeTimes->{{3.589886854676772*^9, 3.589886861956155*^9}, {
+  3.589886993344329*^9, 3.589887009351399*^9}, {3.589887088072344*^9, 
+  3.589887095261668*^9}, {3.589890668171043*^9, 3.589890668498872*^9}},
+ FormatType->"TextForm"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Manipulate", "[", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{"GraphicsRow", "[", 
     RowBox[{"{", "\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -531,6 +555,10 @@ Cell[BoxData[
           RowBox[{"ImageSize", "\[Rule]", "400"}], ",", 
           RowBox[{"PlotLabel", "\[Rule]", "\"\<Relativistic\>\""}], ",", " ", 
           
+          RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+          RowBox[{"AxesLabel", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "p"}], "}"}]}], ",", " ", 
           RowBox[{"Epilog", "->", 
            RowBox[{"{", 
             RowBox[{
@@ -592,6 +620,10 @@ Cell[BoxData[
             RowBox[{"-", "Range"}], ",", "Range"}], "}"}], ",", 
           RowBox[{"ImageSize", "\[Rule]", "400"}], ",", 
           RowBox[{"PlotLabel", "\[Rule]", "\"\<Newtonian\>\""}], ",", " ", 
+          RowBox[{"Axes", "\[Rule]", " ", "True"}], ",", 
+          RowBox[{"AxesLabel", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "p"}], "}"}]}], ",", " ", 
           RowBox[{"Epilog", "->", 
            RowBox[{"{", 
             RowBox[{
@@ -668,28 +700,41 @@ Cell[BoxData[
        RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", 
      RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"Domain", ",", "1", ",", "30"}], "}"}], ",", 
+    RowBox[{"Domain", ",", "3", ",", "30"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"Range", ",", "1", ",", "30"}], "}"}], ",", 
+    RowBox[{"Range", ",", "3", ",", "30"}], "}"}], ",", 
    RowBox[{"ContentSize", "\[Rule]", "1000"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.589544516052058*^9, 3.589544519393578*^9}, {
-  3.589544556760997*^9, 3.589544562764229*^9}, {3.589544602082383*^9, 
-  3.589544669326151*^9}, {3.589544750675799*^9, 3.589544753939908*^9}, {
-  3.589544786291439*^9, 3.589544847854336*^9}, {3.58954491083638*^9, 
-  3.589544925014497*^9}, {3.589544973896307*^9, 3.589544982789727*^9}, {
-  3.5895450322672873`*^9, 3.589545049477415*^9}, {3.589545190379352*^9, 
-  3.5895454100801992`*^9}, {3.5895458717632427`*^9, 3.589545923211151*^9}, {
-  3.589546065427804*^9, 3.589546093142226*^9}, {3.589546123214114*^9, 
-  3.589546161131012*^9}, {3.5895462523050337`*^9, 3.589546265021646*^9}, {
-  3.589546380012919*^9, 3.589546428050235*^9}}],
+   3.589544556760997*^9, 3.589544562764229*^9}, {3.589544602082383*^9, 
+   3.589544669326151*^9}, {3.589544750675799*^9, 3.589544753939908*^9}, {
+   3.589544786291439*^9, 3.589544847854336*^9}, {3.58954491083638*^9, 
+   3.589544925014497*^9}, {3.589544973896307*^9, 3.589544982789727*^9}, {
+   3.5895450322672873`*^9, 3.589545049477415*^9}, {3.589545190379352*^9, 
+   3.5895454100801992`*^9}, {3.5895458717632427`*^9, 3.589545923211151*^9}, {
+   3.589546065427804*^9, 3.589546093142226*^9}, {3.589546123214114*^9, 
+   3.589546161131012*^9}, {3.5895462523050337`*^9, 3.589546265021646*^9}, {
+   3.589546380012919*^9, 3.589546428050235*^9}, {3.589885239091567*^9, 
+   3.589885246211753*^9}, {3.589886124485243*^9, 3.589886129511203*^9}, {
+   3.589886178829288*^9, 3.589886187794148*^9}, {3.589886432798456*^9, 
+   3.58988643747934*^9}, 3.589886496026597*^9, {3.5898866308420563`*^9, 
+   3.5898866344650393`*^9}, {3.589887263209611*^9, 3.589887314199843*^9}, {
+   3.589887369925161*^9, 3.589887393290381*^9}, {3.589887473661618*^9, 
+   3.589887489022241*^9}, {3.589888994660529*^9, 3.589889021458329*^9}, {
+   3.589889086298814*^9, 3.5898890944869223`*^9}, 3.589889315713872*^9, {
+   3.58988936651154*^9, 3.5898893666574497`*^9}, {3.589889483387689*^9, 
+   3.589889521086231*^9}, {3.589889551147634*^9, 3.589889588886793*^9}, {
+   3.589889662142096*^9, 3.58988966299406*^9}, {3.5898899850419483`*^9, 
+   3.589889989570937*^9}, {3.589890061195359*^9, 3.589890081823996*^9}, {
+   3.589890210769796*^9, 3.589890214045567*^9}, {3.5898904923155947`*^9, 
+   3.5898905124731894`*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`c$$ = 1, $CellContext`Domain$$ = 
-    1, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+    3, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
 $CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
-    1, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    3, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
        Hold[$CellContext`c$$], 1, "Speed of Light"}, 1, 300000000}, {{
@@ -699,24 +744,24 @@ $CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ =
         $CellContext`x[$CellContext`t]]}}, {
       Hold[$CellContext`forces$$], {(-4) $CellContext`x, 1, 
        Sin[$CellContext`x]}}, {
-      Hold[$CellContext`Domain$$], 1, 30}, {
-      Hold[Range$$], 1, 30}}, Typeset`size$$ = {1206., {312., 318.}}, 
+      Hold[$CellContext`Domain$$], 3, 30}, {
+      Hold[Range$$], 3, 30}}, Typeset`size$$ = {450., {114., 121.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`c$1114715$$ = 0, $CellContext`m$1114716$$ = 
-    0, $CellContext`force$1114717$$ = 0, $CellContext`forces$1114718$$ = 
-    0, $CellContext`Domain$1114719$$ = 0, Range$1114720$$ = 0}, 
+    True, $CellContext`c$702150$$ = 0, $CellContext`m$702151$$ = 
+    0, $CellContext`force$702152$$ = 0, $CellContext`forces$702153$$ = 
+    0, $CellContext`Domain$702154$$ = 0, Range$702155$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`c$$ = 1, $CellContext`Domain$$ = 
-        1, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+        3, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
 $CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
-        1}, "ControllerVariables" :> {
-        Hold[$CellContext`c$$, $CellContext`c$1114715$$, 0], 
-        Hold[$CellContext`m$$, $CellContext`m$1114716$$, 0], 
-        Hold[$CellContext`force$$, $CellContext`force$1114717$$, 0], 
-        Hold[$CellContext`forces$$, $CellContext`forces$1114718$$, 0], 
-        Hold[$CellContext`Domain$$, $CellContext`Domain$1114719$$, 0], 
-        Hold[Range$$, Range$1114720$$, 0]}, 
+        3}, "ControllerVariables" :> {
+        Hold[$CellContext`c$$, $CellContext`c$702150$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$702151$$, 0], 
+        Hold[$CellContext`force$$, $CellContext`force$702152$$, 0], 
+        Hold[$CellContext`forces$$, $CellContext`forces$702153$$, 0], 
+        Hold[$CellContext`Domain$$, $CellContext`Domain$702154$$, 0], 
+        Hold[Range$$, Range$702155$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -728,7 +773,9 @@ $CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ =
             1 + ($CellContext`p/($CellContext`m$$ $CellContext`c$$))^2], \
 $CellContext`forces$$}, {$CellContext`x, -$CellContext`Domain$$, \
 $CellContext`Domain$$}, {$CellContext`p, -Range$$, Range$$}, ImageSize -> 400,
-            PlotLabel -> "Relativistic", Epilog -> {PointSize -> Large, Red, 
+            PlotLabel -> "Relativistic", Axes -> True, 
+           AxesLabel -> {$CellContext`x, $CellContext`p}, 
+           Epilog -> {PointSize -> Large, Red, 
              Point[
               Table[{
                 ReplaceAll[
@@ -753,7 +800,9 @@ $CellContext`m$$, $CellContext`force$$, 10]]]}, {$CellContext`f, 1, 20}]],
           StreamDensityPlot[{$CellContext`p/$CellContext`m$$, \
 $CellContext`forces$$}, {$CellContext`x, -$CellContext`Domain$$, \
 $CellContext`Domain$$}, {$CellContext`p, -Range$$, Range$$}, ImageSize -> 400,
-            PlotLabel -> "Newtonian", Epilog -> {PointSize -> Large, Red, 
+            PlotLabel -> "Newtonian", Axes -> True, 
+           AxesLabel -> {$CellContext`x, $CellContext`p}, 
+           Epilog -> {PointSize -> Large, Red, 
              Point[
               Table[{
                 ReplaceAll[
@@ -780,9 +829,9 @@ $CellContext`m$$, $CellContext`force$$, 10]]]}, {$CellContext`f, 1, 20}]],
            $CellContext`x[$CellContext`t]]}, ControlType -> 
          PopupMenu}, {$CellContext`forces$$, {(-4) $CellContext`x, 1, 
           Sin[$CellContext`x]}, ControlType -> 
-         PopupMenu}, {$CellContext`Domain$$, 1, 30}, {Range$$, 1, 30}}, 
+         PopupMenu}, {$CellContext`Domain$$, 3, 30}, {Range$$, 3, 30}}, 
       "Options" :> {ContentSize -> 1000}, "DefaultOptions" :> {}],
-     ImageSizeCache->{1266., {448., 456.}},
+     ImageSizeCache->{1266., {251., 258.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -792,11 +841,433 @@ $CellContext`m$$, $CellContext`force$$, 10]]]}, {$CellContext`f, 1, 20}]],
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.589546291641006*^9, 3.589546429015149*^9}]
+ CellChangeTimes->{{3.589890503372414*^9, 3.5898905147780313`*^9}}]
+}, Open  ]],
+
+Cell[TextData[StyleBox["They're faster alone.", "Section"]], "Input",
+ CellChangeTimes->{{3.5898912587569733`*^9, 3.589891277405452*^9}},
+ FormatType->"TextForm"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"StreamDensityPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"p", "/", "m"}], ")"}], "/", 
+           RowBox[{"Sqrt", "[", 
+            RowBox[{"1", "+", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"p", "/", 
+                RowBox[{"(", 
+                 RowBox[{"m", "*", "c"}], ")"}]}], ")"}], "^", "2"}]}], 
+            "]"}]}], ",", "forces"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "Domain"}], ",", "Domain"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"p", ",", 
+          RowBox[{"-", "Range"}], ",", "Range"}], "}"}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", "400"}], ",", 
+        RowBox[{"PlotLabel", "\[Rule]", "\"\<Relativistic\>\""}], ",", " ", 
+        RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "p"}], "}"}]}]}], "]"}], ",", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"StreamDensityPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"p", "/", "m"}], ")"}], ",", "forces"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", 
+          RowBox[{"-", "Domain"}], ",", "Domain"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"p", ",", 
+          RowBox[{"-", "Range"}], ",", "Range"}], "}"}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", "400"}], ",", 
+        RowBox[{"PlotLabel", "\[Rule]", "\"\<Newtonian\>\""}], ",", " ", 
+        RowBox[{"Axes", "\[Rule]", " ", "True"}], ",", 
+        RowBox[{"AxesLabel", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "p"}], "}"}]}]}], "]"}]}], "}"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", "1", ",", "\"\<Speed of Light\>\""}], "}"}], ",", "1",
+      ",", 
+     RowBox[{"3", "*", 
+      RowBox[{"10", "^", "8"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", ",", "2", ",", "\"\<Mass\>\""}], "}"}], ",", "1", ",", 
+     "100"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"force", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "4"}], 
+        RowBox[{"x", "[", "t", "]"}]}], ",", "1", ",", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"x", "[", "t", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"forces", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "4"}], "x"}], ",", "1", ",", 
+       RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Domain", ",", "3", ",", "30"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Range", ",", "3", ",", "30"}], "}"}], ",", 
+   RowBox[{"ContentSize", "\[Rule]", "1000"}], ",", " ", 
+   RowBox[{"ContinuousAction", "\[Rule]", "False"}], ",", " ", 
+   RowBox[{"SynchronousUpdating", "\[Rule]", "False"}]}], " ", "]"}]], "Input",\
+
+ CellChangeTimes->{{3.5898905363761063`*^9, 3.58989058386412*^9}, {
+  3.5898906384220743`*^9, 3.5898906766359158`*^9}, {3.589890733246682*^9, 
+  3.589890736530396*^9}, {3.5898907765336657`*^9, 3.5898907790579863`*^9}, {
+  3.5898910541105213`*^9, 3.5898910564699*^9}, {3.589891098571142*^9, 
+  3.589891102372527*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`c$$ = 5.65*^7, $CellContext`Domain$$ = 
+    3, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+$CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
+    3, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`c$$], 1, "Speed of Light"}, 1, 300000000}, {{
+       Hold[$CellContext`m$$], 2, "Mass"}, 1, 100}, {
+      Hold[$CellContext`force$$], {(-4) $CellContext`x[$CellContext`t], 1, 
+       Sin[
+        $CellContext`x[$CellContext`t]]}}, {
+      Hold[$CellContext`forces$$], {(-4) $CellContext`x, 1, 
+       Sin[$CellContext`x]}}, {
+      Hold[$CellContext`Domain$$], 3, 30}, {
+      Hold[Range$$], 3, 30}}, Typeset`size$$ = {1082., {267., 273.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`c$805375$$ = 0, $CellContext`m$805376$$ = 
+    0, $CellContext`force$805377$$ = 0, $CellContext`forces$805378$$ = 
+    0, $CellContext`Domain$805379$$ = 0, Range$805380$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`c$$ = 1, $CellContext`Domain$$ = 
+        3, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+$CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
+        3}, "ControllerVariables" :> {
+        Hold[$CellContext`c$$, $CellContext`c$805375$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$805376$$, 0], 
+        Hold[$CellContext`force$$, $CellContext`force$805377$$, 0], 
+        Hold[$CellContext`forces$$, $CellContext`forces$805378$$, 0], 
+        Hold[$CellContext`Domain$$, $CellContext`Domain$805379$$, 0], 
+        Hold[Range$$, Range$805380$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> GraphicsRow[{
+         StreamDensityPlot[{($CellContext`p/$CellContext`m$$)/Sqrt[
+           1 + ($CellContext`p/($CellContext`m$$ $CellContext`c$$))^2], \
+$CellContext`forces$$}, {$CellContext`x, -$CellContext`Domain$$, \
+$CellContext`Domain$$}, {$CellContext`p, -Range$$, Range$$}, ImageSize -> 400,
+           PlotLabel -> "Relativistic", Axes -> True, 
+          AxesLabel -> {$CellContext`x, $CellContext`p}], 
+         StreamDensityPlot[{$CellContext`p/$CellContext`m$$, \
+$CellContext`forces$$}, {$CellContext`x, -$CellContext`Domain$$, \
+$CellContext`Domain$$}, {$CellContext`p, -Range$$, Range$$}, ImageSize -> 400,
+           PlotLabel -> "Newtonian", Axes -> True, 
+          AxesLabel -> {$CellContext`x, $CellContext`p}]}], 
+      "Specifications" :> {{{$CellContext`c$$, 1, "Speed of Light"}, 1, 
+         300000000}, {{$CellContext`m$$, 2, "Mass"}, 1, 
+         100}, {$CellContext`force$$, {(-4) $CellContext`x[$CellContext`t], 1, 
+          Sin[
+           $CellContext`x[$CellContext`t]]}, ControlType -> 
+         PopupMenu}, {$CellContext`forces$$, {(-4) $CellContext`x, 1, 
+          Sin[$CellContext`x]}, ControlType -> 
+         PopupMenu}, {$CellContext`Domain$$, 3, 30}, {Range$$, 3, 30}}, 
+      "Options" :> {
+       ContentSize -> 1000, ContinuousAction -> False, SynchronousUpdating -> 
+        False}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1266., {403., 411.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.5898905292459373`*^9, {3.589890563489009*^9, 3.589890585438849*^9}, {
+   3.589890649415457*^9, 3.589890676850904*^9}, {3.589890737084015*^9, 
+   3.589890803993002*^9}, {3.589890844886179*^9, 3.589890853347394*^9}, {
+   3.589891037780148*^9, 3.5898911112638083`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"GraphicsRow", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Animate", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"PointSize", "\[Rule]", "Large"}], ",", "Red", ",", 
+           "\[IndentingNewLine]", "\t\t", 
+           RowBox[{"Point", "[", "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x", "[", "t", "]"}], "/.", 
+                 RowBox[{"First", "[", 
+                  RowBox[{"relPoints", "[", 
+                   RowBox[{
+                    RowBox[{"pos", "[", 
+                    RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
+                    "force", ",", "10"}], "]"}], "]"}]}], ",", " ", 
+                RowBox[{
+                 RowBox[{"p", "[", "t", "]"}], "/.", 
+                 RowBox[{"First", "[", 
+                  RowBox[{"relPoints", "[", 
+                   RowBox[{
+                    RowBox[{"pos", "[", 
+                    RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
+                    "force", ",", "10"}], "]"}], "]"}]}]}], "}"}], " ", ",", 
+              RowBox[{"{", 
+               RowBox[{"f", ",", "1", ",", "20"}], "}"}]}], "]"}], "]"}], ",", 
+           RowBox[{"PlotRange", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "}"}]}], " ", ",", 
+           RowBox[{"AspectRatio", "\[Rule]", "GoldenRatio"}]}], "}"}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+        RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Animate", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"PointSize", "\[Rule]", "Large"}], ",", "Red", ",", 
+           "\[IndentingNewLine]", "\t\t", 
+           RowBox[{"Point", "[", "\[IndentingNewLine]", "\t\t", 
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x", "[", "t", "]"}], "/.", 
+                 RowBox[{"First", "[", 
+                  RowBox[{"relPoints", "[", 
+                   RowBox[{
+                    RowBox[{"pos", "[", 
+                    RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
+                    "force", ",", "10"}], "]"}], "]"}]}], ",", " ", 
+                RowBox[{
+                 RowBox[{"p", "[", "t", "]"}], "/.", 
+                 RowBox[{"First", "[", 
+                  RowBox[{"relPoints", "[", 
+                   RowBox[{
+                    RowBox[{"pos", "[", 
+                    RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", 
+                    "force", ",", "10"}], "]"}], "]"}]}]}], "}"}], " ", ",", 
+              RowBox[{"{", 
+               RowBox[{"f", ",", "1", ",", "20"}], "}"}]}], "]"}], "]"}], ",", 
+           RowBox[{"PlotRange", "->", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "4"}], ",", "4"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "4"}], ",", "4"}], "}"}]}], "}"}]}], " ", ",", 
+           RowBox[{"AspectRatio", "\[Rule]", "GoldenRatio"}]}], "}"}], "]"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+        RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}]}], "}"}], 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c", ",", "1", ",", "\"\<Speed of Light\>\""}], "}"}], ",", "1",
+      ",", 
+     RowBox[{"3", "*", 
+      RowBox[{"10", "^", "8"}]}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"m", ",", "2", ",", "\"\<Mass\>\""}], "}"}], ",", "1", ",", 
+     "100"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"force", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "4"}], 
+        RowBox[{"x", "[", "t", "]"}]}], ",", "1", ",", 
+       RowBox[{"Sin", "[", 
+        RowBox[{"x", "[", "t", "]"}], "]"}]}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"forces", ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "4"}], "x"}], ",", "1", ",", 
+       RowBox[{"Sin", "[", "x", "]"}]}], "}"}], ",", 
+     RowBox[{"ControlType", "\[Rule]", "PopupMenu"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Domain", ",", "3", ",", "30"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Range", ",", "3", ",", "30"}], "}"}], ",", 
+   RowBox[{"ContentSize", "\[Rule]", "1000"}], ",", " ", 
+   RowBox[{"ContinuousAction", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.589891152394164*^9, 3.589891191139101*^9}, {
+  3.5898912993286943`*^9, 3.5898913027787647`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`c$$ = 1.02*^8, $CellContext`Domain$$ = 
+    3, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+$CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
+    3, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`c$$], 1, "Speed of Light"}, 1, 300000000}, {{
+       Hold[$CellContext`m$$], 2, "Mass"}, 1, 100}, {
+      Hold[$CellContext`force$$], {(-4) $CellContext`x[$CellContext`t], 1, 
+       Sin[
+        $CellContext`x[$CellContext`t]]}}, {
+      Hold[$CellContext`forces$$], {(-4) $CellContext`x, 1, 
+       Sin[$CellContext`x]}}, {
+      Hold[$CellContext`Domain$$], 3, 30}, {
+      Hold[Range$$], 3, 30}}, Typeset`size$$ = {1175., {303., 310.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`c$1253543$$ = 0, $CellContext`m$1253544$$ = 
+    0, $CellContext`force$1253545$$ = 0, $CellContext`forces$1253546$$ = 
+    0, $CellContext`Domain$1253547$$ = 0, Range$1253548$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`c$$ = 1, $CellContext`Domain$$ = 
+        3, $CellContext`force$$ = (-4) $CellContext`x[$CellContext`t], \
+$CellContext`forces$$ = (-4) $CellContext`x, $CellContext`m$$ = 2, Range$$ = 
+        3}, "ControllerVariables" :> {
+        Hold[$CellContext`c$$, $CellContext`c$1253543$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$1253544$$, 0], 
+        Hold[$CellContext`force$$, $CellContext`force$1253545$$, 0], 
+        Hold[$CellContext`forces$$, $CellContext`forces$1253546$$, 0], 
+        Hold[$CellContext`Domain$$, $CellContext`Domain$1253547$$, 0], 
+        Hold[Range$$, Range$1253548$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> GraphicsRow[{
+         Animate[
+          Graphics[{PointSize -> Large, Red, 
+            Point[
+             Table[{
+               ReplaceAll[
+                $CellContext`x[$CellContext`t], 
+                First[
+                 $CellContext`relPoints[
+                  
+                  Part[$CellContext`pos, $CellContext`f], $CellContext`c$$, \
+$CellContext`m$$, $CellContext`force$$, 10]]], 
+               ReplaceAll[
+                $CellContext`p[$CellContext`t], 
+                First[
+                 $CellContext`relPoints[
+                  
+                  Part[$CellContext`pos, $CellContext`f], $CellContext`c$$, \
+$CellContext`m$$, $CellContext`force$$, 10]]]}, {$CellContext`f, 1, 20}]], 
+            PlotRange -> {{-4, 4}, {-4, 4}}, AspectRatio -> 
+            GoldenRatio}], {$CellContext`t, 0, 1}, AnimationRunning -> False], 
+         Animate[
+          Graphics[{PointSize -> Large, Red, 
+            Point[
+             Table[{
+               ReplaceAll[
+                $CellContext`x[$CellContext`t], 
+                First[
+                 $CellContext`relPoints[
+                  
+                  Part[$CellContext`pos, $CellContext`f], $CellContext`c$$, \
+$CellContext`m$$, $CellContext`force$$, 10]]], 
+               ReplaceAll[
+                $CellContext`p[$CellContext`t], 
+                First[
+                 $CellContext`relPoints[
+                  
+                  Part[$CellContext`pos, $CellContext`f], $CellContext`c$$, \
+$CellContext`m$$, $CellContext`force$$, 10]]]}, {$CellContext`f, 1, 20}]], 
+            PlotRange -> {{-4, 4}, {-4, 4}}, AspectRatio -> 
+            GoldenRatio}], {$CellContext`t, 0, 1}, AnimationRunning -> 
+          False]}], 
+      "Specifications" :> {{{$CellContext`c$$, 1, "Speed of Light"}, 1, 
+         300000000}, {{$CellContext`m$$, 2, "Mass"}, 1, 
+         100}, {$CellContext`force$$, {(-4) $CellContext`x[$CellContext`t], 1, 
+          Sin[
+           $CellContext`x[$CellContext`t]]}, ControlType -> 
+         PopupMenu}, {$CellContext`forces$$, {(-4) $CellContext`x, 1, 
+          Sin[$CellContext`x]}, ControlType -> 
+         PopupMenu}, {$CellContext`Domain$$, 3, 30}, {Range$$, 3, 30}}, 
+      "Options" :> {ContentSize -> 1000, ContinuousAction -> False}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{1266., {440., 447.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.58989119365759*^9, {3.5898913031581984`*^9, 3.589891322488699*^9}}]
 }, Open  ]]
 },
 WindowSize->{1453, 1522},
-WindowMargins->{{Automatic, 19}, {Automatic, 0}},
+WindowMargins->{{Automatic, 17}, {Automatic, 59}},
 PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
@@ -814,16 +1285,29 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 505, 10, 202, "Input"],
-Cell[1065, 32, 5801, 94, 99, "Input"],
-Cell[CellGroupData[{
-Cell[6891, 130, 12653, 279, 666, "Input",
+Cell[557, 20, 565, 11, 202, "Input"],
+Cell[1125, 33, 5828, 95, 99, "Input",
  InitializationCell->True],
-Cell[19547, 411, 4410, 85, 827, "Output"]
+Cell[6956, 130, 8307, 169, 330, "Input",
+ InitializationCell->True],
+Cell[15266, 301, 157, 2, 60, "Input"],
+Cell[CellGroupData[{
+Cell[15448, 307, 4531, 115, 309, "Input"],
+Cell[19982, 424, 4412, 86, 833, "Output"]
+}, Open  ]],
+Cell[24409, 513, 389, 8, 106, "Input"],
+Cell[CellGroupData[{
+Cell[24823, 525, 8919, 203, 393, "Input"],
+Cell[33745, 730, 5661, 113, 529, "Output"]
+}, Open  ]],
+Cell[39421, 846, 162, 2, 60, "Input"],
+Cell[CellGroupData[{
+Cell[39608, 852, 3702, 95, 267, "Input"],
+Cell[43313, 949, 4194, 75, 834, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23994, 501, 7637, 182, 414, "Input"],
-Cell[31634, 685, 5500, 109, 958, "Output"]
+Cell[47544, 1029, 5422, 133, 351, "Input"],
+Cell[52969, 1164, 4942, 101, 941, "Output"]
 }, Open  ]]
 }
 ]
