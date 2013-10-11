@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    874894,      14586]
-NotebookOptionsPosition[    873391,      14532]
-NotebookOutlinePosition[    873748,      14548]
-CellTagsIndexPosition[    873705,      14545]
+NotebookDataLength[    882324,      14805]
+NotebookOptionsPosition[    880575,      14745]
+NotebookOutlinePosition[    880932,      14761]
+CellTagsIndexPosition[    880889,      14758]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -291,19 +291,233 @@ Cell[BoxData[
  RowBox[{"-", "4"}]], "Input",
  CellChangeTimes->{{3.590491569615891*^9, 3.590491570815708*^9}}],
 
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"x", "[", "t", "]"}], "/.", 
+      RowBox[{"First", "[", 
+       RowBox[{"relPoints", "[", 
+        RowBox[{
+         RowBox[{"pos", "[", 
+          RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", "force", 
+         ",", "3"}], "]"}], "]"}]}], ",", " ", 
+     RowBox[{
+      RowBox[{"p", "[", "t", "]"}], "/.", 
+      RowBox[{"First", "[", 
+       RowBox[{"relPoints", "[", 
+        RowBox[{
+         RowBox[{"pos", "[", 
+          RowBox[{"[", "f", "]"}], "]"}], ",", "c", ",", "m", ",", "force", 
+         ",", "10"}], "]"}], "]"}]}]}], "}"}], " ", ",", 
+   RowBox[{"{", 
+    RowBox[{"f", ",", "1", ",", "20"}], "}"}]}], "]"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"puts", " ", "point", " ", "into", " ", "ndsolve"}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.59049308746621*^9, 3.5904930946191273`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dv", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "point_", ",", " ", "c_", ",", " ", "m_", ",", " ", "f_", ",", " ", 
+     "tf_"}], "}"}], "]"}], " ", ":=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "[", "t", "]"}], "/.", 
+     RowBox[{"First", "[", 
+      RowBox[{"relPoints", "[", 
+       RowBox[{
+        RowBox[{"pos", "[", 
+         RowBox[{"[", "point", "]"}], "]"}], ",", "c", ",", "m", ",", "force",
+         ",", "3"}], "]"}], "]"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"p", "[", "t", "]"}], "/.", 
+     RowBox[{"First", "[", 
+      RowBox[{"relPoints", "[", 
+       RowBox[{
+        RowBox[{"pos", "[", 
+         RowBox[{"[", "point", "]"}], "]"}], ",", "c", ",", "m", ",", "force",
+         ",", "10"}], "]"}], "]"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.590493027850889*^9, 3.590493083900474*^9}, {
+  3.590493155446433*^9, 3.590493184762339*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dp", "[", 
+   RowBox[{"{", 
+    RowBox[{
+    "point_", ",", " ", "c_", ",", " ", "m_", ",", " ", "f_", ",", " ", 
+     "tf_"}], "}"}], "]"}], " ", ":=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"x", "[", "t", "]"}], "/.", 
+     RowBox[{"First", "[", 
+      RowBox[{"relPoints", "[", 
+       RowBox[{
+        RowBox[{"pos", "[", 
+         RowBox[{"[", "point", "]"}], "]"}], ",", "c", ",", "m", ",", "force",
+         ",", "3"}], "]"}], "]"}]}], ",", " ", 
+    RowBox[{
+     RowBox[{"p", "[", "t", "]"}], "/.", 
+     RowBox[{"First", "[", 
+      RowBox[{"relPoints", "[", 
+       RowBox[{
+        RowBox[{"pos", "[", 
+         RowBox[{"[", "point", "]"}], "]"}], ",", "c", ",", "m", ",", "force",
+         ",", "10"}], "]"}], "]"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.590493163373411*^9, 3.590493187291374*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"f", "[", 
+   RowBox[{"{", 
+    RowBox[{"p_", ",", " ", "c_"}], "}"}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"x", "+", 
+       RowBox[{
+        RowBox[{"dv", "[", 
+         RowBox[{
+         "p", ",", " ", "c", ",", " ", "m", " ", ",", " ", "f", ",", " ", 
+          "tf"}], "]"}], "*", "t"}]}], ",", " ", 
+      RowBox[{"p", "+", 
+       RowBox[{
+        RowBox[{"dp", "[", 
+         RowBox[{
+         "p", ",", " ", "c", ",", " ", "m", ",", " ", "f", ",", " ", "tf"}], 
+         "]"}], "*", "t"}]}]}], "}"}], ",", " ", "c"}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.5904926023673058`*^9, 3.590492625941028*^9}, {
+  3.590492674961701*^9, 3.590492774252714*^9}, {3.590492833689662*^9, 
+  3.590492834360497*^9}, {3.5904929590471582`*^9, 3.590492960702201*^9}, {
+  3.59049312695088*^9, 3.59049314465982*^9}, {3.590493174911351*^9, 
+  3.590493199333085*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"relPoints", " ", "=", " ", 
+    RowBox[{"Function", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"a", ",", "c", ",", "m", ",", " ", "f", ",", "tf"}], "}"}], 
+      ",", 
+      RowBox[{"NDSolve", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"p", "'"}], "[", "t", "]"}], "\[Equal]", 
+           RowBox[{"f", "[", 
+            RowBox[{"x", "[", "t", "]"}], "]"}]}], ",", " ", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"p", "[", "t", "]"}], "/", "m"}], ")"}], "/", 
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"1", "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"p", "[", "t", "]"}], "/", 
+                 RowBox[{"(", 
+                  RowBox[{"m", "*", "c"}], ")"}]}], ")"}], "^", "2"}]}], 
+             "]"}]}]}], ",", 
+          RowBox[{
+           RowBox[{"x", "[", "0", "]"}], "\[Equal]", 
+           RowBox[{"a", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"p", "[", "0", "]"}], "\[Equal]", 
+           RowBox[{"a", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "p"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", "0", ",", "tf"}], "}"}]}], "]"}]}], "]"}]}], ";"}],
+   "\[IndentingNewLine]", 
+  RowBox[{"(*", "Newtonian", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"newtPoints", " ", "=", " ", 
+   RowBox[{"Function", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a", ",", "c", ",", "m", ",", " ", "f", ",", "tf"}], "}"}], ",", 
+     RowBox[{"NDSolve", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"p", "'"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{"f", "[", 
+           RowBox[{"x", "[", "t", "]"}], "]"}]}], ",", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"x", "'"}], "[", "t", "]"}], "\[Equal]", 
+          RowBox[{
+           RowBox[{"p", "[", "t", "]"}], "/", "m"}]}], ",", 
+         RowBox[{
+          RowBox[{"x", "[", "0", "]"}], "\[Equal]", 
+          RowBox[{"a", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+         RowBox[{
+          RowBox[{"p", "[", "0", "]"}], "\[Equal]", 
+          RowBox[{"a", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "p"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", "0", ",", "tf"}], "}"}]}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"hookef", "[", "x_", "]"}], ":=", " ", 
+   RowBox[{
+    RowBox[{"-", "4"}], "x"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"cf", "[", "x_", "]"}], ":=", "1"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"sinf", "[", "x_", "]"}], ":=", 
+   RowBox[{"Sin", "[", "x", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tanf", "[", "x_", "]"}], ":=", 
+   RowBox[{"-", 
+    RowBox[{"Tan", "[", "x", "]"}]}]}], ";"}]}], "Input"]
+}, Open  ]],
+
 Cell[CellGroupData[{
 
-Cell["\<\
-Todo : 
-Make a list of points (different initial conditions)
-Give each point a color
-Make a function which evolves the points
-Draw the evolution
-\
-\>", "Input",
+Cell[TextData[{
+ "Todo : \n",
+ StyleBox["Make a list of points (different initial conditions)\nGive each \
+point a color",
+  FontColor->GrayLevel[0.5]],
+ "\nMake a function which evolves the points\nDraw the evolution\n"
+}], "Section",
  CellChangeTimes->{{3.590338459955415*^9, 3.590338533482127*^9}, {
    3.590338938676815*^9, 3.590338970538106*^9}, {3.590339164863529*^9, 
-   3.59033917959647*^9}, 3.590489578140874*^9, 3.590490320237447*^9}],
+   3.59033917959647*^9}, 3.590489578140874*^9, 3.590490320237447*^9, {
+   3.59049231870643*^9, 3.590492324237754*^9}, {3.5904925522403183`*^9, 
+   3.590492570080709*^9}}],
 
 Cell[BoxData[
  RowBox[{"Todo", ":", 
@@ -324,8 +538,7 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"Draw", " ", "evolution", " ", "the"}]], "Output",
- CellChangeTimes->{3.5904910062137823`*^9, 3.5904914063924923`*^9}]
-}, Open  ]],
+ CellChangeTimes->{3.5904910062137823`*^9, 3.5904914063924923`*^9}],
 
 Cell[CellGroupData[{
 
@@ -14531,7 +14744,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{740, 752},
-WindowMargins->{{Automatic, 242}, {46, Automatic}},
+WindowMargins->{{Automatic, 316}, {46, Automatic}},
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
 StyleDefinitions->"Default.nb"
@@ -14567,25 +14780,31 @@ Cell[6522, 227, 1382, 46, 46, "Output"]
 }, Open  ]],
 Cell[7919, 276, 437, 11, 46, "Input"],
 Cell[8359, 289, 110, 2, 28, InheritFromParent],
-Cell[CellGroupData[{
-Cell[8494, 295, 379, 10, 104, "Input"],
-Cell[8876, 307, 244, 5, 28, "Output"],
-Cell[9123, 314, 162, 3, 28, "Output"],
-Cell[9288, 319, 196, 3, 28, "Output"],
-Cell[9487, 324, 141, 2, 28, "Output"]
+Cell[8472, 293, 755, 22, 46, "Input"],
+Cell[9230, 317, 185, 4, 28, "Input"],
+Cell[9418, 323, 923, 26, 63, "Input"],
+Cell[10344, 351, 874, 25, 63, "Input"],
+Cell[11221, 378, 940, 25, 28, "Input"],
+Cell[12164, 405, 3323, 98, 199, "Input"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9665, 331, 860475, 14113, 39, "Input"],
-Cell[870143, 14446, 1068, 17, 138, "Output"]
-}, Open  ]],
-Cell[871226, 14466, 91, 1, 28, "Input"],
+Cell[15524, 508, 545, 11, 255, "Section"],
+Cell[16072, 521, 244, 5, 28, "Output"],
+Cell[16319, 528, 162, 3, 28, "Output"],
+Cell[16484, 533, 196, 3, 28, "Output"],
+Cell[16683, 538, 141, 2, 28, "Output"],
 Cell[CellGroupData[{
-Cell[871342, 14471, 128, 2, 28, "Input"],
-Cell[871473, 14475, 110, 2, 40, "Output"]
+Cell[16849, 544, 860475, 14113, 39, "Input"],
+Cell[877327, 14659, 1068, 17, 138, "Output"]
+}, Open  ]],
+Cell[878410, 14679, 91, 1, 28, "Input"],
+Cell[CellGroupData[{
+Cell[878526, 14684, 128, 2, 28, "Input"],
+Cell[878657, 14688, 110, 2, 40, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[871620, 14482, 1333, 36, 97, "Input"],
-Cell[872956, 14520, 407, 8, 219, "Output"]
+Cell[878804, 14695, 1333, 36, 97, "Input"],
+Cell[880140, 14733, 407, 8, 219, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
