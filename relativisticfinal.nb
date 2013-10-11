@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     31405,        651]
-NotebookOptionsPosition[     30781,        627]
-NotebookOutlinePosition[     31267,        646]
-CellTagsIndexPosition[     31224,        643]
+NotebookDataLength[     32066,        665]
+NotebookOptionsPosition[     31530,        643]
+NotebookOutlinePosition[     31886,        659]
+CellTagsIndexPosition[     31843,        656]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -62,7 +62,7 @@ Cell[BoxData[
     RowBox[{"pos", " ", "=", " ", 
      RowBox[{"Transpose", "[", 
       RowBox[{"{", " ", 
-       RowBox[{"r1", ",", "r2"}], "}"}], "]"}]}], ";"}], " "}]}]], "Input",
+       RowBox[{"r1", ",", "r2"}], "}"}], "]"}]}], ";"}]}]}]], "Input",
  CellChangeTimes->{{3.588505255286828*^9, 3.5885052602368917`*^9}, {
    3.5885052958137197`*^9, 3.588505328709536*^9}, {3.588505405684578*^9, 
    3.588505439793706*^9}, {3.5885055197740707`*^9, 3.58850555213358*^9}, {
@@ -126,7 +126,8 @@ Cell[BoxData[
    3.5888120229734783`*^9}, {3.58881314289132*^9, 3.588813145889415*^9}, {
    3.5888133183670807`*^9, 3.5888133189567337`*^9}, {3.588940880190585*^9, 
    3.5889409395195417`*^9}, {3.58894596411272*^9, 3.588945976452168*^9}, 
-   3.589285050322036*^9}],
+   3.589285050322036*^9, {3.5904911918481483`*^9, 3.590491196723934*^9}, {
+   3.590491250647767*^9, 3.590491252789537*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -519,6 +520,21 @@ Cell[BoxData[
    3.590321885022897*^9}, {3.59032192155091*^9, 3.590322010773403*^9}}],
 
 Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Range$$", "::", "shdw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Symbol \[NoBreak]\\!\\(\\\"Range$$\\\"\\)\[NoBreak] \
+appears in multiple contexts \[NoBreak]\\!\\({\\\"System`\\\", \
+\\\"Global`\\\"}\\)\[NoBreak]; definitions in context \
+\[NoBreak]\\!\\(\\\"System`\\\"\\)\[NoBreak] may shadow or be shadowed by \
+other definitions. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\
+\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/shdw\\\", ButtonNote -> \
+\\\"Range$$::shdw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.590491354647193*^9}],
+
+Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`c$$ = 1, $CellContext`Domain$$ = 
@@ -531,21 +547,21 @@ Cell[BoxData[
       Hold[$CellContext`force$$], {$CellContext`hookef, $CellContext`cf, \
 $CellContext`sinf, $CellContext`tanf}}, {
       Hold[$CellContext`Domain$$], 3, 30}, {
-      Hold[Range$$], 3, 30}}, Typeset`size$$ = {1250., {323., 329.}}, 
+      Hold[Range$$], 3, 30}}, Typeset`size$$ = {1000., {259., 263.}}, 
     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    True, $CellContext`c$86767$$ = 0, $CellContext`m$86768$$ = 
-    0, $CellContext`force$86769$$ = 0, $CellContext`Domain$86770$$ = 0, 
-    Range$86771$$ = 0}, 
+    True, $CellContext`c$18728$$ = 0, $CellContext`m$18729$$ = 
+    0, $CellContext`force$18730$$ = 0, $CellContext`Domain$18731$$ = 0, 
+    Range$18732$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`c$$ = 1, $CellContext`Domain$$ = 
         3, $CellContext`force$$ = $CellContext`hookef, $CellContext`m$$ = 2, 
         Range$$ = 3}, "ControllerVariables" :> {
-        Hold[$CellContext`c$$, $CellContext`c$86767$$, 0], 
-        Hold[$CellContext`m$$, $CellContext`m$86768$$, 0], 
-        Hold[$CellContext`force$$, $CellContext`force$86769$$, 0], 
-        Hold[$CellContext`Domain$$, $CellContext`Domain$86770$$, 0], 
-        Hold[Range$$, Range$86771$$, 0]}, 
+        Hold[$CellContext`c$$, $CellContext`c$18728$$, 0], 
+        Hold[$CellContext`m$$, $CellContext`m$18729$$, 0], 
+        Hold[$CellContext`force$$, $CellContext`force$18730$$, 0], 
+        Hold[$CellContext`Domain$$, $CellContext`Domain$18731$$, 0], 
+        Hold[Range$$, Range$18732$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -612,7 +628,7 @@ $CellContext`sinf, $CellContext`tanf}, ControlType ->
          PopupMenu}, {$CellContext`Domain$$, 3, 30}, {Range$$, 3, 30}}, 
       "Options" :> {ContentSize -> 1000, ContinuousAction -> False}, 
       "DefaultOptions" :> {}],
-     ImageSizeCache->{1266., {451., 458.}},
+     ImageSizeCache->{1014., {364., 369.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -622,14 +638,11 @@ $CellContext`sinf, $CellContext`tanf}, ControlType ->
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.590491076180838*^9, 3.590491146941312*^9}]
+ CellChangeTimes->{3.5904912846149817`*^9, 3.5904913547151957`*^9}]
 }, Open  ]]
 },
-WindowSize->{1141, 743},
-WindowMargins->{{Automatic, 75}, {Automatic, 0}},
-PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
-ShowSelection->True,
-Magnification:>1.25 Inherited,
+WindowSize->{1022, 828},
+WindowMargins->{{12, Automatic}, {0, Automatic}},
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
 StyleDefinitions->"Default.nb"
@@ -645,13 +658,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 589, 12, 133, "Input"],
-Cell[1149, 34, 5801, 94, 99, "Input"],
-Cell[6953, 130, 8415, 172, 351, "Input"],
-Cell[15371, 304, 321, 4, 60, "Input"],
+Cell[557, 20, 589, 12, 107, "Input"],
+Cell[1149, 34, 5894, 95, 80, "Input"],
+Cell[7046, 131, 8415, 172, 284, "Input"],
+Cell[15464, 305, 321, 4, 48, "Input"],
 Cell[CellGroupData[{
-Cell[15717, 312, 9788, 206, 519, "Input"],
-Cell[25508, 520, 5257, 104, 929, "Output"]
+Cell[15810, 313, 9788, 206, 369, "Input"],
+Cell[25601, 521, 649, 13, 24, "Message"],
+Cell[26253, 536, 5261, 104, 784, "Output"]
 }, Open  ]]
 }
 ]
