@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    216700,       3910]
-NotebookOptionsPosition[    215879,       3879]
-NotebookOutlinePosition[    216233,       3895]
-CellTagsIndexPosition[    216190,       3892]
+NotebookDataLength[    217188,       3927]
+NotebookOptionsPosition[    216252,       3892]
+NotebookOutlinePosition[    216606,       3908]
+CellTagsIndexPosition[    216563,       3905]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -671,9 +671,10 @@ Cell[BoxData[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Rasterize", "[", 
-  GraphicsBox[
-   TagBox[RasterBox[CompressedData["
+ RowBox[{"s", " ", "=", 
+  RowBox[{"Rasterize", "[", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
 1:eJzsvQd0VFeW7z3hzbz+3pt5682bmTUz3zfTM9Pdbtvtdmq73d1uZ5yNc8A2
 Ns4YB4IBE00wOYNEECIp54yEEAgkQORscs7RgIkOBOl8+7fvPVW3qm6VJIdW
 9xvdtQ5VqkTVvft/9v7v+J9vdnym7V/82Z/9WZcfyT/PvNH93s6d3+j57H+T
@@ -1590,15 +1591,16 @@ jMGTDIb6tW/fqU3btm1vMTrhimbNmtX5X+uOz9vxRWPWfLl///7feOihh745
 Kivrh23aPN0qMzOzW2npnH4DBw8eOiAjY0xxcekEYyvlGGxMKSuvyC4oKsoa
 MWLkqIyMjOHGrhrYr9/Abs2bP/LouHHjbr/xxhuvI0Zn+MOXv/BXOkep7qg7
 6o66o+6oOz7Px/8HCeMvMw==
-     "], {{0, 200}, {200, 0}}, {0, 255},
-     ColorFunction->RGBColor],
-    BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
-    Selectable->False],
-   BaseStyle->"ImageGraphics",
-   ImageSize->Automatic,
-   ImageSizeRaw->{200, 200},
-   PlotRange->{{0, 200}, {0, 200}}], "]"}]], "Input",
- CellChangeTimes->{{3.590849273991242*^9, 3.590849291423086*^9}}],
+      "], {{0, 200}, {200, 0}}, {0, 255},
+      ColorFunction->RGBColor],
+     BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+     Selectable->False],
+    BaseStyle->"ImageGraphics",
+    ImageSize->Automatic,
+    ImageSizeRaw->{200, 200},
+    PlotRange->{{0, 200}, {0, 200}}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.590849273991242*^9, 3.590849291423086*^9}, {
+  3.591705338903976*^9, 3.5917053391639013`*^9}}],
 
 Cell[BoxData[
  GraphicsBox[RasterBox[CompressedData["
@@ -2460,7 +2462,18 @@ XM7lXP/G638BPGUZ1A==
    ColorFunction->RGBColor],
   ImageSize->{200, 200},
   PlotRange->{{0, 200}, {0, 200}}]], "Output",
- CellChangeTimes->{3.590849292761722*^9}]
+ CellChangeTimes->{3.590849292761722*^9, 3.591705340555223*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"s", "[", 
+  RowBox[{"[", "0", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.591705342587809*^9, 3.591705344144587*^9}}],
+
+Cell[BoxData["Graphics"], "Output",
+ CellChangeTimes->{3.5917053445949373`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3904,12 +3917,16 @@ Cell[15280, 334, 4281, 108, 403, "Input"],
 Cell[19564, 444, 4977, 117, 488, "Input"],
 Cell[24544, 563, 4113, 105, 403, "Input"],
 Cell[CellGroupData[{
-Cell[28682, 672, 56309, 928, 67, "Input"],
-Cell[84994, 1602, 52291, 860, 215, "Output"]
+Cell[28682, 672, 56398, 930, 67, "Input"],
+Cell[85083, 1604, 52313, 860, 215, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[137322, 2467, 128, 2, 28, "Input"],
-Cell[137453, 2471, 78398, 1404, 10540, "Output"]
+Cell[137433, 2469, 143, 3, 28, "Input"],
+Cell[137579, 2474, 79, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[137695, 2480, 128, 2, 28, "Input"],
+Cell[137826, 2484, 78398, 1404, 10529, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
