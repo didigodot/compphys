@@ -10,43 +10,81 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     11455,        332]
-NotebookOptionsPosition[     10776,        306]
-NotebookOutlinePosition[     11132,        322]
-CellTagsIndexPosition[     11089,        319]
+NotebookDataLength[     38130,        815]
+NotebookOptionsPosition[     37339,        786]
+NotebookOutlinePosition[     37717,        803]
+CellTagsIndexPosition[     37674,        800]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[TextData[StyleBox["Waves", "Title",
- FontWeight->"Plain"]], "Input",
- CellChangeTimes->{{3.591718723102359*^9, 3.591718732206218*^9}},
- FormatType->"TextForm"],
+Cell[BoxData[
+ FormBox[
+  StyleBox["Waves", "Title",
+   FontWeight->"Plain"], TraditionalForm]], "Input",
+ CellChangeTimes->{{3.591718723102359*^9, 3.591718732206218*^9}, 
+   3.591980234587646*^9}],
 
-Cell[OutputFormData["\<\
-Create*list*of*points
-Create*list*of*springs
-Evolve*the*points
-p = {pindex, {springs}, m, bc, {{r}, {v}}}
-s = {sindex, {p1, p2}, k, l0, {f}}
-CreateString[] := {points, interactions}
-CreateSheet[] := {points, interactions}
-CreateSolid[] := {points, interactions}\
-\>", "\<\
-Create list of points
-Create list of springs
-Evolve the points
-p = {pindex, {springs}, m, bc, {{r}, {v}}}
-s = {sindex, {p1, p2}, k, l0, {f}}
-CreateString[] := {points, interactions}
-CreateSheet[] := {points, interactions}
-CreateSolid[] := {points, interactions}\
-\>"], "Input",
+Cell[BoxData[{
+ FormBox[
+  RowBox[{"Create", " ", "list", " ", "of", " ", "points"}], 
+  TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"Create", " ", "list", " ", "of", " ", "springs"}], 
+  TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"Evolve", " ", "points", " ", "the"}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"p", "=", 
+   RowBox[{"{", 
+    RowBox[{"pindex", ",", 
+     RowBox[{"{", "springs", "}"}], ",", "m", ",", "bc", ",", 
+     RowBox[{"(", "\[NoBreak]", GridBox[{
+        {"r"},
+        {"v"}
+       },
+       GridBoxAlignment->{
+        "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, 
+         "Rows" -> {{Baseline}}, "RowsIndexed" -> {}},
+       GridBoxSpacings->{"Columns" -> {
+           Offset[0.27999999999999997`], {
+            Offset[0.7]}, 
+           Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+           Offset[0.2], {
+            Offset[0.4]}, 
+           Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}]}], 
+    "}"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{"s", "=", 
+   RowBox[{"{", 
+    RowBox[{"sindex", ",", 
+     RowBox[{"{", 
+      RowBox[{"p1", ",", "p2"}], "}"}], ",", "k", ",", "l0", ",", 
+     RowBox[{"{", "f", "}"}]}], "}"}]}], TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   RowBox[{"CreateString", "(", ")"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{"points", ",", "interactions"}], "}"}]}], 
+  TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   RowBox[{"CreateSheet", "(", ")"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{"points", ",", "interactions"}], "}"}]}], 
+  TraditionalForm], "\n", 
+ FormBox[
+  RowBox[{
+   RowBox[{"CreateSolid", "(", ")"}], ":=", 
+   RowBox[{"{", 
+    RowBox[{"points", ",", "interactions"}], "}"}]}], 
+  TraditionalForm]}], "Input",
  CellChangeTimes->{{3.591702257067905*^9, 3.591702410165896*^9}, {
    3.5917026347788277`*^9, 3.5917026777655697`*^9}, {3.591704469726406*^9, 
    3.591704485085984*^9}, {3.591704620238241*^9, 3.591704620463941*^9}, 
    3.5917046570534897`*^9, {3.5917047782652082`*^9, 3.591704822472209*^9}, {
-   3.59170488639021*^9, 3.591704906529406*^9}, 3.591718458943387*^9},
+   3.59170488639021*^9, 3.591704906529406*^9}, 3.591718458943387*^9, 
+   3.591980228829907*^9},
  Background->RGBColor[0.87, 0.94, 1]],
 
 Cell[BoxData[
@@ -131,140 +169,250 @@ Cell[BoxData[
    3.591718337801587*^9}, 3.59171856741996*^9, {3.591719245521544*^9, 
    3.5917192803630133`*^9}}],
 
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{"Setter", " ", "methods"}], "*)"}]], "Input",
- CellChangeTimes->{{3.591719296126958*^9, 3.591719298864641*^9}}],
-
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"points", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"InitPoints", "[", 
+    RowBox[{"n_", ",", " ", "r_", ",", "m_", ",", " ", "v_"}], "]"}], ":=", 
    RowBox[{"Table", "[", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"i", ",", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{"i", "\[Equal]", "0"}], ",", 
-         RowBox[{"{", "i", "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"i", "-", "1"}], ",", "i"}], "}"}]}], "]"}], ",", "1", ",", 
+      RowBox[{"1", ",", 
        RowBox[{"If", "[", 
         RowBox[{
          RowBox[{
-          RowBox[{"i", "\[Equal]", "0"}], "||", 
-          RowBox[{"i", "\[Equal]", "10"}]}], ",", " ", "1", ",", "0"}], "]"}],
-        ",", 
+          RowBox[{"i", "\[Equal]", "1"}], "||", 
+          RowBox[{"i", "\[Equal]", "n"}]}], ",", 
+         RowBox[{"{", "i", "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"i", "-", "1"}], ",", "i"}], "}"}]}], "]"}], ",", "m", ",", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"i", "\[Equal]", "1"}], "||", 
+          RowBox[{"i", "\[Equal]", "n"}]}], ",", " ", "1", ",", "0"}], "]"}], 
+       ",", "\[IndentingNewLine]", 
        RowBox[{"{", 
         RowBox[{
-         RowBox[{"{", 
-          RowBox[{"i", ",", "0", ",", "0"}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], "}"}], ",", 
+         RowBox[{"stretchedMiddle", "[", 
+          RowBox[{"i", ",", "n"}], "]"}], ",", 
+         RowBox[{"noV", "[", 
+          RowBox[{"i", ",", "n"}], "]"}]}], "}"}]}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"i", ",", "0", ",", "10"}], "}"}]}], "]"}]}], 
+      RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"springs", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"InitSprings", "[", 
+    RowBox[{"n_", ",", "k_", ",", " ", "\[ScriptL]_", ",", "f_"}], "]"}], " ",
+    ":=", " ", 
    RowBox[{"Table", "[", 
     RowBox[{
      RowBox[{"{", 
       RowBox[{"i", ",", 
        RowBox[{"{", 
         RowBox[{"i", ",", 
-         RowBox[{"i", "+", "1"}]}], "}"}], ",", "1", ",", " ", "1", ",", 
+         RowBox[{"i", "+", "1"}]}], "}"}], ",", "k", ",", " ", "\[ScriptL]", 
+       ",", 
        RowBox[{"{", "f", "}"}]}], "}"}], ",", 
      RowBox[{"{", 
-      RowBox[{"i", ",", "9"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"n", "-", "1"}]}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Force", "[", 
+    RowBox[{"object_", ",", "index_"}], "]"}], ":=", "\[IndentingNewLine]", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"r2", "=", 
+        RowBox[{"r", "[", 
+         RowBox[{"object", ",", 
+          RowBox[{"index", "+", "1"}]}], "]"}]}], ",", "\[IndentingNewLine]", 
+       
+       RowBox[{"r1", "=", 
+        RowBox[{"r", "[", 
+         RowBox[{"object", ",", "index"}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\[ScriptL]0", "=", " ", 
+        RowBox[{"springs", "[", 
+         RowBox[{"[", 
+          RowBox[{"index", ",", "4"}], "]"}], "]"}]}], " ", ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"k", " ", "=", " ", 
+        RowBox[{"ks", "[", 
+         RowBox[{"object", ",", "index"}], "]"}]}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"k", "*", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"r2", "-", "r1"}], ")"}], "-", 
+        RowBox[{"\[ScriptL]0", "*", 
+         FractionBox[
+          RowBox[{"r2", "-", "r1"}], 
+          RowBox[{"Norm", "[", 
+           RowBox[{"r2", "-", "r1"}], "]"}]]}]}], ")"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}]}], "Input",
  CellChangeTimes->{{3.591703513656735*^9, 3.591703595025243*^9}, {
    3.591703661948889*^9, 3.591703703205411*^9}, {3.591703737926056*^9, 
    3.5917037626041803`*^9}, {3.591703810650673*^9, 3.5917039555932198`*^9}, {
    3.5917041806816187`*^9, 3.5917042411090727`*^9}, {3.5917042772377167`*^9, 
    3.591704278325502*^9}, 3.591705110675428*^9, {3.591717997498228*^9, 
-   3.591718018714775*^9}, {3.591718497345611*^9, 3.591718498435458*^9}}],
+   3.591718018714775*^9}, {3.591718497345611*^9, 3.591718498435458*^9}, {
+   3.591980292808756*^9, 3.591980293963129*^9}, {3.591980880891303*^9, 
+   3.591980884327499*^9}, {3.592132236911147*^9, 3.592132238180272*^9}, {
+   3.592132400507667*^9, 3.592132439244273*^9}, {3.592132505357861*^9, 
+   3.5921325086040373`*^9}, {3.5921339797605247`*^9, 3.592134161412142*^9}, {
+   3.592134305727503*^9, 3.5921343172476473`*^9}, {3.59213434804906*^9, 
+   3.592134350725184*^9}, {3.5921344028345222`*^9, 3.592134405621044*^9}, {
+   3.592134483458906*^9, 3.592134520621395*^9}, {3.592134564386683*^9, 
+   3.592134630447337*^9}, {3.592134757950733*^9, 3.592134767452033*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"stretchedMiddle", "[", 
+   RowBox[{"i_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"i", "-", 
+       RowBox[{"n", "/", "2"}]}], ")"}], "+", 
+     RowBox[{"10", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"2", "Pi", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"i", "-", 
+            RowBox[{"n", "/", "2"}]}], ")"}], "/", "n"}], "/", "2"}]}], "]"}], 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"i", "-", 
+            RowBox[{"n", "/", "2"}]}], ")"}], "^", "2"}]}], "/", 
+        RowBox[{"(", 
+         RowBox[{"n", "*", "2"}], ")"}]}], "]"}]}]}], ",", "0", ",", "0"}], 
+   "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"noV", "[", 
+   RowBox[{"i_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{"0", ",", "0", ",", "0"}], "}"}]}]}], "Input"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"Str", " ", "=", 
    RowBox[{"CreateString", "[", 
-    RowBox[{"points", ",", " ", "springs"}], "]"}]}], ";"}]], "Input",
- CellChangeTimes->{{3.591718537687792*^9, 3.591718550108927*^9}}],
+    RowBox[{
+     RowBox[{"initPoints", "[", 
+      RowBox[{"200", ",", "stretchedMiddle", ",", "1", ",", "noV"}], "]"}], 
+     ",", " ", 
+     RowBox[{"initSprings", "[", 
+      RowBox[{"200", ",", "1", ",", "1", ",", 
+       RowBox[{"f", "?"}]}], "]"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.591718537687792*^9, 3.591718550108927*^9}, {
+  3.592134732111203*^9, 3.592134736055964*^9}, {3.5921347988996973`*^9, 
+  3.592134815473296*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Compiled", " ", "version", " ", "of", " ", "evolve"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.5921334974525137`*^9, 3.5921335012258587`*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"Force", "[", 
-   RowBox[{"object_", ",", "index_"}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"Compiledf", " ", "=", " ", 
+   RowBox[{"Compile", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"object", ",", "dt", ",", "i"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Module", " ", "[", 
+      RowBox[{
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"rnew", " ", "=", " ", 
+          RowBox[{
+           RowBox[{"r", "[", 
+            RowBox[{"object", ",", "i"}], "]"}], "+", 
+           RowBox[{
+            RowBox[{"v", "[", 
+             RowBox[{"object", ",", "i"}], "]"}], "*", 
+            RowBox[{"dt", "/", "2"}]}]}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{"vnew", " ", "=", " ", 
+          RowBox[{
+           RowBox[{"v", "[", 
+            RowBox[{"object", ",", "i"}], "]"}], "+", 
+           RowBox[{
+            RowBox[{"a", "[", 
+             RowBox[{"object", ",", "i"}], "]"}], "*", "dt"}]}]}]}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"rnew", "+", 
+          RowBox[{"vnew", "*", 
+           RowBox[{"dt", "/", "2"}]}]}], ",", "vnew"}], "}"}]}], 
+      "\[IndentingNewLine]", "]"}], ",", " ", 
+     RowBox[{"CompilationTarget", "\[Rule]", "\"\<C\>\""}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.592133379487571*^9, 3.592133400935072*^9}, {
+  3.5921334842549353`*^9, 3.59213349021274*^9}, {3.5921348723949614`*^9, 
+  3.592134875567628*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EvolveState", "[", 
+   RowBox[{"object_", ",", " ", "dt_"}], "]"}], ":=", 
   RowBox[{"Module", "[", 
    RowBox[{
-    RowBox[{"{", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"r2", "=", 
-       RowBox[{"r", "[", 
-        RowBox[{"object", ",", 
-         RowBox[{"index", "+", "1"}]}], "]"}]}], ",", "\[IndentingNewLine]", 
-      RowBox[{"r1", "=", 
-       RowBox[{"r", "[", 
-        RowBox[{"objects", ",", "index"}], "]"}]}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"\[ScriptL]0", "=", " ", 
-       RowBox[{"springs", "[", 
-        RowBox[{"[", 
-         RowBox[{"index", ",", "4"}], "]"}], "]"}]}], " ", ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"k", " ", "=", " ", 
-       RowBox[{"ks", "[", 
-        RowBox[{"object", ",", "index"}], "]"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", "=", 
+      RowBox[{"Length", "[", 
+       RowBox[{"object", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "]"}]}], "}"}], ",", 
     "\[IndentingNewLine]", 
-    RowBox[{"k", "*", 
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{"r2", "-", "r1"}], ")"}], "-", 
-       RowBox[{"\[ScriptL]0", "*", 
-        FractionBox[
-         RowBox[{"r2", "-", "r1"}], 
-         RowBox[{"Norm", "[", 
-          RowBox[{"r2", "-", "r1"}], "]"}]]}]}], ")"}]}]}], 
-   "\[IndentingNewLine]", "]"}]}]], "Input",
- CellChangeTimes->{{3.5917049586660147`*^9, 3.591704998058362*^9}, {
-  3.59170511820156*^9, 3.5917051337997704`*^9}, {3.591705513910771*^9, 
-  3.5917057645526648`*^9}, {3.591706072230187*^9, 3.59170607775035*^9}, {
-  3.591706113707644*^9, 3.591706119555285*^9}, {3.591706150466716*^9, 
-  3.591706329317231*^9}, {3.5917064170588207`*^9, 3.591706438813567*^9}, {
-  3.5917186115095663`*^9, 3.591718702868269*^9}}],
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"i", "\[Equal]", "1"}], ")"}], "||", 
+          RowBox[{"(", 
+           RowBox[{"i", "\[Equal]", "n"}], ")"}]}], ")"}], ",", 
+        RowBox[{"{", "}"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"cEvolve", "[", 
+       RowBox[{"object", ",", " ", "dt", ",", " ", "i"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", "n"}], "}"}]}], "]"}]}], "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.592133544685948*^9, 3.592133574477894*^9}, {
+  3.5921336354127283`*^9, 3.592133744737488*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"Evolve", "[", 
-   RowBox[{"object_", ",", "dt_"}], "]"}], ":=", "\[IndentingNewLine]", 
-  RowBox[{"Module", " ", "[", 
+  RowBox[{"hist", "[", 
    RowBox[{
-    RowBox[{"{", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"rnew", " ", "=", " ", 
-       RowBox[{
-        RowBox[{"r", "[", 
-         RowBox[{"object", ",", "i"}], "]"}], "+", 
-        RowBox[{
-         RowBox[{"v", "[", 
-          RowBox[{"object", ",", "i"}], "]"}], "*", 
-         RowBox[{"dt", "/", "2"}]}]}]}], ",", "\[IndentingNewLine]", 
-      RowBox[{"vnew", " ", "=", " ", 
-       RowBox[{
-        RowBox[{"v", "[", 
-         RowBox[{"object", ",", "i"}], "]"}], "+", 
-        RowBox[{
-         RowBox[{"a", "[", 
-          RowBox[{"object", ",", "i"}], "]"}], "*", "dt"}]}]}]}], "}"}], ",", 
-    "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"object", "[", "r", "]"}], "=", " ", 
-     RowBox[{"rnew", "+", 
-      RowBox[{"vnew", "*", 
-       RowBox[{"dt", "/", "2"}]}]}]}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.591718837525249*^9, 3.591718925816778*^9}, {
-  3.5917190863523607`*^9, 3.5917192429781647`*^9}}],
+   "object_", ",", " ", "steps_", ",", "dt_", ",", "omega2_", ",", "initS_"}],
+    "]"}], ":=", 
+  RowBox[{"NestList", "[", 
+   RowBox[{
+    RowBox[{"EvolveState", "[", 
+     RowBox[{"object", ",", " ", "dt"}], "]"}], ",", "asdf"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.5921325183249607`*^9, 3.592132518675272*^9}, {
+  3.5921326611188593`*^9, 3.592132668582343*^9}, {3.5921327028211527`*^9, 
+  3.5921327531717253`*^9}, {3.592133588806169*^9, 3.592133634042919*^9}, {
+  3.592133772922455*^9, 3.592133808072733*^9}}],
 
 Cell[CellGroupData[{
 
@@ -281,33 +429,366 @@ Cell[BoxData[
          RowBox[{"r", "[", 
           RowBox[{"Str", ",", "i"}], "]"}], ",", 
          RowBox[{"{", 
-          RowBox[{"i", ",", "10"}], "}"}]}], "]"}], "]"}]}], " ", "}"}], 
+          RowBox[{"i", ",", "200"}], "}"}]}], "]"}], "]"}]}], " ", "}"}], 
     "]"}], ",", 
    RowBox[{"Axes", "\[Rule]", "True"}], ",", 
    RowBox[{"ImageSize", "\[Rule]", "600"}], ",", 
-   RowBox[{"PlotLabel", "\[Rule]", "\"\<Points\>\""}]}], "]"}]], "Input",
+   RowBox[{"PlotLabel", "\[Rule]", "\"\<Points\>\""}], ",", " ", 
+   RowBox[{"PlotRange", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "30"}], ",", "30"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "}"}]}]}], "]"}]], "Input",
  CellChangeTimes->{{3.591718384746715*^9, 3.591718391530818*^9}, {
-  3.59171855812964*^9, 3.5917185585111017`*^9}}],
+  3.59171855812964*^9, 3.5917185585111017`*^9}, {3.592132531560089*^9, 
+  3.59213257030544*^9}, {3.5921326009871492`*^9, 3.592132603912504*^9}}],
 
 Cell[BoxData[
  Graphics3DBox[
   {RGBColor[0, 0, 1], PointSize[0.01], 
-   Point3DBox[{{0, 0, 0}, {1, 0, 0}, {2, 0, 0}, {3, 0, 0}, {4, 0, 0}, {5, 0, 
-    0}, {6, 0, 0}, {7, 0, 0}, {8, 0, 0}, {9, 0, 0}}]},
+   Point3DBox[
+    NCache[{{-100, 0, 
+      0}, {-99 + 10 E^Rational[-9801, 400] Sin[Rational[1, 50] Pi], 0, 
+       0}, {-98 + 10 E^Rational[-2401, 100] Sin[Rational[1, 25] Pi], 0, 
+       0}, {-97 + 10 E^Rational[-9409, 400] Sin[Rational[3, 50] Pi], 0, 
+       0}, {-96 + 10 E^Rational[-576, 25] Sin[Rational[2, 25] Pi], 0, 
+       0}, {-95 + Rational[5, 2] (-1 + 5^Rational[1, 2]) E^Rational[-361, 16],
+        0, 0}, {-94 + 10 E^Rational[-2209, 100] Sin[Rational[3, 25] Pi], 0, 
+       0}, {-93 + 10 E^Rational[-8649, 400] Sin[Rational[7, 50] Pi], 0, 
+       0}, {-92 + 10 E^Rational[-529, 25] Sin[Rational[4, 25] Pi], 0, 
+       0}, {-91 + 10 E^Rational[-8281, 400] Sin[Rational[9, 50] Pi], 0, 
+       0}, {-90 + 
+       10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2] 
+        E^Rational[-81, 4], 0, 0}, {-89 + 
+       10 E^Rational[-7921, 400] Sin[Rational[11, 50] Pi], 0, 0}, {-88 + 
+       10 E^Rational[-484, 25] Sin[Rational[6, 25] Pi], 0, 0}, {-87 + 
+       10 E^Rational[-7569, 400] Cos[Rational[6, 25] Pi], 0, 0}, {-86 + 
+       10 E^Rational[-1849, 100] Cos[Rational[11, 50] Pi], 0, 0}, {-85 + 
+       Rational[5, 2] (1 + 5^Rational[1, 2]) E^Rational[-289, 16], 0, 
+       0}, {-84 + 10 E^Rational[-441, 25] Cos[Rational[9, 50] Pi], 0, 
+       0}, {-83 + 10 E^Rational[-6889, 400] Cos[Rational[4, 25] Pi], 0, 
+       0}, {-82 + 10 E^Rational[-1681, 100] Cos[Rational[7, 50] Pi], 0, 
+       0}, {-81 + 10 E^Rational[-6561, 400] Cos[Rational[3, 25] Pi], 0, 
+       0}, {-80 + 
+       10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2] 
+        E^(-16), 0, 0}, {-79 + 
+       10 E^Rational[-6241, 400] Cos[Rational[2, 25] Pi], 0, 0}, {-78 + 
+       10 E^Rational[-1521, 100] Cos[Rational[3, 50] Pi], 0, 0}, {-77 + 
+       10 E^Rational[-5929, 400] Cos[Rational[1, 25] Pi], 0, 0}, {-76 + 
+       10 E^Rational[-361, 25] Cos[Rational[1, 50] Pi], 0, 0}, {-75 + 
+       10 E^Rational[-225, 16], 0, 0}, {-74 + 
+       10 E^Rational[-1369, 100] Cos[Rational[1, 50] Pi], 0, 0}, {-73 + 
+       10 E^Rational[-5329, 400] Cos[Rational[1, 25] Pi], 0, 0}, {-72 + 
+       10 E^Rational[-324, 25] Cos[Rational[3, 50] Pi], 0, 0}, {-71 + 
+       10 E^Rational[-5041, 400] Cos[Rational[2, 25] Pi], 0, 0}, {-70 + 
+       10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2] 
+        E^Rational[-49, 4], 0, 0}, {-69 + 
+       10 E^Rational[-4761, 400] Cos[Rational[3, 25] Pi], 0, 0}, {-68 + 
+       10 E^Rational[-289, 25] Cos[Rational[7, 50] Pi], 0, 0}, {-67 + 
+       10 E^Rational[-4489, 400] Cos[Rational[4, 25] Pi], 0, 0}, {-66 + 
+       10 E^Rational[-1089, 100] Cos[Rational[9, 50] Pi], 0, 0}, {-65 + 
+       Rational[5, 2] (1 + 5^Rational[1, 2]) E^Rational[-169, 16], 0, 
+       0}, {-64 + 10 E^Rational[-256, 25] Cos[Rational[11, 50] Pi], 0, 
+       0}, {-63 + 10 E^Rational[-3969, 400] Cos[Rational[6, 25] Pi], 0, 
+       0}, {-62 + 10 E^Rational[-961, 100] Sin[Rational[6, 25] Pi], 0, 
+       0}, {-61 + 10 E^Rational[-3721, 400] Sin[Rational[11, 50] Pi], 0, 
+       0}, {-60 + 
+       10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2] 
+        E^(-9), 0, 0}, {-59 + 
+       10 E^Rational[-3481, 400] Sin[Rational[9, 50] Pi], 0, 0}, {-58 + 
+       10 E^Rational[-841, 100] Sin[Rational[4, 25] Pi], 0, 0}, {-57 + 
+       10 E^Rational[-3249, 400] Sin[Rational[7, 50] Pi], 0, 0}, {-56 + 
+       10 E^Rational[-196, 25] Sin[Rational[3, 25] Pi], 0, 0}, {-55 + 
+       Rational[5, 2] (-1 + 5^Rational[1, 2]) E^Rational[-121, 16], 0, 
+       0}, {-54 + 10 E^Rational[-729, 100] Sin[Rational[2, 25] Pi], 0, 
+       0}, {-53 + 10 E^Rational[-2809, 400] Sin[Rational[3, 50] Pi], 0, 
+       0}, {-52 + 10 E^Rational[-169, 25] Sin[Rational[1, 25] Pi], 0, 
+       0}, {-51 + 10 E^Rational[-2601, 400] Sin[Rational[1, 50] Pi], 0, 
+       0}, {-50, 0, 
+      0}, {-49 - 10 E^Rational[-2401, 400] Sin[Rational[1, 50] Pi], 0, 
+       0}, {-48 - 10 E^Rational[-144, 25] Sin[Rational[1, 25] Pi], 0, 
+       0}, {-47 - 10 E^Rational[-2209, 400] Sin[Rational[3, 50] Pi], 0, 
+       0}, {-46 - 10 E^Rational[-529, 100] Sin[Rational[2, 25] Pi], 0, 
+       0}, {-45 + Rational[5, 2] (1 - 5^Rational[1, 2]) E^Rational[-81, 16], 
+       0, 0}, {-44 - 10 E^Rational[-121, 25] Sin[Rational[3, 25] Pi], 0, 
+       0}, {-43 - 10 E^Rational[-1849, 400] Sin[Rational[7, 50] Pi], 0, 
+       0}, {-42 - 10 E^Rational[-441, 100] Sin[Rational[4, 25] Pi], 0, 
+       0}, {-41 - 10 E^Rational[-1681, 400] Sin[Rational[9, 50] Pi], 0, 
+       0}, {-40 - 
+       10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2] 
+       E^(-4), 0, 0}, {-39 - 10 E^Rational[-1521, 400] 
+       Sin[Rational[11, 50] Pi], 0, 0}, {-38 - 10 E^Rational[-361, 100] 
+       Sin[Rational[6, 25] Pi], 0, 0}, {-37 - 10 E^Rational[-1369, 400] 
+       Cos[Rational[6, 25] Pi], 0, 0}, {-36 - 10 E^Rational[-81, 25] 
+       Cos[Rational[11, 50] Pi], 0, 0}, {-35 + 
+       Rational[5, 2] (-1 - 5^Rational[1, 2]) E^Rational[-49, 16], 0, 
+       0}, {-34 - 10 E^Rational[-289, 100] Cos[Rational[9, 50] Pi], 0, 
+       0}, {-33 - 10 E^Rational[-1089, 400] Cos[Rational[4, 25] Pi], 0, 
+       0}, {-32 - 10 E^Rational[-64, 25] Cos[Rational[7, 50] Pi], 0, 0}, {-31 - 
+       10 E^Rational[-961, 400] Cos[Rational[3, 25] Pi], 0, 0}, {-30 - 
+       10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2] 
+       E^Rational[-9, 4], 0, 0}, {-29 - 10 E^Rational[-841, 400] 
+       Cos[Rational[2, 25] Pi], 0, 0}, {-28 - 10 E^Rational[-49, 25] 
+       Cos[Rational[3, 50] Pi], 0, 0}, {-27 - 10 E^Rational[-729, 400] 
+       Cos[Rational[1, 25] Pi], 0, 0}, {-26 - 10 E^Rational[-169, 100] 
+       Cos[Rational[1, 50] Pi], 0, 0}, {-25 - 10 E^Rational[-25, 16], 0, 
+       0}, {-24 - 10 E^Rational[-36, 25] Cos[Rational[1, 50] Pi], 0, 0}, {-23 - 
+       10 E^Rational[-529, 400] Cos[Rational[1, 25] Pi], 0, 0}, {-22 - 10 
+       E^Rational[-121, 100] Cos[Rational[3, 50] Pi], 0, 0}, {-21 - 10 
+       E^Rational[-441, 400] Cos[Rational[2, 25] Pi], 0, 0}, {-20 - 
+       10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^Rational[1, 2]/E,
+        0, 0}, {-19 - 10 E^Rational[-361, 400] Cos[Rational[3, 25] Pi], 0, 
+       0}, {-18 - 10 E^Rational[-81, 100] Cos[Rational[7, 50] Pi], 0, 
+       0}, {-17 - 10 E^Rational[-289, 400] Cos[Rational[4, 25] Pi], 0, 
+       0}, {-16 - 10 E^Rational[-16, 25] Cos[Rational[9, 50] Pi], 0, 0}, {-15 + 
+       Rational[5, 2] (-1 - 5^Rational[1, 2]) E^Rational[-9, 16], 0, 0}, {-14 - 
+       10 E^Rational[-49, 100] Cos[Rational[11, 50] Pi], 0, 0}, {-13 - 10 
+       E^Rational[-169, 400] Cos[Rational[6, 25] Pi], 0, 0}, {-12 - 10 
+       E^Rational[-9, 25] Sin[Rational[6, 25] Pi], 0, 0}, {-11 - 10 
+       E^Rational[-121, 400] Sin[Rational[11, 50] Pi], 0, 0}, {-10 - 
+       10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^Rational[1, 2] 
+       E^Rational[-1, 4], 0, 0}, {-9 - 10 E^Rational[-81, 400] 
+       Sin[Rational[9, 50] Pi], 0, 0}, {-8 - 10 E^Rational[-4, 25] 
+       Sin[Rational[4, 25] Pi], 0, 0}, {-7 - 10 E^Rational[-49, 400] 
+       Sin[Rational[7, 50] Pi], 0, 0}, {-6 - 10 E^Rational[-9, 100] 
+       Sin[Rational[3, 25] Pi], 0, 0}, {-5 + 
+       Rational[5, 2] (1 - 5^Rational[1, 2]) E^Rational[-1, 16], 0, 0}, {-4 - 
+       10 E^Rational[-1, 25] Sin[Rational[2, 25] Pi], 0, 0}, {-3 - 10 
+       E^Rational[-9, 400] Sin[Rational[3, 50] Pi], 0, 0}, {-2 - 10 
+       E^Rational[-1, 100] Sin[Rational[1, 25] Pi], 0, 0}, {-1 - 10 
+       E^Rational[-1, 400] Sin[Rational[1, 50] Pi], 0, 0}, {0, 0, 0}, {
+      1 + 10 E^Rational[-1, 400] Sin[Rational[1, 50] Pi], 0, 0}, {
+      2 + 10 E^Rational[-1, 100] Sin[Rational[1, 25] Pi], 0, 0}, {
+      3 + 10 E^Rational[-9, 400] Sin[Rational[3, 50] Pi], 0, 0}, {
+      4 + 10 E^Rational[-1, 25] Sin[Rational[2, 25] Pi], 0, 0}, {
+      5 + Rational[5, 2] (-1 + 5^Rational[1, 2]) E^Rational[-1, 16], 0, 0}, {
+      6 + 10 E^Rational[-9, 100] Sin[Rational[3, 25] Pi], 0, 0}, {
+      7 + 10 E^Rational[-49, 400] Sin[Rational[7, 50] Pi], 0, 0}, {
+      8 + 10 E^Rational[-4, 25] Sin[Rational[4, 25] Pi], 0, 0}, {
+      9 + 10 E^Rational[-81, 400] Sin[Rational[9, 50] Pi], 0, 0}, {
+      10 + 10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+         Rational[1, 2] E^Rational[-1, 4], 0, 0}, {
+      11 + 10 E^Rational[-121, 400] Sin[Rational[11, 50] Pi], 0, 0}, {
+      12 + 10 E^Rational[-9, 25] Sin[Rational[6, 25] Pi], 0, 0}, {
+      13 + 10 E^Rational[-169, 400] Cos[Rational[6, 25] Pi], 0, 0}, {
+      14 + 10 E^Rational[-49, 100] Cos[Rational[11, 50] Pi], 0, 0}, {
+      15 + Rational[5, 2] (1 + 5^Rational[1, 2]) E^Rational[-9, 16], 0, 0}, {
+      16 + 10 E^Rational[-16, 25] Cos[Rational[9, 50] Pi], 0, 0}, {
+      17 + 10 E^Rational[-289, 400] Cos[Rational[4, 25] Pi], 0, 0}, {
+      18 + 10 E^Rational[-81, 100] Cos[Rational[7, 50] Pi], 0, 0}, {
+      19 + 10 E^Rational[-361, 400] Cos[Rational[3, 25] Pi], 0, 0}, {
+      20 + 10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+         Rational[1, 2]/E, 0, 0}, {
+      21 + 10 E^Rational[-441, 400] Cos[Rational[2, 25] Pi], 0, 0}, {
+      22 + 10 E^Rational[-121, 100] Cos[Rational[3, 50] Pi], 0, 0}, {
+      23 + 10 E^Rational[-529, 400] Cos[Rational[1, 25] Pi], 0, 0}, {
+      24 + 10 E^Rational[-36, 25] Cos[Rational[1, 50] Pi], 0, 0}, {
+      25 + 10 E^Rational[-25, 16], 0, 0}, {
+      26 + 10 E^Rational[-169, 100] Cos[Rational[1, 50] Pi], 0, 0}, {
+      27 + 10 E^Rational[-729, 400] Cos[Rational[1, 25] Pi], 0, 0}, {
+      28 + 10 E^Rational[-49, 25] Cos[Rational[3, 50] Pi], 0, 0}, {
+      29 + 10 E^Rational[-841, 400] Cos[Rational[2, 25] Pi], 0, 0}, {
+      30 + 10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+         Rational[1, 2] E^Rational[-9, 4], 0, 0}, {
+      31 + 10 E^Rational[-961, 400] Cos[Rational[3, 25] Pi], 0, 0}, {
+      32 + 10 E^Rational[-64, 25] Cos[Rational[7, 50] Pi], 0, 0}, {
+      33 + 10 E^Rational[-1089, 400] Cos[Rational[4, 25] Pi], 0, 0}, {
+      34 + 10 E^Rational[-289, 100] Cos[Rational[9, 50] Pi], 0, 0}, {
+      35 + Rational[5, 2] (1 + 5^Rational[1, 2]) E^Rational[-49, 16], 0, 0}, {
+      36 + 10 E^Rational[-81, 25] Cos[Rational[11, 50] Pi], 0, 0}, {
+      37 + 10 E^Rational[-1369, 400] Cos[Rational[6, 25] Pi], 0, 0}, {
+      38 + 10 E^Rational[-361, 100] Sin[Rational[6, 25] Pi], 0, 0}, {
+      39 + 10 E^Rational[-1521, 400] Sin[Rational[11, 50] Pi], 0, 0}, {
+      40 + 10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+         Rational[1, 2] E^(-4), 0, 0}, {
+      41 + 10 E^Rational[-1681, 400] Sin[Rational[9, 50] Pi], 0, 0}, {
+      42 + 10 E^Rational[-441, 100] Sin[Rational[4, 25] Pi], 0, 0}, {
+      43 + 10 E^Rational[-1849, 400] Sin[Rational[7, 50] Pi], 0, 0}, {
+      44 + 10 E^Rational[-121, 25] Sin[Rational[3, 25] Pi], 0, 0}, {
+      45 + Rational[5, 2] (-1 + 5^Rational[1, 2]) E^Rational[-81, 16], 0, 
+       0}, {46 + 10 E^Rational[-529, 100] Sin[Rational[2, 25] Pi], 0, 0}, {
+      47 + 10 E^Rational[-2209, 400] Sin[Rational[3, 50] Pi], 0, 0}, {
+      48 + 10 E^Rational[-144, 25] Sin[Rational[1, 25] Pi], 0, 0}, {
+      49 + 10 E^Rational[-2401, 400] Sin[Rational[1, 50] Pi], 0, 0}, {50, 0, 
+      0}, {51 - 10 E^Rational[-2601, 400] Sin[Rational[1, 50] Pi], 0, 0}, {
+      52 - 10 E^Rational[-169, 25] Sin[Rational[1, 25] Pi], 0, 0}, {
+      53 - 10 E^Rational[-2809, 400] Sin[Rational[3, 50] Pi], 0, 0}, {
+      54 - 10 E^Rational[-729, 100] Sin[Rational[2, 25] Pi], 0, 0}, {
+      55 + Rational[5, 2] (1 - 5^Rational[1, 2]) E^Rational[-121, 16], 0, 
+       0}, {56 - 10 E^Rational[-196, 25] Sin[Rational[3, 25] Pi], 0, 0}, {
+      57 - 10 E^Rational[-3249, 400] Sin[Rational[7, 50] Pi], 0, 0}, {
+      58 - 10 E^Rational[-841, 100] Sin[Rational[4, 25] Pi], 0, 0}, {
+      59 - 10 E^Rational[-3481, 400] Sin[Rational[9, 50] Pi], 0, 0}, {
+      60 - 10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+        Rational[1, 2] E^(-9), 0, 0}, {
+      61 - 10 E^Rational[-3721, 400] Sin[Rational[11, 50] Pi], 0, 0}, {
+      62 - 10 E^Rational[-961, 100] Sin[Rational[6, 25] Pi], 0, 0}, {
+      63 - 10 E^Rational[-3969, 400] Cos[Rational[6, 25] Pi], 0, 0}, {
+      64 - 10 E^Rational[-256, 25] Cos[Rational[11, 50] Pi], 0, 0}, {
+      65 + Rational[5, 2] (-1 - 5^Rational[1, 2]) E^Rational[-169, 16], 0, 
+       0}, {66 - 10 E^Rational[-1089, 100] Cos[Rational[9, 50] Pi], 0, 0}, {
+      67 - 10 E^Rational[-4489, 400] Cos[Rational[4, 25] Pi], 0, 0}, {
+      68 - 10 E^Rational[-289, 25] Cos[Rational[7, 50] Pi], 0, 0}, {
+      69 - 10 E^Rational[-4761, 400] Cos[Rational[3, 25] Pi], 0, 0}, {
+      70 - 10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+        Rational[1, 2] E^Rational[-49, 4], 0, 0}, {
+      71 - 10 E^Rational[-5041, 400] Cos[Rational[2, 25] Pi], 0, 0}, {
+      72 - 10 E^Rational[-324, 25] Cos[Rational[3, 50] Pi], 0, 0}, {
+      73 - 10 E^Rational[-5329, 400] Cos[Rational[1, 25] Pi], 0, 0}, {
+      74 - 10 E^Rational[-1369, 100] Cos[Rational[1, 50] Pi], 0, 0}, {
+      75 - 10 E^Rational[-225, 16], 0, 0}, {
+      76 - 10 E^Rational[-361, 25] Cos[Rational[1, 50] Pi], 0, 0}, {
+      77 - 10 E^Rational[-5929, 400] Cos[Rational[1, 25] Pi], 0, 0}, {
+      78 - 10 E^Rational[-1521, 100] Cos[Rational[3, 50] Pi], 0, 0}, {
+      79 - 10 E^Rational[-6241, 400] Cos[Rational[2, 25] Pi], 0, 0}, {
+      80 - 10 (Rational[5, 8] + Rational[1, 8] 5^Rational[1, 2])^
+        Rational[1, 2] E^(-16), 0, 0}, {
+      81 - 10 E^Rational[-6561, 400] Cos[Rational[3, 25] Pi], 0, 0}, {
+      82 - 10 E^Rational[-1681, 100] Cos[Rational[7, 50] Pi], 0, 0}, {
+      83 - 10 E^Rational[-6889, 400] Cos[Rational[4, 25] Pi], 0, 0}, {
+      84 - 10 E^Rational[-441, 25] Cos[Rational[9, 50] Pi], 0, 0}, {
+      85 + Rational[5, 2] (-1 - 5^Rational[1, 2]) E^Rational[-289, 16], 0, 
+       0}, {86 - 10 E^Rational[-1849, 100] Cos[Rational[11, 50] Pi], 0, 0}, {
+      87 - 10 E^Rational[-7569, 400] Cos[Rational[6, 25] Pi], 0, 0}, {
+      88 - 10 E^Rational[-484, 25] Sin[Rational[6, 25] Pi], 0, 0}, {
+      89 - 10 E^Rational[-7921, 400] Sin[Rational[11, 50] Pi], 0, 0}, {
+      90 - 10 (Rational[5, 8] + Rational[-1, 8] 5^Rational[1, 2])^
+        Rational[1, 2] E^Rational[-81, 4], 0, 0}, {
+      91 - 10 E^Rational[-8281, 400] Sin[Rational[9, 50] Pi], 0, 0}, {
+      92 - 10 E^Rational[-529, 25] Sin[Rational[4, 25] Pi], 0, 0}, {
+      93 - 10 E^Rational[-8649, 400] Sin[Rational[7, 50] Pi], 0, 0}, {
+      94 - 10 E^Rational[-2209, 100] Sin[Rational[3, 25] Pi], 0, 0}, {
+      95 + Rational[5, 2] (1 - 5^Rational[1, 2]) E^Rational[-361, 16], 0, 
+       0}, {96 - 10 E^Rational[-576, 25] Sin[Rational[2, 25] Pi], 0, 0}, {
+      97 - 10 E^Rational[-9409, 400] Sin[Rational[3, 50] Pi], 0, 0}, {
+      98 - 10 E^Rational[-2401, 100] Sin[Rational[1, 25] Pi], 0, 0}, {
+      99 - 10 E^Rational[-9801, 400] Sin[Rational[1, 50] Pi], 0, 0}}, {{-100, 
+      0, 0}, {-98.99999999998566, 0, 0}, {-97.99999999995316, 0, 
+       0}, {-96.99999999988597, 0, 0}, {-95.9999999997548, 0, 
+       0}, {-94.99999999950884, 0, 0}, {-93.99999999906152, 0, 
+       0}, {-92.99999999826758, 0, 0}, {-91.99999999688718, 0, 
+       0}, {-90.9999999945293, 0, 0}, {-89.9999999905647, 0, 
+       0}, {-88.99999998399292, 0, 0}, {-87.99999997324147, 0, 
+       0}, {-86.99999995586619, 0, 0}, {-85.99999992810889, 0, 
+       0}, {-84.99999988425198, 0, 0}, {-83.99999981568678, 0, 
+       0}, {-82.99999970958476, 0, 0}, {-81.99999954702385, 0, 
+       0}, {-80.99999930037822, 0, 0}, {-79.99999892972689, 0, 
+       0}, {-78.99999837797606, 0, 0}, {-77.99999756432445, 0, 
+       0}, {-76.999996375635, 0, 0}, {-75.99999465521975, 0, 
+       0}, {-74.99999218851059, 0, 0}, {-73.99998868510013, 0, 
+       0}, {-72.99998375672303, 0, 0}, {-71.99997689095375, 0, 
+       0}, {-70.9999674207782, 0, 0}, {-69.99995449082923, 0, 
+       0}, {-68.99993702205464, 0, 0}, {-67.99991367802548, 0, 
+       0}, {-66.99988283812881, 0, 0}, {-65.99984258567714, 0, 
+       0}, {-64.99979072267308, 0, 0}, {-63.99972482776414, 0, 
+       0}, {-62.99964237996502, 0, 0}, {-61.99954097814085, 0, 
+       0}, {-60.999418695096466`, 0, 0}, {-59.9992746153717, 0, 
+       0}, {-58.99910961732954, 0, 0}, {-57.998927472484645`, 0, 
+       0}, {-56.998736347660426`, 0, 0}, {-55.99855080760503, 0, 
+       0}, {-54.998394425933675`, 0, 0}, {-53.99830311913551, 0, 
+       0}, {-52.99832931996671, 0, 0}, {-51.99854710059193, 0, 
+       0}, {-50.99905833981553, 0, 0}, {-50, 0, 
+      0}, {-49.00155253517592, 0, 0}, {-48.00394939005955, 0, 
+       0}, {-47.007487468445234`, 0, 0}, {-46.01253834790095, 0, 
+       0}, {-45.0195598963665, 0, 0}, {-44.02910780735797, 0, 
+       0}, {-43.04184641834372, 0, 0}, {-42.05855801819798, 0, 
+       0}, {-41.08014969375475, 0, 0}, {-40.10765662425113, 0, 
+       0}, {-39.14224062008036, 0, 0}, {-38.18518263482386, 0, 
+       0}, {-37.23786797407865, 0, 0}, {-36.30176299812452, 0, 
+       0}, {-35.378382283461164`, 0, 0}, {-34.46924548301512, 0, 
+       0}, {-33.57582351376768, 0, 0}, {-32.699474204369615`, 0, 
+       0}, {-31.84136814633033, 0, 0}, {-31.002406193320173`, 0, 
+       0}, {-30.183130816370223`, 0, 0}, {-29.383634310285178`, 0, 
+       0}, {-28.603467610888398`, 0, 0}, {-27.84155416861865, 0, 
+       0}, {-27.09611387151098, 0, 0}, {-26.36460235871361, 0, 
+       0}, {-25.64367115695042, 0, 0}, {-24.929153857859585`, 0, 
+       0}, {-24.216082998829094`, 0, 0}, {-23.498741397371198`, 0, 
+       0}, {-22.770750425539234`, 0, 0}, {-22.025196128262372`, 0, 
+       0}, {-21.254792246312768`, 0, 0}, {-20.45207718525196, 0, 
+       0}, {-19.609639883102787`, 0, 0}, {-18.720367495930734`, 0, 
+       0}, {-17.777705976200455`, 0, 0}, {-16.775923098868844`, 0, 
+       0}, {-15.71036242084574, 0, 0}, {-14.577676147632014`, 0, 
+       0}, {-13.376025004732158`, 0, 0}, {-12.10523401197429, 0, 
+       0}, {-10.76689453450273, 0, 0}, {-9.364405087625483, 0, 
+       0}, {-7.90294601147184, 0, 0}, {-6.389386172119753, 0, 
+       0}, {-4.83212312163106, 0, 0}, {-3.240861470535851, 0, 
+       0}, {-1.626337392874488, 0, 0}, {0, 0, 0}, {1.626337392874488, 0, 0}, {
+      3.240861470535851, 0, 0}, {4.83212312163106, 0, 0}, {
+      6.389386172119753, 0, 0}, {7.90294601147184, 0, 0}, {
+      9.364405087625483, 0, 0}, {10.76689453450273, 0, 0}, {
+      12.10523401197429, 0, 0}, {13.376025004732158`, 0, 0}, {
+      14.577676147632014`, 0, 0}, {15.71036242084574, 0, 0}, {
+      16.775923098868844`, 0, 0}, {17.777705976200455`, 0, 0}, {
+      18.720367495930734`, 0, 0}, {19.609639883102787`, 0, 0}, {
+      20.45207718525196, 0, 0}, {21.254792246312768`, 0, 0}, {
+      22.025196128262372`, 0, 0}, {22.770750425539234`, 0, 0}, {
+      23.498741397371198`, 0, 0}, {24.216082998829094`, 0, 0}, {
+      24.929153857859585`, 0, 0}, {25.64367115695042, 0, 0}, {
+      26.36460235871361, 0, 0}, {27.09611387151098, 0, 0}, {
+      27.84155416861865, 0, 0}, {28.603467610888398`, 0, 0}, {
+      29.383634310285178`, 0, 0}, {30.183130816370223`, 0, 0}, {
+      31.002406193320173`, 0, 0}, {31.84136814633033, 0, 0}, {
+      32.699474204369615`, 0, 0}, {33.57582351376768, 0, 0}, {
+      34.46924548301512, 0, 0}, {35.378382283461164`, 0, 0}, {
+      36.30176299812452, 0, 0}, {37.23786797407865, 0, 0}, {
+      38.18518263482386, 0, 0}, {39.14224062008036, 0, 0}, {
+      40.10765662425113, 0, 0}, {41.08014969375475, 0, 0}, {
+      42.05855801819798, 0, 0}, {43.04184641834372, 0, 0}, {
+      44.02910780735797, 0, 0}, {45.0195598963665, 0, 0}, {
+      46.01253834790095, 0, 0}, {47.007487468445234`, 0, 0}, {
+      48.00394939005955, 0, 0}, {49.00155253517592, 0, 0}, {50, 0, 0}, {
+      50.99905833981553, 0, 0}, {51.99854710059193, 0, 0}, {
+      52.99832931996671, 0, 0}, {53.99830311913551, 0, 0}, {
+      54.998394425933675`, 0, 0}, {55.99855080760503, 0, 0}, {
+      56.998736347660426`, 0, 0}, {57.998927472484645`, 0, 0}, {
+      58.99910961732954, 0, 0}, {59.9992746153717, 0, 0}, {
+      60.999418695096466`, 0, 0}, {61.99954097814085, 0, 0}, {
+      62.99964237996502, 0, 0}, {63.99972482776414, 0, 0}, {
+      64.99979072267308, 0, 0}, {65.99984258567714, 0, 0}, {
+      66.99988283812881, 0, 0}, {67.99991367802548, 0, 0}, {
+      68.99993702205464, 0, 0}, {69.99995449082923, 0, 0}, {
+      70.9999674207782, 0, 0}, {71.99997689095375, 0, 0}, {
+      72.99998375672303, 0, 0}, {73.99998868510013, 0, 0}, {
+      74.99999218851059, 0, 0}, {75.99999465521975, 0, 0}, {
+      76.999996375635, 0, 0}, {77.99999756432445, 0, 0}, {
+      78.99999837797606, 0, 0}, {79.99999892972689, 0, 0}, {
+      80.99999930037822, 0, 0}, {81.99999954702385, 0, 0}, {
+      82.99999970958476, 0, 0}, {83.99999981568678, 0, 0}, {
+      84.99999988425198, 0, 0}, {85.99999992810889, 0, 0}, {
+      86.99999995586619, 0, 0}, {87.99999997324147, 0, 0}, {
+      88.99999998399292, 0, 0}, {89.9999999905647, 0, 0}, {
+      90.9999999945293, 0, 0}, {91.99999999688718, 0, 0}, {
+      92.99999999826758, 0, 0}, {93.99999999906152, 0, 0}, {
+      94.99999999950884, 0, 0}, {95.9999999997548, 0, 0}, {
+      96.99999999988597, 0, 0}, {97.99999999995316, 0, 0}, {
+      98.99999999998566, 0, 0}}]]},
   Axes->True,
   ImageSize->600,
   PlotLabel->FormBox["\"Points\"", TraditionalForm],
-  ViewPoint->{1.9336380962256938`, -1.7777323449357045`, 2.133239654280333},
-  ViewVertical->{0.0460400267602928, 0.5205988418685155, 
-   4.464980766313262}]], "Output",
+  PlotRange->{{-30, 30}, {-5, 5}, {-5, 5}},
+  ViewPoint->{-0.13381852020469412`, -3.3223888150788228`, \
+-0.6275549100193277},
+  ViewVertical->{0.006286367598699428, 2.3038671566801656`, 
+   5.539925402145533}]], "Output",
  CellChangeTimes->{
-  3.591718392117507*^9, {3.591718558882085*^9, 3.591718571605113*^9}}]
+  3.591718392117507*^9, {3.591718558882085*^9, 3.591718571605113*^9}, 
+   3.59197003904749*^9, 3.591980204273918*^9, 3.592131211674265*^9, 
+   3.592132208680594*^9, {3.592132454589376*^9, 3.592132570858762*^9}, 
+   3.592132604607963*^9, 3.5921338353727617`*^9}]
 }, Open  ]]
 },
 WindowSize->{958, 1184},
-WindowMargins->{{0, Automatic}, {2, Automatic}},
+WindowMargins->{{145, Automatic}, {Automatic, 0}},
 ShowSelection->True,
-FrontEndVersion->"9.0 for Linux x86 (64-bit) (February 7, 2013)",
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -321,18 +802,20 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 164, 3, 67, "Input"],
-Cell[724, 25, 976, 24, 133, "Input"],
-Cell[1703, 51, 338, 8, 32, "Input"],
-Cell[2044, 61, 2532, 70, 187, "Input"],
-Cell[4579, 133, 151, 3, 32, "Input"],
-Cell[4733, 138, 1756, 46, 77, "Input"],
-Cell[6492, 186, 221, 5, 32, "Input"],
-Cell[6716, 193, 1632, 41, 224, "Input"],
-Cell[8351, 236, 1104, 30, 121, "Input"],
+Cell[557, 20, 197, 5, 66, "Input"],
+Cell[757, 27, 2163, 60, 184, "Input"],
+Cell[2923, 89, 338, 8, 28, "Input"],
+Cell[3264, 99, 2532, 70, 148, "Input"],
+Cell[5799, 171, 3967, 101, 244, "Input"],
+Cell[9769, 274, 967, 32, 46, "Input"],
+Cell[10739, 308, 534, 13, 28, "Input"],
+Cell[11276, 323, 186, 4, 28, "Input"],
+Cell[11465, 329, 1404, 38, 97, "Input"],
+Cell[12872, 369, 1019, 29, 63, "Input"],
+Cell[13894, 400, 582, 14, 28, "Input"],
 Cell[CellGroupData[{
-Cell[9480, 270, 729, 19, 55, "Input"],
-Cell[10212, 291, 548, 12, 465, "Output"]
+Cell[14501, 418, 1179, 32, 46, "Input"],
+Cell[15683, 452, 21640, 331, 180, "Output"]
 }, Open  ]]
 }
 ]
