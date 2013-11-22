@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     47053,       1201]
-NotebookOptionsPosition[     45153,       1137]
-NotebookOutlinePosition[     45518,       1153]
-CellTagsIndexPosition[     45475,       1150]
+NotebookDataLength[     46602,       1185]
+NotebookOptionsPosition[     44816,       1125]
+NotebookOutlinePosition[     45181,       1141]
+CellTagsIndexPosition[     45138,       1138]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1010,18 +1010,6 @@ Cell[BoxData[
    3.59394172002488*^9}, {3.593941835588737*^9, 3.5939418357284727`*^9}, {
    3.59394929899837*^9, 3.593949312983087*^9}}],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"Quotient", "[", 
-  RowBox[{"5", ",", "3"}], "]"}]], "Input",
- CellChangeTimes->{{3.593949947689847*^9, 3.59394999228365*^9}}],
-
-Cell[BoxData["1"], "Output",
- CellChangeTimes->{{3.5939499534708767`*^9, 3.593949992566592*^9}, 
-   3.5941231223570576`*^9, 3.5941235475717087`*^9}]
-}, Open  ]],
-
 Cell[BoxData[
  RowBox[{
   RowBox[{"normalGrid", "[", 
@@ -1189,19 +1177,15 @@ Cell[33143, 843, 123, 2, 44, "Input"],
 Cell[33269, 847, 151, 2, 31, "Output"]
 }, Open  ]],
 Cell[33435, 852, 7011, 158, 232, "Input"],
+Cell[40449, 1012, 727, 17, 31, "Input"],
 Cell[CellGroupData[{
-Cell[40471, 1014, 149, 3, 31, "Input"],
-Cell[40623, 1019, 148, 2, 31, "Output"]
+Cell[41201, 1033, 165, 3, 31, "Input"],
+Cell[41369, 1038, 196, 4, 31, "Output"]
 }, Open  ]],
-Cell[40786, 1024, 727, 17, 31, "Input"],
+Cell[41580, 1045, 798, 18, 72, "Input"],
 Cell[CellGroupData[{
-Cell[41538, 1045, 165, 3, 31, "Input"],
-Cell[41706, 1050, 196, 4, 31, "Output"]
-}, Open  ]],
-Cell[41917, 1057, 798, 18, 72, "Input"],
-Cell[CellGroupData[{
-Cell[42740, 1079, 1140, 29, 52, "Input"],
-Cell[43883, 1110, 1254, 24, 426, "Output"]
+Cell[42403, 1067, 1140, 29, 52, "Input"],
+Cell[43546, 1098, 1254, 24, 394, "Output"]
 }, Open  ]]
 }
 ]
