@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     10315,        300]
-NotebookOptionsPosition[      9581,        272]
-NotebookOutlinePosition[      9926,        287]
-CellTagsIndexPosition[      9883,        284]
+NotebookDataLength[      9909,        281]
+NotebookOptionsPosition[      9285,        257]
+NotebookOutlinePosition[      9630,        272]
+CellTagsIndexPosition[      9587,        269]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,11 +30,11 @@ Cell[BoxData[
 Cell[BoxData[
  RowBox[{
   RowBox[{"testState", "=", 
-   RowBox[{"rvcoords", "[", 
-    RowBox[{"Str", ",", "200"}], "]"}]}], ";"}]], "Input",
+   RowBox[{"rvcoords", "[", "Str", "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.5941224499465547`*^9, 3.594122459066737*^9}, {
    3.5941226777892165`*^9, 3.594122683030884*^9}, 3.5941231983456316`*^9, {
-   3.594123831635751*^9, 3.594123835395399*^9}}],
+   3.594123831635751*^9, 3.594123835395399*^9}, {3.594381772227728*^9, 
+   3.5943817727467794`*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -156,22 +156,6 @@ Cell[BoxData[{
   3.5941243587217083`*^9, 3.5941243591273136`*^9}, {3.5941245673129826`*^9, 
   3.594124568576599*^9}}],
 
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"testHist", "[", 
-   RowBox[{"[", "1", "]"}], "]"}], "[", 
-  RowBox[{"[", 
-   RowBox[{"2", ",", "2"}], "]"}], "]"}]], "Input",
- CellChangeTimes->{{3.5941244546483383`*^9, 3.5941244772998285`*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"0", ",", "0", ",", "0"}], "}"}]], "Output",
- CellChangeTimes->{{3.594124458220784*^9, 3.594124477565032*^9}}]
-}, Open  ]],
-
 Cell[BoxData[
  RowBox[{
   RowBox[{"ppp", "[", "object_", "]"}], ":=", 
@@ -235,11 +219,11 @@ Cell[BoxData[
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`lol$$], 1, 20000, 1}}, Typeset`size$$ = {
     600., {163., 167.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`lol$7476367$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`lol$3983904$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`lol$$ = 1}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`lol$$, $CellContext`lol$7476367$$, 0]}, 
+        Hold[$CellContext`lol$$, $CellContext`lol$3983904$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -267,11 +251,12 @@ Cell[BoxData[
  CellChangeTimes->{{3.5941227956571083`*^9, 3.594122812983841*^9}, 
    3.594122966389449*^9, 3.594123181216612*^9, 3.594124361826148*^9, {
    3.5941245148651104`*^9, 3.5941245574068556`*^9}, 3.594124666546855*^9, 
-   3.5941247687905655`*^9}]
+   3.5941247687905655`*^9, 3.5943814189694057`*^9, 3.594381720810587*^9, 
+   3.5943818744969535`*^9, 3.5943839473142147`*^9}]
 }, Open  ]]
 },
 WindowSize->{707, 787},
-WindowMargins->{{Automatic, 282}, {Automatic, -2}},
+WindowMargins->{{46, Automatic}, {-73, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -287,20 +272,16 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 325, 7, 31, "Input"],
-Cell[885, 29, 334, 7, 31, "Input"],
-Cell[1222, 38, 138, 3, 31, "Input"],
-Cell[1363, 43, 997, 28, 72, "Input"],
-Cell[2363, 73, 2029, 56, 92, "Input"],
-Cell[4395, 131, 390, 10, 52, "Input"],
-Cell[4788, 143, 564, 13, 92, "Input"],
+Cell[885, 29, 359, 7, 31, "Input"],
+Cell[1247, 38, 138, 3, 31, "Input"],
+Cell[1388, 43, 997, 28, 72, "Input"],
+Cell[2388, 73, 2029, 56, 92, "Input"],
+Cell[4420, 131, 390, 10, 52, "Input"],
+Cell[4813, 143, 564, 13, 92, "Input"],
+Cell[5380, 158, 401, 11, 31, "Input"],
 Cell[CellGroupData[{
-Cell[5377, 160, 230, 6, 31, "Input"],
-Cell[5610, 168, 149, 3, 31, "Output"]
-}, Open  ]],
-Cell[5774, 174, 401, 11, 31, "Input"],
-Cell[CellGroupData[{
-Cell[6200, 189, 1351, 37, 112, "Input"],
-Cell[7554, 228, 2011, 41, 440, "Output"]
+Cell[5806, 173, 1351, 37, 112, "Input"],
+Cell[7160, 212, 2109, 42, 440, "Output"]
 }, Open  ]]
 }
 ]
