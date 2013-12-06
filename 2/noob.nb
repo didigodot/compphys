@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      9930,        281]
-NotebookOptionsPosition[      9306,        257]
-NotebookOutlinePosition[      9651,        272]
-CellTagsIndexPosition[      9608,        269]
+NotebookDataLength[      9975,        280]
+NotebookOptionsPosition[      9351,        256]
+NotebookOutlinePosition[      9697,        271]
+CellTagsIndexPosition[      9654,        268]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -199,16 +199,14 @@ Cell[BoxData[
          RowBox[{
           RowBox[{"-", "5"}], ",", "5"}], "}"}]}], "}"}]}], ",", 
      RowBox[{"ImageSize", "\[Rule]", "600"}], ",", 
-     RowBox[{
-     "PlotLabel", "\[Rule]", 
-      "\"\<Physical Picture of points near center\>\""}]}], "]"}], ",", 
+     RowBox[{"PlotLabel", "\[Rule]", "\"\<String\>\""}]}], "]"}], ",", 
    RowBox[{"{", 
     RowBox[{"lol", ",", "1", ",", "20000", ",", "1"}], "}"}]}], 
   "]"}]], "Input",
  CellChangeTimes->{{3.5941228014096837`*^9, 3.5941228126508074`*^9}, {
    3.5941229533164816`*^9, 3.5941229655158377`*^9}, {3.5941244106245737`*^9, 
    3.594124417051856*^9}, {3.594124510278651*^9, 3.594124557048051*^9}, 
-   3.5941247685721626`*^9}],
+   3.5941247685721626`*^9, {3.595164289068907*^9, 3.595164290348115*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -219,11 +217,11 @@ Cell[BoxData[
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`lol$$], 1, 20000, 1}}, Typeset`size$$ = {
     600., {163., 167.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`lol$3984108$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`lol$3982332$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`lol$$ = 1}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`lol$$, $CellContext`lol$3984108$$, 0]}, 
+        Hold[$CellContext`lol$$, $CellContext`lol$3982332$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -235,7 +233,7 @@ Cell[BoxData[
            $CellContext`ppp[
             Part[$CellContext`testHist, $CellContext`lol$$]]]}], Axes -> True,
          PlotRange -> {{-30, 30}, {-5, 5}, {-5, 5}}, ImageSize -> 600, 
-        PlotLabel -> "Physical Picture of points near center"], 
+        PlotLabel -> "String"], 
       "Specifications" :> {{$CellContext`lol$$, 1, 20000, 1}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
      ImageSizeCache->{651., {209., 214.}},
@@ -252,11 +250,12 @@ Cell[BoxData[
    3.594122966389449*^9, 3.594123181216612*^9, 3.594124361826148*^9, {
    3.5941245148651104`*^9, 3.5941245574068556`*^9}, 3.594124666546855*^9, 
    3.5941247687905655`*^9, 3.5943814189694057`*^9, 3.594381720810587*^9, 
-   3.5943818744969535`*^9, 3.5943839473142147`*^9, 3.59499760926342*^9}]
+   3.5943818744969535`*^9, 3.5943839473142147`*^9, 3.59499760926342*^9, {
+   3.5951643705638294`*^9, 3.5951643706574297`*^9}, 3.595332282519889*^9}]
 }, Open  ]]
 },
 WindowSize->{707, 787},
-WindowMargins->{{Automatic, 158}, {52, Automatic}},
+WindowMargins->{{Automatic, 76}, {-102, Automatic}},
 FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
 StyleDefinitions->"Default.nb"
 ]
@@ -280,8 +279,8 @@ Cell[4420, 131, 390, 10, 52, "Input"],
 Cell[4813, 143, 564, 13, 92, "Input"],
 Cell[5380, 158, 401, 11, 31, "Input"],
 Cell[CellGroupData[{
-Cell[5806, 173, 1351, 37, 112, "Input"],
-Cell[7160, 212, 2130, 42, 440, "Output"]
+Cell[5806, 173, 1352, 35, 92, "Input"],
+Cell[7161, 210, 2174, 43, 440, "Output"]
 }, Open  ]]
 }
 ]
