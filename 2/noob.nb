@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      9975,        280]
-NotebookOptionsPosition[      9351,        256]
-NotebookOutlinePosition[      9697,        271]
-CellTagsIndexPosition[      9654,        268]
+NotebookDataLength[     11102,        309]
+NotebookOptionsPosition[     10384,        282]
+NotebookOutlinePosition[     10742,        298]
+CellTagsIndexPosition[     10699,        295]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -216,7 +216,7 @@ Cell[BoxData[
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`lol$$], 1, 20000, 1}}, Typeset`size$$ = {
-    600., {163., 167.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    600., {161., 165.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True, $CellContext`lol$3982332$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`lol$$ = 1}, 
@@ -236,7 +236,7 @@ Cell[BoxData[
         PlotLabel -> "String"], 
       "Specifications" :> {{$CellContext`lol$$, 1, 20000, 1}}, 
       "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{651., {209., 214.}},
+     ImageSizeCache->{645., {205., 210.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -251,12 +251,39 @@ Cell[BoxData[
    3.5941245148651104`*^9, 3.5941245574068556`*^9}, 3.594124666546855*^9, 
    3.5941247687905655`*^9, 3.5943814189694057`*^9, 3.594381720810587*^9, 
    3.5943818744969535`*^9, 3.5943839473142147`*^9, 3.59499760926342*^9, {
-   3.5951643705638294`*^9, 3.5951643706574297`*^9}, 3.595332282519889*^9}]
+   3.5951643705638294`*^9, 3.5951643706574297`*^9}, 3.595332282519889*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partd"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part specification \[NoBreak]\\!\\(testHist \
+\[LeftDoubleBracket] 1 \[RightDoubleBracket]\\)\[NoBreak] is longer than \
+depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\
+\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
+\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.595779199932653*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partd"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part specification \[NoBreak]\\!\\(testHist \
+\[LeftDoubleBracket] 1 \[RightDoubleBracket]\\)\[NoBreak] is longer than \
+depth of object. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\
+\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partd\\\", ButtonNote -> \
+\\\"Part::partd\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.59577920186078*^9}]
 }, Open  ]]
 },
 WindowSize->{707, 787},
 WindowMargins->{{Automatic, 76}, {-102, Automatic}},
-FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -270,17 +297,19 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 325, 7, 31, "Input"],
-Cell[885, 29, 359, 7, 31, "Input"],
-Cell[1247, 38, 138, 3, 31, "Input"],
-Cell[1388, 43, 997, 28, 72, "Input"],
-Cell[2388, 73, 2029, 56, 92, "Input"],
-Cell[4420, 131, 390, 10, 52, "Input"],
-Cell[4813, 143, 564, 13, 92, "Input"],
-Cell[5380, 158, 401, 11, 31, "Input"],
+Cell[557, 20, 325, 7, 28, "Input"],
+Cell[885, 29, 359, 7, 28, "Input"],
+Cell[1247, 38, 138, 3, 28, "Input"],
+Cell[1388, 43, 997, 28, 63, "Input"],
+Cell[2388, 73, 2029, 56, 80, "Input"],
+Cell[4420, 131, 390, 10, 46, "Input"],
+Cell[4813, 143, 564, 13, 80, "Input"],
+Cell[5380, 158, 401, 11, 28, "Input"],
 Cell[CellGroupData[{
-Cell[5806, 173, 1352, 35, 92, "Input"],
-Cell[7161, 210, 2174, 43, 440, "Output"]
+Cell[5806, 173, 1352, 35, 80, "Input"],
+Cell[7161, 210, 2174, 43, 432, "Output"],
+Cell[9338, 255, 514, 11, 24, "Message"],
+Cell[9855, 268, 513, 11, 24, "Message"]
 }, Open  ]]
 }
 ]
