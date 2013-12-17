@@ -1,0 +1,218 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      8258,        209]
+NotebookOptionsPosition[      7825,        189]
+NotebookOutlinePosition[      8211,        206]
+CellTagsIndexPosition[      8168,        203]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"generate", " ", "tone", " ", "row"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.596208904798617*^9, 3.596208918211533*^9}, {
+  3.596228054243074*^9, 3.596228054449111*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GenerateRow", "[", 
+   RowBox[{"notelen_", ",", "row_"}], "]"}], ":=", 
+  RowBox[{"Sound", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"row", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], ",", "notelen"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", "12"}], "}"}]}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.59620862632018*^9, 3.596208663237316*^9}, {
+  3.596208699348735*^9, 3.5962087008772984`*^9}, {3.59620876114611*^9, 
+  3.596208762666564*^9}, {3.596218029215061*^9, 3.596218067201882*^9}, {
+  3.59621811193677*^9, 3.59621819626506*^9}, {3.596218342851235*^9, 
+  3.59621836121882*^9}, {3.59621840007551*^9, 3.5962184020255327`*^9}, {
+  3.596218442693451*^9, 3.5962184522014923`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"row", "=", 
+     RowBox[{"RandomSample", "[", 
+      RowBox[{
+       RowBox[{"Range", "[", 
+        RowBox[{"0", ",", "11"}], "]"}], ",", "12"}], "]"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"GraphicsGrid", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"Manipulate", "[", 
+         RowBox[{
+          RowBox[{"GenerateRow", "[", 
+           RowBox[{"notelength", ",", "row"}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<Tone Row\>\"", ",", " ", "14", ",", " ", "Bold"}], 
+           "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"notelength", ",", "0.3", ",", "10"}], "}"}]}], "]"}], 
+        "}"}], ",", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"Manipulate", "[", 
+         RowBox[{
+          RowBox[{"GenerateRow", "[", 
+           RowBox[{"notelength", ",", "row"}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<Inversion\>\"", ",", " ", "14", ",", " ", "Bold"}], 
+           "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"notelength", ",", "0.3", ",", "10"}], "}"}]}], "]"}], 
+        "}"}]}], "}"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.596208702358255*^9, 3.596208710518601*^9}, {
+   3.596213197172719*^9, 3.5962132451363287`*^9}, 3.596218080923321*^9, 
+   3.596218422892056*^9, {3.596218458946851*^9, 3.596218462142756*^9}, {
+   3.596218502819055*^9, 3.596218561132573*^9}, {3.5962208232714357`*^9, 
+   3.596220824739986*^9}, {3.5962212103528633`*^9, 3.596221249332204*^9}, {
+   3.596238557701355*^9, 3.596238641431776*^9}, {3.596238876127874*^9, 
+   3.5962389404076643`*^9}}],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`row$$ = {9, 11, 4, 8, 0, 3, 7, 2, 6, 10, 5, 
+  1}}, 
+  GraphicsBox[{{}, {InsetBox[
+      TagBox[
+       FormBox[
+        StyleBox[
+         DynamicModuleBox[{$CellContext`notelength$$ = 0.3, Typeset`show$$ = 
+          True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+          Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+          "\"untitled\"", Typeset`specs$$ = {{
+            Hold[
+             Style["Tone Row", 14, Bold]], 
+            Manipulate`Dump`ThisIsNotAControl}, {
+            Hold[$CellContext`notelength$$], 0.3, 10}}, Typeset`size$$ = {
+          313., {68., 75.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+          Typeset`skipInitDone$$ = True, $CellContext`notelength$10599$$ = 0}, 
+          
+          DynamicBox[Manipulate`ManipulateBoxes[
+           1, TraditionalForm, 
+            "Variables" :> {$CellContext`notelength$$ = 0.3}, 
+            "ControllerVariables" :> {
+              
+              Hold[$CellContext`notelength$$, $CellContext`notelength$10599$$,
+                0]}, "OtherVariables" :> {
+             Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+              Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+              Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+              Typeset`initDone$$, Typeset`skipInitDone$$}, 
+            "Body" :> $CellContext`GenerateRow[$CellContext`notelength$$, \
+$CellContext`row$$], "Specifications" :> {
+              Style[
+              "Tone Row", 14, Bold], {$CellContext`notelength$$, 0.3, 10}}, 
+            "Options" :> {}, "DefaultOptions" :> {}],
+           ImageSizeCache->{364., {130., 136.}},
+           SingleEvaluation->True],
+          Deinitialization:>None,
+          DynamicModuleValues:>{},
+          SynchronousInitialization->True,
+          UnsavedVariables:>{Typeset`initDone$$},
+          UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+         Deployed->True,
+         StripOnInput->False],
+        TraditionalForm],
+       Manipulate`InterpretManipulate[1]], {189., -192.}, {
+      Center, Center}, {360., 360.}], InsetBox[
+      TagBox[
+       FormBox[
+        StyleBox[
+         DynamicModuleBox[{$CellContext`notelength$$ = 0.3, Typeset`show$$ = 
+          True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+          Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+          "\"untitled\"", Typeset`specs$$ = {{
+            Hold[
+             Style["Inversion", 14, Bold]], 
+            Manipulate`Dump`ThisIsNotAControl}, {
+            Hold[$CellContext`notelength$$], 0.3, 10}}, Typeset`size$$ = {
+          313., {68., 75.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+          Typeset`skipInitDone$$ = True, $CellContext`notelength$10616$$ = 0}, 
+          
+          DynamicBox[Manipulate`ManipulateBoxes[
+           1, TraditionalForm, 
+            "Variables" :> {$CellContext`notelength$$ = 0.3}, 
+            "ControllerVariables" :> {
+              
+              Hold[$CellContext`notelength$$, $CellContext`notelength$10616$$,
+                0]}, "OtherVariables" :> {
+             Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+              Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+              Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+              Typeset`initDone$$, Typeset`skipInitDone$$}, 
+            "Body" :> $CellContext`GenerateRow[$CellContext`notelength$$, \
+$CellContext`row$$], "Specifications" :> {
+              Style[
+              "Inversion", 14, Bold], {$CellContext`notelength$$, 0.3, 10}}, 
+            "Options" :> {}, "DefaultOptions" :> {}],
+           ImageSizeCache->{364., {130., 136.}},
+           SingleEvaluation->True],
+          Deinitialization:>None,
+          DynamicModuleValues:>{},
+          SynchronousInitialization->True,
+          UnsavedVariables:>{Typeset`initDone$$},
+          UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+         Deployed->True,
+         StripOnInput->False],
+        TraditionalForm],
+       Manipulate`InterpretManipulate[1]], {189., -576.}, {
+      Center, Center}, {360., 360.}]}, {}},
+   ContentSelectable->True,
+   ImageSize->400,
+   PlotRangePadding->{6, 5}],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{
+  3.596238881552636*^9, {3.596238912349612*^9, 3.596238945886573*^9}}]
+}, Open  ]]
+},
+WindowSize->{1035, 838},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 211, 4, 36, "Input"],
+Cell[771, 26, 815, 18, 36, "Input"],
+Cell[CellGroupData[{
+Cell[1611, 48, 1786, 43, 141, "Input"],
+Cell[3400, 93, 4409, 93, 971, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
