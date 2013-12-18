@@ -10,39 +10,115 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      8258,        209]
-NotebookOptionsPosition[      7825,        189]
-NotebookOutlinePosition[      8211,        206]
-CellTagsIndexPosition[      8168,        203]
+NotebookDataLength[     22614,        592]
+NotebookOptionsPosition[     21335,        545]
+NotebookOutlinePosition[     21721,        562]
+CellTagsIndexPosition[     21678,        559]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{"generate", " ", "tone", " ", "row"}], "*)"}]], "Input",
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"generate", " ", "tone", " ", "row"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  StyleBox[
+   RowBox[{
+    RowBox[{
+     RowBox[{"A", " ", "pitch"}], "-", 
+     RowBox[{
+     "class", " ", "set", " ", "is", " ", "a", " ", "set", " ", "of", " ", 
+      "distinct", " ", "integers", " ", "representing", " ", "pitch", " ", 
+      RowBox[{"classes", ".", "\[IndentingNewLine]", "Order"}], " ", 
+      RowBox[{"doesn", "'"}], "t", " ", "matter", " ", "for", " ", 
+      "unordered", " ", "sets"}]}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Cardinal", " ", "number", " ", "of", " ", "a", " ", "set"}], 
+     " ", "-", " ", 
+     RowBox[{"number", " ", "of", " ", "permutations"}]}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Normal", " ", "order"}], " ", "-", " ", 
+     RowBox[{
+     "circular", " ", "permutation", " ", "for", " ", "which", " ", 
+      "difference", " ", "between", " ", "first", " ", "and", " ", "last", 
+      " ", "is", " ", 
+      RowBox[{"minimized", ".", "\[IndentingNewLine]", "Set"}], " ", "must", 
+      " ", "be", " ", "in", " ", "ascending", " ", "order"}]}]}], 
+   "Subitem"]}]], "Input",
  CellChangeTimes->{{3.596208904798617*^9, 3.596208918211533*^9}, {
-  3.596228054243074*^9, 3.596228054449111*^9}}],
+  3.596228054243074*^9, 3.596228054449111*^9}, {3.596368779642105*^9, 
+  3.5963687966477947`*^9}, {3.596368903083796*^9, 3.596368904233522*^9}, {
+  3.596369011281074*^9, 3.596369078529997*^9}, {3.596369268691723*^9, 
+  3.59636927862435*^9}, {3.596371306817026*^9, 3.596371319984241*^9}, {
+  3.59637184112173*^9, 3.596371852219036*^9}, {3.5963719272010813`*^9, 
+  3.596371933403532*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"GenerateRow", "[", 
-   RowBox[{"notelen_", ",", "row_"}], "]"}], ":=", 
-  RowBox[{"Sound", "[", 
-   RowBox[{"Table", "[", 
-    RowBox[{
-     RowBox[{"SoundNote", "[", 
+  RowBox[{"A", " ", "pitch"}], "-", 
+  RowBox[{
+  "a", " ", "class", " ", "distinct", " ", "for", " ", "integers", " ", "is", 
+   " ", "matter", " ", "of", " ", "pitch", " ", "representing", " ", 
+   SuperscriptBox["set", "2"], " ", "sets", " ", "t", " ", "unordered", " ", 
+   RowBox[{"classes", ".", "Order"}], " ", 
+   SuperscriptBox["doesn", "\[Prime]",
+    MultilineFunction->None]}]}]], "Output",
+ CellChangeTimes->{3.596373210330688*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "number"}], " ", "of", " ", "permutations"}], "+", 
+  RowBox[{
+  "a", " ", "Cardinal", " ", "number", " ", "of", " ", "set"}]}]], "Output",
+ CellChangeTimes->{3.596373210387795*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Normal", " ", "order"}], "-", 
+  RowBox[{
+  "and", " ", "ascending", " ", "be", " ", "between", " ", "circular", " ", 
+   "difference", " ", "first", " ", "for", " ", "in", " ", "is", " ", "last", 
+   " ", "must", " ", "order", " ", "permutation", " ", "which", " ", 
+   RowBox[{"minimized", ".", "Set"}]}]}]], "Output",
+ CellChangeTimes->{3.596373210389598*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GenerateSet", "[", 
+   RowBox[{"notelen_", ",", "sl_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"row", "=", 
+      RowBox[{"RandomSample", "[", 
+       RowBox[{
+        RowBox[{"Range", "[", 
+         RowBox[{"0", ",", "sl"}], "]"}], ",", "sl"}], "]"}]}], "}"}], ",", 
+    RowBox[{"Sound", "[", 
+     RowBox[{"Table", "[", 
       RowBox[{
-       RowBox[{"row", "[", 
-        RowBox[{"[", "i", "]"}], "]"}], ",", "notelen"}], "]"}], ",", 
-     RowBox[{"{", 
-      RowBox[{"i", ",", "1", ",", "12"}], "}"}]}], "]"}], "]"}]}]], "Input",
+       RowBox[{"SoundNote", "[", 
+        RowBox[{
+         RowBox[{"row", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", "notelen"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", 
+         RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], "]"}]}], 
+   "]"}]}]], "Input",
  CellChangeTimes->{{3.59620862632018*^9, 3.596208663237316*^9}, {
   3.596208699348735*^9, 3.5962087008772984`*^9}, {3.59620876114611*^9, 
   3.596208762666564*^9}, {3.596218029215061*^9, 3.596218067201882*^9}, {
   3.59621811193677*^9, 3.59621819626506*^9}, {3.596218342851235*^9, 
   3.59621836121882*^9}, {3.59621840007551*^9, 3.5962184020255327`*^9}, {
-  3.596218442693451*^9, 3.5962184522014923`*^9}}],
+  3.596218442693451*^9, 3.5962184522014923`*^9}, {3.5963737386065187`*^9, 
+  3.5963737737337923`*^9}, {3.596373983433772*^9, 3.596373993451654*^9}, {
+  3.596374033366206*^9, 3.5963740985087147`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -54,78 +130,83 @@ Cell[BoxData[
      RowBox[{"RandomSample", "[", 
       RowBox[{
        RowBox[{"Range", "[", 
-        RowBox[{"0", ",", "11"}], "]"}], ",", "12"}], "]"}]}], "}"}], ",", 
+        RowBox[{"0", ",", "11"}], "]"}], ",", "10"}], "]"}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
-   RowBox[{"GraphicsGrid", "[", 
+   RowBox[{"GraphicsRow", "[", 
     RowBox[{
      RowBox[{"{", 
       RowBox[{
-       RowBox[{"{", 
-        RowBox[{"Manipulate", "[", 
-         RowBox[{
-          RowBox[{"GenerateRow", "[", 
-           RowBox[{"notelength", ",", "row"}], "]"}], ",", 
-          RowBox[{"Style", "[", 
-           RowBox[{"\"\<Tone Row\>\"", ",", " ", "14", ",", " ", "Bold"}], 
-           "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"notelength", ",", "0.3", ",", "10"}], "}"}]}], "]"}], 
-        "}"}], ",", 
-       RowBox[{"{", "\[IndentingNewLine]", 
-        RowBox[{"Manipulate", "[", 
-         RowBox[{
-          RowBox[{"GenerateRow", "[", 
-           RowBox[{"notelength", ",", "row"}], "]"}], ",", 
-          RowBox[{"Style", "[", 
-           RowBox[{"\"\<Inversion\>\"", ",", " ", "14", ",", " ", "Bold"}], 
-           "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"notelength", ",", "0.3", ",", "10"}], "}"}]}], "]"}], 
-        "}"}]}], "}"}], ",", 
-     RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}]}], "]"}]], "Input",
+       RowBox[{"Manipulate", "[", 
+        RowBox[{
+         RowBox[{"GenerateSet", "[", 
+          RowBox[{"1", ",", "setlength"}], "]"}], ",", 
+         RowBox[{"Style", "[", 
+          RowBox[{"row", ",", " ", "14", ",", " ", "Bold"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"setlength", ",", "1", ",", "10", ",", "1"}], "}"}]}], 
+        "]"}], "\[IndentingNewLine]", 
+       RowBox[{"Manipulate", "[", 
+        RowBox[{
+         RowBox[{"GenerateSet", "[", 
+          RowBox[{"1", ",", "setlength"}], "]"}], ",", 
+         RowBox[{"Style", "[", 
+          RowBox[{
+           RowBox[{"Reverse", "[", "row", "]"}], ",", " ", "14", ",", " ", 
+           "Bold"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"setlength", ",", "1", ",", "10", ",", "1"}], "}"}]}], 
+        "]"}]}], "}"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "450"}]}], "]"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.596208702358255*^9, 3.596208710518601*^9}, {
    3.596213197172719*^9, 3.5962132451363287`*^9}, 3.596218080923321*^9, 
    3.596218422892056*^9, {3.596218458946851*^9, 3.596218462142756*^9}, {
    3.596218502819055*^9, 3.596218561132573*^9}, {3.5962208232714357`*^9, 
    3.596220824739986*^9}, {3.5962212103528633`*^9, 3.596221249332204*^9}, {
    3.596238557701355*^9, 3.596238641431776*^9}, {3.596238876127874*^9, 
-   3.5962389404076643`*^9}}],
+   3.5962389404076643`*^9}, {3.596239231339023*^9, 3.596239247401223*^9}, {
+   3.5962392806491117`*^9, 3.596239302778943*^9}, {3.5963684706430407`*^9, 
+   3.596368563082049*^9}, {3.59636881635474*^9, 3.596368847635213*^9}, {
+   3.596373797388603*^9, 3.596373797555835*^9}, {3.596373833535984*^9, 
+   3.596373911512021*^9}, {3.596373957529129*^9, 3.596373973240727*^9}, {
+   3.596374020846846*^9, 3.596374028424829*^9}, {3.596374129036026*^9, 
+   3.596374142994493*^9}}],
 
 Cell[BoxData[
- DynamicModuleBox[{$CellContext`row$$ = {9, 11, 4, 8, 0, 3, 7, 2, 6, 10, 5, 
-  1}}, 
-  GraphicsBox[{{}, {InsetBox[
+ DynamicModuleBox[{$CellContext`row$$ = {8, 1, 5, 2, 3, 4, 7, 0, 9, 6}}, 
+  GraphicsBox[{{}, InsetBox[
+     RowBox[{
       TagBox[
        FormBox[
         StyleBox[
-         DynamicModuleBox[{$CellContext`notelength$$ = 0.3, Typeset`show$$ = 
+         DynamicModuleBox[{$CellContext`setlength$$ = 6, Typeset`show$$ = 
           True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
           Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
           "\"untitled\"", Typeset`specs$$ = {{
             Hold[
-             Style["Tone Row", 14, Bold]], 
+             Style[{6, 9, 0, 7, 4, 3, 2, 5, 1, 8}, 14, Bold]], 
             Manipulate`Dump`ThisIsNotAControl}, {
-            Hold[$CellContext`notelength$$], 0.3, 10}}, Typeset`size$$ = {
+            Hold[$CellContext`setlength$$], 1, 10, 1}}, Typeset`size$$ = {
           313., {68., 75.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-          Typeset`skipInitDone$$ = True, $CellContext`notelength$10599$$ = 0}, 
+          Typeset`skipInitDone$$ = True, $CellContext`setlength$30191$$ = 0}, 
+          
           
           DynamicBox[Manipulate`ManipulateBoxes[
-           1, TraditionalForm, 
-            "Variables" :> {$CellContext`notelength$$ = 0.3}, 
+           1, TraditionalForm, "Variables" :> {$CellContext`setlength$$ = 1}, 
             "ControllerVariables" :> {
               
-              Hold[$CellContext`notelength$$, $CellContext`notelength$10599$$,
-                0]}, "OtherVariables" :> {
+              Hold[$CellContext`setlength$$, $CellContext`setlength$30191$$, 
+               0]}, "OtherVariables" :> {
              Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
               Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
               Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
               Typeset`initDone$$, Typeset`skipInitDone$$}, 
-            "Body" :> $CellContext`GenerateRow[$CellContext`notelength$$, \
-$CellContext`row$$], "Specifications" :> {
-              Style[
-              "Tone Row", 14, Bold], {$CellContext`notelength$$, 0.3, 10}}, 
-            "Options" :> {}, "DefaultOptions" :> {}],
-           ImageSizeCache->{364., {130., 136.}},
+            "Body" :> $CellContext`GenerateSet[1, $CellContext`setlength$$], 
+            "Specifications" :> {
+              
+              Style[{6, 9, 0, 7, 4, 3, 2, 5, 1, 8}, 14, 
+               Bold], {$CellContext`setlength$$, 1, 10, 1}}, "Options" :> {}, 
+            "DefaultOptions" :> {}],
+           ImageSizeCache->{364., {131., 137.}},
            SingleEvaluation->True],
           Deinitialization:>None,
           DynamicModuleValues:>{},
@@ -135,39 +216,39 @@ $CellContext`row$$], "Specifications" :> {
          Deployed->True,
          StripOnInput->False],
         TraditionalForm],
-       Manipulate`InterpretManipulate[1]], {189., -192.}, {
-      Center, Center}, {360., 360.}], InsetBox[
+       Manipulate`InterpretManipulate[1]], " ", 
       TagBox[
        FormBox[
         StyleBox[
-         DynamicModuleBox[{$CellContext`notelength$$ = 0.3, Typeset`show$$ = 
+         DynamicModuleBox[{$CellContext`setlength$$ = 1, Typeset`show$$ = 
           True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
           Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
           "\"untitled\"", Typeset`specs$$ = {{
             Hold[
-             Style["Inversion", 14, Bold]], 
+             Style[{8, 1, 5, 2, 3, 4, 7, 0, 9, 6}, 14, Bold]], 
             Manipulate`Dump`ThisIsNotAControl}, {
-            Hold[$CellContext`notelength$$], 0.3, 10}}, Typeset`size$$ = {
+            Hold[$CellContext`setlength$$], 1, 10, 1}}, Typeset`size$$ = {
           313., {68., 75.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-          Typeset`skipInitDone$$ = True, $CellContext`notelength$10616$$ = 0}, 
+          Typeset`skipInitDone$$ = True, $CellContext`setlength$30208$$ = 0}, 
+          
           
           DynamicBox[Manipulate`ManipulateBoxes[
-           1, TraditionalForm, 
-            "Variables" :> {$CellContext`notelength$$ = 0.3}, 
+           1, TraditionalForm, "Variables" :> {$CellContext`setlength$$ = 1}, 
             "ControllerVariables" :> {
               
-              Hold[$CellContext`notelength$$, $CellContext`notelength$10616$$,
-                0]}, "OtherVariables" :> {
+              Hold[$CellContext`setlength$$, $CellContext`setlength$30208$$, 
+               0]}, "OtherVariables" :> {
              Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
               Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
               Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
               Typeset`initDone$$, Typeset`skipInitDone$$}, 
-            "Body" :> $CellContext`GenerateRow[$CellContext`notelength$$, \
-$CellContext`row$$], "Specifications" :> {
-              Style[
-              "Inversion", 14, Bold], {$CellContext`notelength$$, 0.3, 10}}, 
-            "Options" :> {}, "DefaultOptions" :> {}],
-           ImageSizeCache->{364., {130., 136.}},
+            "Body" :> $CellContext`GenerateSet[1, $CellContext`setlength$$], 
+            "Specifications" :> {
+              
+              Style[{8, 1, 5, 2, 3, 4, 7, 0, 9, 6}, 14, 
+               Bold], {$CellContext`setlength$$, 1, 10, 1}}, "Options" :> {}, 
+            "DefaultOptions" :> {}],
+           ImageSizeCache->{364., {131., 137.}},
            SingleEvaluation->True],
           Deinitialization:>None,
           DynamicModuleValues:>{},
@@ -177,14 +258,289 @@ $CellContext`row$$], "Specifications" :> {
          Deployed->True,
          StripOnInput->False],
         TraditionalForm],
-       Manipulate`InterpretManipulate[1]], {189., -576.}, {
-      Center, Center}, {360., 360.}]}, {}},
+       Manipulate`InterpretManipulate[1]]}], {189., -189.}, {
+     Center, Center}, {360., 360.}], {}},
    ContentSelectable->True,
-   ImageSize->400,
+   ImageSize->450,
    PlotRangePadding->{6, 5}],
   DynamicModuleValues:>{}]], "Output",
  CellChangeTimes->{
-  3.596238881552636*^9, {3.596238912349612*^9, 3.596238945886573*^9}}]
+  3.596238881552636*^9, {3.596238912349612*^9, 3.596238945886573*^9}, {
+   3.5962392340695257`*^9, 3.5962392477729607`*^9}, {3.5962392896152773`*^9, 
+   3.5962393032148037`*^9}, {3.5963684510575237`*^9, 3.596368563403977*^9}, {
+   3.596368839579035*^9, 3.596368848064516*^9}, 3.5963732124090137`*^9, {
+   3.596373871370549*^9, 3.596373912665064*^9}, {3.596373964380643*^9, 
+   3.596373997529046*^9}, 3.596374029217136*^9, 3.596374101561912*^9, 
+   3.596374143512508*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"circular", " ", "permutation"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.596371974343377*^9, 3.596371978611487*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"random", " ", "pitch", " ", "class"}], ",", " ", 
+   RowBox[{"in", " ", "order"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.596372102789015*^9, 3.596372106864781*^9}, {
+  3.5963723461963797`*^9, 3.596372348295916*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"r", "=", 
+  RowBox[{"Sort", "[", 
+   RowBox[{"RandomSample", "[", 
+    RowBox[{
+     RowBox[{"Range", "[", 
+      RowBox[{"0", ",", "5"}], "]"}], ",", "5"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.5963713445528917`*^9, 3.596371347343212*^9}, {
+  3.59637158560411*^9, 3.596371603324312*^9}, {3.596372313724945*^9, 
+  3.5963723162685204`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "1", ",", "3", ",", "4", ",", "5"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.596371347648727*^9, {3.596371587269247*^9, 3.596371603679632*^9}, {
+   3.5963723167464437`*^9, 3.596372360281795*^9}, 3.5963731681482553`*^9, 
+   3.596373212768898*^9, 3.596373302012315*^9}]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"cperm", "[", "set_", "]"}], ":=", 
+  RowBox[{"Delete", "[", 
+   RowBox[{
+    RowBox[{"Append", "[", 
+     RowBox[{"set", ",", 
+      RowBox[{"set", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}], ",", 
+    RowBox[{
+     RowBox[{"Length", "[", "set", "]"}], "+", "1"}]}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"cpermordered", "[", "cp_", "]"}], ":=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"cp", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "<", 
+       RowBox[{"cp", "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"cp", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "+", "12"}], ",", " ", 
+      RowBox[{"cp", "[", 
+       RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"i", ",", "1", ",", 
+      RowBox[{"Length", "[", "cp", "]"}]}], "}"}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.596372141339264*^9, 3.596372277199671*^9}, {
+  3.59637238505215*^9, 3.596372385935554*^9}, {3.596373140476392*^9, 
+  3.596373163282518*^9}, {3.596373323081381*^9, 3.596373323417972*^9}, {
+  3.596373529532172*^9, 3.5963735519112997`*^9}, {3.596373589327196*^9, 
+  3.5963736088545017`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"makeCPerm", "[", "pc_", "]"}], ":=", 
+  RowBox[{"cpermordered", "[", 
+   RowBox[{"cperm", "[", "pc", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.596373136819339*^9, 3.596373137522468*^9}, {
+  3.596373220003981*^9, 3.596373221115357*^9}, {3.596373310438252*^9, 
+  3.59637338178461*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"makeCPerm", "[", "r", "]"}]], "Input",
+ CellChangeTimes->{{3.596373555890967*^9, 3.596373558718803*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"0", ",", "1", ",", "3", ",", "4", ",", "5"}], "}"}]], "Output",
+ CellChangeTimes->{3.596373559157572*^9, 3.596373619780944*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"makeCPerm", "[", 
+  RowBox[{"makeCPerm", "[", "r", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5963733835874166`*^9, 3.596373396277008*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4", ",", "5", ",", "12", ",", "13", ",", "15"}], "}"}]], "Output",
+ CellChangeTimes->{{3.596373386868013*^9, 3.596373396984042*^9}, 
+   3.59637356289921*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"find", " ", "normal", " ", "order"}], "*)"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.596371615469501*^9, 3.596371620365703*^9}, 
+   3.596371652454577*^9}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"PlaySet", "[", 
+   RowBox[{"row_", ",", "notelen_"}], "]"}], ":=", 
+  RowBox[{"Sound", "[", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"row", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], ",", "notelen"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "1", ",", 
+       RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"PlaySetChord", "[", 
+   RowBox[{"row_", ",", "notelen_"}], "]"}], ":=", 
+  RowBox[{"Sound", "[", 
+   RowBox[{"SoundNote", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"row", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", 
+         RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], ",", 
+     "notelen"}], "]"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.59637261869578*^9, 3.596372636630069*^9}, {
+  3.596372938039815*^9, 3.596372972061804*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PlaySetChord", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2"}], "}"}], ",", "1.2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5963726381826057`*^9, 3.59637268204845*^9}, {
+  3.596372814931205*^9, 3.596372832728139*^9}, {3.596372976613*^9, 
+  3.5963730318191433`*^9}, {3.596373112244254*^9, 3.596373121105423*^9}, {
+  3.596374204617961*^9, 3.596374209481868*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  GraphicsBox[{
+    {GrayLevel[0.9], RectangleBox[{0, 0}, {360, -164}]}, {InsetBox[
+      GraphicsBox[
+       {RGBColor[0.5, 0, 0.5], 
+        StyleBox[{
+          RectangleBox[{0., 0.4438917279327484}, \
+{1.15, 0.45579648983751037`}], 
+          RectangleBox[{0., 0.45579648983751037`}, \
+{1.15, 0.4677012517422721}]},
+         Antialiasing->True]},
+       AspectRatio->NCache[
+         Rational[6, 35], 0.17142857142857143`],
+       Background->GrayLevel[1],
+       Frame->True,
+       FrameStyle->GrayLevel[0.75],
+       FrameTicks->False,
+       ImagePadding->None,
+       PlotRange->All,
+       PlotRangePadding->{Automatic, 0.05}], {180, -35}, 
+      ImageScaled[{0.5, 0.5}], {350, 60},
+      Background->GrayLevel[0.9]], InsetBox[
+      GraphicsBox[
+       {GrayLevel[0.6], RectangleBox[{0, 0}]},
+       AspectRatio->NCache[
+         Rational[6, 35], 0.17142857142857143`],
+       Background->GrayLevel[1],
+       Frame->True,
+       FrameStyle->GrayLevel[0.75],
+       FrameTicks->False,
+       ImagePadding->None], {180, -100}, ImageScaled[{0.5, 0.5}], {350, 60},
+      Background->GrayLevel[0.9]]}, InsetBox[
+     StyleBox[
+      TemplateBox[{
+       StyleBox[
+        "\" | \"", FontSize -> 14, FontColor -> GrayLevel[0.75], StripOnInput -> 
+         False],TemplateBox[{"\"1.2\"", "\" s\""}, "RowDefault"]},
+       "RowWithSeparator"], "DialogStyle",
+      StripOnInput->False], {355, -159}, Scaled[{1, 0}]], 
+    TagBox[
+     TooltipBox[
+      TagBox[{
+        {GrayLevel[0.9], RectangleBox[{5, -158}, {29, -135}]}, 
+        {GrayLevel[0.3], 
+         PolygonBox[
+          NCache[{{13, -153}, {13, -140}, {21, Rational[-293, 2]}, {
+            13, -153}}, {{13, -153}, {13, -140}, {21, -146.5}, {13, -153}}]]}, 
+        {GrayLevel[0.5], 
+         StyleBox[
+          LineBox[{{5, -158}, {5, -135}, {29, -135}, {29, -158}, {5, -158}}],
+          Antialiasing->False]}},
+       EventHandlerTag[{"MouseClicked" :> (Sound`EmitMIDI[
+            Sound`MIDISequence[{
+              Sound`MIDITrack[{
+                Sound`MIDIEvent[0, "SetTempo", "Tempo" -> 1000000], 
+                Sound`MIDIEvent[
+                0, "ProgramCommand", "Channel" -> 0, "Value" -> 0], 
+                Sound`MIDIEvent[
+                0, "NoteOn", "Note" -> 61, "Channel" -> 0, "Velocity" -> 127], 
+                Sound`MIDIEvent[
+                0, "NoteOn", "Note" -> 62, "Channel" -> 0, "Velocity" -> 127], 
+                Sound`MIDIEvent[
+                288, "NoteOff", "Note" -> 61, "Channel" -> 0, "Velocity" -> 
+                 0], 
+                Sound`MIDIEvent[
+                288, "NoteOff", "Note" -> 62, "Channel" -> 0, "Velocity" -> 
+                 0]}]}, "DivisionType" -> "PPQ", "Resolution" -> 240]]; 
+          Sound`EmitSampledSound[None, "Preemptive"]), PassEventsDown -> 
+         Automatic, PassEventsUp -> True}]],
+      DynamicBox[
+       ToBoxes[
+        FEPrivate`FrontEndResource["FEStrings", "playText"], StandardForm]]],
+     Annotation[#, 
+      Dynamic[
+       FEPrivate`FrontEndResource["FEStrings", "playText"]], "Tooltip"]& ], 
+    TagBox[
+     TooltipBox[
+      TagBox[{
+        {GrayLevel[0.9], RectangleBox[{34, -158}, {58, -135}]}, 
+        {GrayLevel[0.3], RectangleBox[{42, -150}, {50, -143}]}, 
+        {GrayLevel[0.5], 
+         StyleBox[
+          LineBox[{{34, -158}, {34, -135}, {58, -135}, {58, -158}, {
+           34, -158}}],
+          Antialiasing->False]}},
+       EventHandlerTag[{"MouseClicked" :> (Sound`EmitSampledSound[
+            SampledSoundList[{{0.}}, 8000], "Preemptive"]; Sound`StopMIDI[]), 
+         PassEventsDown -> Automatic, PassEventsUp -> True}]],
+      DynamicBox[
+       ToBoxes[
+        FEPrivate`FrontEndResource["FEStrings", "stopText"], StandardForm]]],
+     Annotation[#, 
+      Dynamic[
+       FEPrivate`FrontEndResource["FEStrings", "stopText"]], "Tooltip"]& ], 
+    {GrayLevel[0.75], 
+     StyleBox[LineBox[{{0, 0}, {360, 0}, {360, -164}, {0, -164}, {0, 0}}],
+      Antialiasing->False]}},
+   ContentSelectable->False,
+   ImageSize->250,
+   PlotRange->{{0, 360}, {-164, 0}},
+   PlotRangePadding->1],
+  Sound[
+   SoundNote[{1, 2}, 1.2]]]], "Output",
+ CellChangeTimes->{{3.596372649239047*^9, 3.5963726829561653`*^9}, {
+   3.5963728152982283`*^9, 3.596372833235319*^9}, {3.5963729772459583`*^9, 
+   3.596373032348447*^9}, {3.596373112679061*^9, 3.5963731218902607`*^9}, 
+   3.596373213103611*^9, {3.596374192700714*^9, 3.596374209926078*^9}}]
 }, Open  ]]
 },
 WindowSize->{1035, 838},
@@ -205,11 +561,38 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 211, 4, 36, "Input"],
-Cell[771, 26, 815, 18, 36, "Input"],
 Cell[CellGroupData[{
-Cell[1611, 48, 1786, 43, 141, "Input"],
-Cell[3400, 93, 4409, 93, 971, "Output"]
+Cell[579, 22, 1640, 35, 146, "Input"],
+Cell[2222, 59, 468, 10, 60, "Output"],
+Cell[2693, 71, 232, 6, 36, "Output"],
+Cell[2928, 79, 397, 8, 57, "Output"]
+}, Open  ]],
+Cell[3340, 90, 1278, 30, 78, "Input"],
+Cell[CellGroupData[{
+Cell[4643, 124, 2161, 47, 120, "Input"],
+Cell[6807, 173, 4826, 100, 580, "Output"]
+}, Open  ]],
+Cell[11648, 276, 157, 3, 35, "Input"],
+Cell[11808, 281, 272, 6, 35, "Input"],
+Cell[CellGroupData[{
+Cell[12105, 291, 374, 9, 36, "Input"],
+Cell[12482, 302, 318, 6, 35, "Output"]
+}, Open  ]],
+Cell[12815, 311, 1271, 35, 57, "Input"],
+Cell[14089, 348, 324, 7, 36, "Input"],
+Cell[CellGroupData[{
+Cell[14438, 359, 128, 2, 35, "Input"],
+Cell[14569, 363, 167, 3, 35, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14773, 371, 166, 3, 35, "Input"],
+Cell[14942, 376, 197, 4, 35, "Output"]
+}, Open  ]],
+Cell[15154, 383, 251, 6, 78, "Input"],
+Cell[15408, 391, 1032, 30, 57, "Input"],
+Cell[CellGroupData[{
+Cell[16465, 425, 398, 8, 36, "Input"],
+Cell[16866, 435, 4453, 107, 161, "Output"]
 }, Open  ]]
 }
 ]
