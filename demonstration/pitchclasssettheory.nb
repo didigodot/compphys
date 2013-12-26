@@ -10,108 +10,69 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     29196,        767]
-NotebookOptionsPosition[     27811,        717]
-NotebookOutlinePosition[     28198,        734]
-CellTagsIndexPosition[     28155,        731]
+NotebookDataLength[     21912,        588]
+NotebookOptionsPosition[     20799,        547]
+NotebookOutlinePosition[     21186,        564]
+CellTagsIndexPosition[     21143,        561]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+Cell[BoxData[
+ StyleBox[
+  RowBox[{"Pitch", "-", 
+   RowBox[{"Class", " ", "Set", " ", "Theory"}]}], "Title"]], "Input",
+ CellChangeTimes->{{3.597022881963623*^9, 3.597022900801791*^9}},
+ FontWeight->"Plain"],
 
-Cell[CellGroupData[{
+Cell["\<\
+A pitch - class set is a set of distinct integers representing pitch classes.
+   Order doesn' t matter for unordered sets
+Cardinal number of a set - number of permutations
+Normal order - circular permutation for which difference between first and \
+last is minimized.
+   Set must be in ascending order\
+\>", "Input",
+ Evaluatable->False,
+ CellChangeTimes->{{3.596208904798617*^9, 3.596208918211533*^9}, {
+   3.596228054243074*^9, 3.596228054449111*^9}, {3.596368779642105*^9, 
+   3.5963687966477947`*^9}, {3.596368903083796*^9, 3.596368904233522*^9}, {
+   3.596369011281074*^9, 3.596369078529997*^9}, {3.596369268691723*^9, 
+   3.59636927862435*^9}, {3.596371306817026*^9, 3.596371319984241*^9}, {
+   3.59637184112173*^9, 3.596371852219036*^9}, {3.5963719272010813`*^9, 
+   3.596371933403532*^9}, {3.597022948171289*^9, 3.597022949171311*^9}, 
+   3.5970229798493347`*^9},
+ FormatType->"TextForm",
+ Background->RGBColor[0.87, 0.94, 1]],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"(*", 
-   RowBox[{"generate", " ", "tone", " ", "row"}], "*)"}], 
-  "\[IndentingNewLine]", 
-  StyleBox[
-   RowBox[{
+   RowBox[{"generates", " ", "random", " ", 
+    RowBox[{"set", ".", " ", "not"}], " ", "used", " ", "for", " ", 
+    "demonstration", " ", "atm"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"GenerateSet", "[", 
+    RowBox[{"notelen_", ",", "sl_"}], "]"}], ":=", 
+   RowBox[{"Module", "[", 
     RowBox[{
-     RowBox[{"A", " ", "pitch"}], "-", 
-     RowBox[{
-     "class", " ", "set", " ", "is", " ", "a", " ", "set", " ", "of", " ", 
-      "distinct", " ", "integers", " ", "representing", " ", "pitch", " ", 
-      RowBox[{"classes", ".", "\[IndentingNewLine]", "Order"}], " ", 
-      RowBox[{"doesn", "'"}], "t", " ", "matter", " ", "for", " ", 
-      "unordered", " ", "sets"}]}], "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"Cardinal", " ", "number", " ", "of", " ", "a", " ", "set"}], 
-     " ", "-", " ", 
-     RowBox[{"number", " ", "of", " ", "permutations"}]}], 
-    "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"Normal", " ", "order"}], " ", "-", " ", 
-     RowBox[{
-     "circular", " ", "permutation", " ", "for", " ", "which", " ", 
-      "difference", " ", "between", " ", "first", " ", "and", " ", "last", 
-      " ", "is", " ", 
-      RowBox[{"minimized", ".", "\[IndentingNewLine]", "Set"}], " ", "must", 
-      " ", "be", " ", "in", " ", "ascending", " ", "order"}]}]}], 
-   "Subitem"]}]], "Input",
- Evaluatable->False,
- CellChangeTimes->{{3.596208904798617*^9, 3.596208918211533*^9}, {
-  3.596228054243074*^9, 3.596228054449111*^9}, {3.596368779642105*^9, 
-  3.5963687966477947`*^9}, {3.596368903083796*^9, 3.596368904233522*^9}, {
-  3.596369011281074*^9, 3.596369078529997*^9}, {3.596369268691723*^9, 
-  3.59636927862435*^9}, {3.596371306817026*^9, 3.596371319984241*^9}, {
-  3.59637184112173*^9, 3.596371852219036*^9}, {3.5963719272010813`*^9, 
-  3.596371933403532*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"A", " ", "pitch"}], "-", 
-  RowBox[{
-  "a", " ", "class", " ", "distinct", " ", "for", " ", "integers", " ", "is", 
-   " ", "matter", " ", "of", " ", "pitch", " ", "representing", " ", 
-   SuperscriptBox["set", "2"], " ", "sets", " ", "t", " ", "unordered", " ", 
-   RowBox[{"classes", ".", "Order"}], " ", 
-   SuperscriptBox["doesn", "\[Prime]",
-    MultilineFunction->None]}]}]], "Output",
- CellChangeTimes->{3.596373210330688*^9, 3.5965410254080687`*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"-", "number"}], " ", "of", " ", "permutations"}], "+", 
-  RowBox[{
-  "a", " ", "Cardinal", " ", "number", " ", "of", " ", "set"}]}]], "Output",
- CellChangeTimes->{3.596373210330688*^9, 3.596541025411285*^9}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"Normal", " ", "order"}], "-", 
-  RowBox[{
-  "and", " ", "ascending", " ", "be", " ", "between", " ", "circular", " ", 
-   "difference", " ", "first", " ", "for", " ", "in", " ", "is", " ", "last", 
-   " ", "must", " ", "order", " ", "permutation", " ", "which", " ", 
-   RowBox[{"minimized", ".", "Set"}]}]}]], "Output",
- CellChangeTimes->{3.596373210330688*^9, 3.596541025412854*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"GenerateSet", "[", 
-   RowBox[{"notelen_", ",", "sl_"}], "]"}], ":=", 
-  RowBox[{"Module", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"row", "=", 
-      RowBox[{"RandomSample", "[", 
-       RowBox[{
-        RowBox[{"Range", "[", 
-         RowBox[{"0", ",", "sl"}], "]"}], ",", "sl"}], "]"}]}], "}"}], ",", 
-    RowBox[{"Sound", "[", 
-     RowBox[{"Table", "[", 
-      RowBox[{
-       RowBox[{"SoundNote", "[", 
+     RowBox[{"{", 
+      RowBox[{"row", "=", 
+       RowBox[{"RandomSample", "[", 
         RowBox[{
-         RowBox[{"row", "[", 
-          RowBox[{"[", "i", "]"}], "]"}], ",", "notelen"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"i", ",", "1", ",", 
-         RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], "]"}]}], 
-   "]"}]}]], "Input",
+         RowBox[{"Range", "[", 
+          RowBox[{"0", ",", "sl"}], "]"}], ",", "sl"}], "]"}]}], "}"}], ",", 
+     RowBox[{"Sound", "[", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"SoundNote", "[", 
+         RowBox[{
+          RowBox[{"row", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], ",", "notelen"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "1", ",", 
+          RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], "]"}]}], 
+    "]"}]}]}]], "Input",
  CellChangeTimes->{{3.59620862632018*^9, 3.596208663237316*^9}, {
   3.596208699348735*^9, 3.5962087008772984`*^9}, {3.59620876114611*^9, 
   3.596208762666564*^9}, {3.596218029215061*^9, 3.596218067201882*^9}, {
@@ -119,7 +80,15 @@ Cell[BoxData[
   3.59621836121882*^9}, {3.59621840007551*^9, 3.5962184020255327`*^9}, {
   3.596218442693451*^9, 3.5962184522014923`*^9}, {3.5963737386065187`*^9, 
   3.5963737737337923`*^9}, {3.596373983433772*^9, 3.596373993451654*^9}, {
-  3.596374033366206*^9, 3.5963740985087147`*^9}}],
+  3.596374033366206*^9, 3.5963740985087147`*^9}, {3.5970256450477047`*^9, 
+  3.597025656408182*^9}}],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"don", "'"}], "t", " ", "do", " ", "random", " ", "ones"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.5970220937741213`*^9, 3.597022096738213*^9}}],
 
 Cell[CellGroupData[{
 
@@ -127,150 +96,100 @@ Cell[BoxData[
  RowBox[{"DynamicModule", "[", 
   RowBox[{
    RowBox[{"{", 
-    RowBox[{"row", "=", 
-     RowBox[{"RandomSample", "[", 
-      RowBox[{
-       RowBox[{"Range", "[", 
-        RowBox[{"0", ",", "11"}], "]"}], ",", "10"}], "]"}]}], "}"}], ",", 
-   "\[IndentingNewLine]", 
-   RowBox[{"GraphicsRow", "[", 
     RowBox[{
+     RowBox[{"Wozzeck", "=", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "2", ",", "3"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Schoenberg", "=", 
+      RowBox[{"{", 
+       RowBox[{"2", ",", "3", ",", "4"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Strauss", "=", 
+      RowBox[{"{", 
+       RowBox[{"4", ",", "5", ",", "7"}], "}"}]}]}], "}"}], ",", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Column", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Exploring Pitch-Class Set Theory\>\"", ",", " ", 
+          "\"\<Subsubtitle\>\""}], "]"}], ",", 
+        RowBox[{"Text", "[", 
+         RowBox[{"Style", "[", "Set", "]"}], "]"}], ",", 
+        RowBox[{"PlaySetChord", "[", 
+         RowBox[{"Set", ",", "length"}], "]"}]}], "}"}], "]"}], ",", 
      RowBox[{"{", 
-      RowBox[{
-       RowBox[{"Manipulate", "[", 
+      RowBox[{"Set", ",", 
+       RowBox[{"{", 
         RowBox[{
-         RowBox[{"GenerateSet", "[", 
-          RowBox[{"1", ",", "setlength"}], "]"}], ",", 
-         RowBox[{"Style", "[", 
-          RowBox[{"row", ",", " ", "14", ",", " ", "Bold"}], "]"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"setlength", ",", "1", ",", "10", ",", "1"}], "}"}]}], 
-        "]"}], "\[IndentingNewLine]", 
-       RowBox[{"Manipulate", "[", 
-        RowBox[{
-         RowBox[{"GenerateSet", "[", 
-          RowBox[{"1", ",", "setlength"}], "]"}], ",", 
-         RowBox[{"Style", "[", 
-          RowBox[{
-           RowBox[{"Reverse", "[", "row", "]"}], ",", " ", "14", ",", " ", 
-           "Bold"}], "]"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"setlength", ",", "1", ",", "10", ",", "1"}], "}"}]}], 
-        "]"}]}], "}"}], ",", 
-     RowBox[{"ImageSize", "\[Rule]", "450"}]}], "]"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.596208702358255*^9, 3.596208710518601*^9}, {
-   3.596213197172719*^9, 3.5962132451363287`*^9}, 3.596218080923321*^9, 
-   3.596218422892056*^9, {3.596218458946851*^9, 3.596218462142756*^9}, {
-   3.596218502819055*^9, 3.596218561132573*^9}, {3.5962208232714357`*^9, 
-   3.596220824739986*^9}, {3.5962212103528633`*^9, 3.596221249332204*^9}, {
-   3.596238557701355*^9, 3.596238641431776*^9}, {3.596238876127874*^9, 
-   3.5962389404076643`*^9}, {3.596239231339023*^9, 3.596239247401223*^9}, {
-   3.5962392806491117`*^9, 3.596239302778943*^9}, {3.5963684706430407`*^9, 
-   3.596368563082049*^9}, {3.59636881635474*^9, 3.596368847635213*^9}, {
-   3.596373797388603*^9, 3.596373797555835*^9}, {3.596373833535984*^9, 
-   3.596373911512021*^9}, {3.596373957529129*^9, 3.596373973240727*^9}, {
-   3.596374020846846*^9, 3.596374028424829*^9}, {3.596374129036026*^9, 
-   3.596374142994493*^9}}],
+        "Wozzeck", ",", "Schoenberg", ",", "Strauss", ",", "Random", ",", 
+         "hello", ",", " ", "hel"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"length", ",", "1.2", ",", "3"}], "}"}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.597021862199161*^9, 3.5970218633367157`*^9}, {
+   3.597021930453701*^9, 3.597022004199657*^9}, {3.597022037336694*^9, 
+   3.597022087678334*^9}, {3.5970222890805597`*^9, 3.597022316484498*^9}, {
+   3.5970224056723003`*^9, 3.597022595679019*^9}, {3.597022703842729*^9, 
+   3.597022757151936*^9}, {3.597025334913651*^9, 3.5970253544458113`*^9}, {
+   3.5970254398153133`*^9, 3.5970254610145617`*^9}, {3.597025501083084*^9, 
+   3.597025537823347*^9}, 3.597025701568284*^9, {3.597025830739592*^9, 
+   3.59702584339375*^9}, {3.5970262709600983`*^9, 3.597026286309403*^9}, {
+   3.597026419873219*^9, 3.597026432550514*^9}, {3.597026470626657*^9, 
+   3.597026513671096*^9}, {3.5970265763906097`*^9, 3.597026591573636*^9}}],
 
 Cell[BoxData[
- DynamicModuleBox[{$CellContext`row$$ = {9, 8, 6, 11, 10, 2, 0, 5, 4, 3}}, 
-  GraphicsBox[{{}, InsetBox[
-     RowBox[{
-      TagBox[
-       FormBox[
-        StyleBox[
-         DynamicModuleBox[{$CellContext`setlength$$ = 1, Typeset`show$$ = 
-          True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-          Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-          "\"untitled\"", Typeset`specs$$ = {{
-            Hold[
-             Style[{3, 4, 5, 0, 2, 10, 11, 6, 8, 9}, 14, Bold]], 
-            Manipulate`Dump`ThisIsNotAControl}, {
-            Hold[$CellContext`setlength$$], 1, 10, 1}}, Typeset`size$$ = {
-          313., {68., 75.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-          Typeset`skipInitDone$$ = True, $CellContext`setlength$385$$ = 0}, 
-          
-          DynamicBox[Manipulate`ManipulateBoxes[
-           1, TraditionalForm, "Variables" :> {$CellContext`setlength$$ = 1}, 
-            "ControllerVariables" :> {
-              
-              Hold[$CellContext`setlength$$, $CellContext`setlength$385$$, 
-               0]}, "OtherVariables" :> {
-             Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-              Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-              Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
-              Typeset`initDone$$, Typeset`skipInitDone$$}, 
-            "Body" :> $CellContext`GenerateSet[1, $CellContext`setlength$$], 
-            "Specifications" :> {
-              
-              Style[{3, 4, 5, 0, 2, 10, 11, 6, 8, 9}, 14, 
-               Bold], {$CellContext`setlength$$, 1, 10, 1}}, "Options" :> {}, 
-            "DefaultOptions" :> {}],
-           ImageSizeCache->{364., {131., 137.}},
-           SingleEvaluation->True],
-          Deinitialization:>None,
-          DynamicModuleValues:>{},
-          SynchronousInitialization->True,
-          UnsavedVariables:>{Typeset`initDone$$},
-          UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-         Deployed->True,
-         StripOnInput->False],
-        TraditionalForm],
-       Manipulate`InterpretManipulate[1]], " ", 
-      TagBox[
-       FormBox[
-        StyleBox[
-         DynamicModuleBox[{$CellContext`setlength$$ = 1, Typeset`show$$ = 
-          True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-          Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-          "\"untitled\"", Typeset`specs$$ = {{
-            Hold[
-             Style[{9, 8, 6, 11, 10, 2, 0, 5, 4, 3}, 14, Bold]], 
-            Manipulate`Dump`ThisIsNotAControl}, {
-            Hold[$CellContext`setlength$$], 1, 10, 1}}, Typeset`size$$ = {
-          313., {68., 75.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-          Typeset`skipInitDone$$ = True, $CellContext`setlength$404$$ = 0}, 
-          
-          DynamicBox[Manipulate`ManipulateBoxes[
-           1, TraditionalForm, "Variables" :> {$CellContext`setlength$$ = 1}, 
-            "ControllerVariables" :> {
-              
-              Hold[$CellContext`setlength$$, $CellContext`setlength$404$$, 
-               0]}, "OtherVariables" :> {
-             Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
-              Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
-              Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
-              Typeset`initDone$$, Typeset`skipInitDone$$}, 
-            "Body" :> $CellContext`GenerateSet[1, $CellContext`setlength$$], 
-            "Specifications" :> {
-              
-              Style[{9, 8, 6, 11, 10, 2, 0, 5, 4, 3}, 14, 
-               Bold], {$CellContext`setlength$$, 1, 10, 1}}, "Options" :> {}, 
-            "DefaultOptions" :> {}],
-           ImageSizeCache->{364., {131., 137.}},
-           SingleEvaluation->True],
-          Deinitialization:>None,
-          DynamicModuleValues:>{},
-          SynchronousInitialization->True,
-          UnsavedVariables:>{Typeset`initDone$$},
-          UntrackedVariables:>{Typeset`size$$}], "Manipulate",
-         Deployed->True,
-         StripOnInput->False],
-        TraditionalForm],
-       Manipulate`InterpretManipulate[1]]}], {189., -189.}, {
-     Center, Center}, {360., 360.}], {}},
-   ContentSelectable->True,
-   ImageSize->450,
-   PlotRangePadding->{6, 5}],
+ DynamicModuleBox[{$CellContext`Wozzeck$$ = {1, 2, 
+  3}, $CellContext`Schoenberg$$ = {2, 3, 4}, $CellContext`Strauss$$ = {4, 5, 
+  7}}, 
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`length$$ = 1.2, Set$$ = {1, 2, 3}, 
+     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+       Hold[
+       Set$$], {{1, 2, 3}, {2, 3, 4}, {4, 5, 7}, Random, 
+        1, $CellContext`hel}}, {
+       Hold[$CellContext`length$$], 1.2, 3}}, Typeset`size$$ = {
+     313., {92.9375, 100.0625}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+     Typeset`skipInitDone$$ = True, Set$30871$$ = 
+     0, $CellContext`length$30872$$ = 0}, 
+     DynamicBox[Manipulate`ManipulateBoxes[1, StandardForm, "Variables" :> {
+         Set$$[$CellContext`length$$, 1.2], 
+         Set$$[Set$$, {1, 2, 3}]}, "ControllerVariables" :> {
+         Hold[Set$$, Set$30871$$, 0], 
+         Hold[$CellContext`length$$, $CellContext`length$30872$$, 0]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Column[{
+          Style["Exploring Pitch-Class Set Theory", "Subsubtitle"], 
+          Text[
+           Style[Set$$]], 
+          $CellContext`PlaySetChord[Set$$, $CellContext`length$$]}], 
+       "Specifications" :> {{
+         Set$$, {{1, 2, 3}, {2, 3, 4}, {4, 5, 7}, Random, 
+           1, $CellContext`hel}}, {$CellContext`length$$, 1.2, 3}}, 
+       "Options" :> {}, "DefaultOptions" :> {}],
+      ImageSizeCache->{368., {164., 171.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
   DynamicModuleValues:>{}]], "Output",
- CellChangeTimes->{
-  3.596238881552636*^9, {3.596238912349612*^9, 3.596238945886573*^9}, {
-   3.5962392340695257`*^9, 3.5962392477729607`*^9}, {3.5962392896152773`*^9, 
-   3.5962393032148037`*^9}, {3.5963684510575237`*^9, 3.596368563403977*^9}, {
-   3.596368839579035*^9, 3.596368848064516*^9}, 3.5963732124090137`*^9, {
-   3.596373871370549*^9, 3.596373912665064*^9}, {3.596373964380643*^9, 
-   3.596373997529046*^9}, 3.596374029217136*^9, 3.596374101561912*^9, 
-   3.596374143512508*^9, 3.5965410274084682`*^9, 3.596559279767926*^9}]
+ CellChangeTimes->{{3.597025530610345*^9, 3.597025538288086*^9}, 
+   3.597025702654132*^9, {3.597025833010064*^9, 3.597025843888061*^9}, {
+   3.597026271796978*^9, 3.597026287368443*^9}, {3.5970264331002703`*^9, 
+   3.597026437155176*^9}, {3.5970264725460453`*^9, 3.597026515368626*^9}, {
+   3.597026585361333*^9, 3.597026592646571*^9}}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -285,38 +204,6 @@ Cell[BoxData[
   "*)"}]], "Input",
  CellChangeTimes->{{3.596371974343377*^9, 3.596371978611487*^9}, {
   3.596541637529804*^9, 3.5965416684603367`*^9}}],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-   RowBox[{"random", " ", "pitch", " ", "class"}], ",", " ", 
-   RowBox[{"in", " ", "order"}]}], "*)"}]], "Input",
- CellChangeTimes->{{3.596372102789015*^9, 3.596372106864781*^9}, {
-  3.5963723461963797`*^9, 3.596372348295916*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"r", "=", 
-  RowBox[{"Sort", "[", 
-   RowBox[{"RandomSample", "[", 
-    RowBox[{
-     RowBox[{"Range", "[", 
-      RowBox[{"0", ",", "5"}], "]"}], ",", "5"}], "]"}], "]"}]}]], "Input",
- CellChangeTimes->{{3.5963713445528917`*^9, 3.596371347343212*^9}, {
-  3.59637158560411*^9, 3.596371603324312*^9}, {3.596372313724945*^9, 
-  3.5963723162685204`*^9}, {3.596544147134233*^9, 3.596544152589593*^9}}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"0", ",", "1", ",", "2", ",", "4", ",", "5"}], "}"}]], "Output",
- CellChangeTimes->{
-  3.596371347648727*^9, {3.596371587269247*^9, 3.596371603679632*^9}, {
-   3.5963723167464437`*^9, 3.596372360281795*^9}, 3.5963731681482553`*^9, 
-   3.596373212768898*^9, 3.596373302012315*^9, 3.596541027779902*^9, 
-   3.596541550338315*^9, 3.59654159352705*^9, 3.596544153115168*^9, 
-   3.596559280169427*^9, 3.5965606674059877`*^9}]
-}, Open  ]],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -337,66 +224,6 @@ Cell[BoxData[
    RowBox[{"then", " ", "mod", " ", "12", " ", 
     RowBox[{"it", "."}]}]}], "*)"}]], "Input",
  CellChangeTimes->{{3.5965443947901287`*^9, 3.596544444944013*^9}}],
-
-Cell[BoxData[
- RowBox[{"(*", 
-  RowBox[{
-   RowBox[{"cperm", "[", "set_", "]"}], ":=", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"Delete", "[", 
-      RowBox[{
-       RowBox[{"Append", "[", 
-        RowBox[{"set", ",", 
-         RowBox[{"set", "[", 
-          RowBox[{"[", "1", "]"}], "]"}]}], "]"}], ",", "1"}], "]"}], 
-     "\[IndentingNewLine]", 
-     RowBox[{"cpermordered", "[", "cp_", "]"}]}], ":=", 
-    RowBox[{"Table", "[", 
-     RowBox[{
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"cp", "[", 
-          RowBox[{"[", "i", "]"}], "]"}], "<", 
-         RowBox[{"cp", "[", 
-          RowBox[{"[", "1", "]"}], "]"}]}], ",", 
-        RowBox[{
-         RowBox[{"cp", "[", 
-          RowBox[{"[", "i", "]"}], "]"}], "+", "12"}], ",", 
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{
-            RowBox[{"cp", "[", 
-             RowBox[{"[", "i", "]"}], "]"}], ">", "12"}], "&&", 
-           RowBox[{
-            RowBox[{"Mod", "[", 
-             RowBox[{
-              RowBox[{"cp", "[", 
-               RowBox[{"[", "i", "]"}], "]"}], ",", "12"}], "]"}], ">", 
-            RowBox[{"cp", "[", 
-             RowBox[{"[", "1", "]"}], "]"}]}]}], ",", 
-          RowBox[{"Mod", "[", 
-           RowBox[{
-            RowBox[{"cp", "[", 
-             RowBox[{"[", "i", "]"}], "]"}], ",", "12"}], "]"}], ",", 
-          RowBox[{"cp", "[", 
-           RowBox[{"[", "i", "]"}], "]"}]}], "]"}]}], "]"}], ",", 
-      RowBox[{"{", 
-       RowBox[{"i", ",", "1", ",", 
-        RowBox[{"Length", "[", "cp", "]"}]}], "}"}]}], "]"}]}]}], 
-  "*)"}]], "Input",
- CellChangeTimes->{{3.596372141339264*^9, 3.596372277199671*^9}, {
-  3.59637238505215*^9, 3.596372385935554*^9}, {3.596373140476392*^9, 
-  3.596373163282518*^9}, {3.596373323081381*^9, 3.596373323417972*^9}, {
-  3.596373529532172*^9, 3.5963735519112997`*^9}, {3.596373589327196*^9, 
-  3.5963736088545017`*^9}, {3.596541874215412*^9, 3.596541903250458*^9}, {
-  3.59654227732858*^9, 3.5965423004432173`*^9}, {3.596543412799613*^9, 
-  3.596543421646264*^9}, {3.596543516050074*^9, 3.596543521520842*^9}, {
-  3.5965442508878183`*^9, 3.596544255477922*^9}, {3.59654459941894*^9, 
-  3.596544604042326*^9}, {3.596544664720171*^9, 3.59654468143231*^9}, {
-  3.596544760075243*^9, 3.5965447625771103`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -518,10 +345,11 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"0", ",", "1", ",", "2", ",", "4", ",", "5"}], "}"}]], "Output",
+  RowBox[{"1", ",", "2", ",", "3", ",", "4", ",", "5"}], "}"}]], "Output",
  CellChangeTimes->{
   3.596560545834462*^9, {3.596560609458543*^9, 3.5965606235891743`*^9}, 
-   3.596560719933803*^9, 3.596561247820133*^9}]
+   3.596560719933803*^9, 3.596561247820133*^9, 3.596649503635017*^9, 
+   3.596847515542153*^9, 3.597020693514029*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -548,9 +376,10 @@ Cell[BoxData[{
 
 Cell[BoxData[
  RowBox[{"{", 
-  RowBox[{"0", ",", "1", ",", "2", ",", "4", ",", "5"}], "}"}]], "Output",
+  RowBox[{"0", ",", "1", ",", "2", ",", "3", ",", "4"}], "}"}]], "Output",
  CellChangeTimes->{3.5965605223657007`*^9, 3.596560731464295*^9, 
-  3.596561256916861*^9}]
+  3.596561256916861*^9, 3.596649503690592*^9, 3.596847515576326*^9, 
+  3.5970206935533333`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -712,11 +541,12 @@ Cell[BoxData[
    3.5963728152982283`*^9, 3.596372833235319*^9}, {3.5963729772459583`*^9, 
    3.596373032348447*^9}, {3.596373112679061*^9, 3.5963731218902607`*^9}, 
    3.596373213103611*^9, {3.596374192700714*^9, 3.596374209926078*^9}, 
-   3.596541028050064*^9, 3.596559280610084*^9}]
+   3.596541028050064*^9, 3.596559280610084*^9, 3.5966495038054037`*^9, 
+   3.5968475157321978`*^9, 3.597020693665234*^9}]
 }, Open  ]]
 },
 WindowSize->{1035, 838},
-WindowMargins->{{70, Automatic}, {Automatic, 0}},
+WindowMargins->{{95, Automatic}, {Automatic, 0}},
 Magnification:>1.25 Inherited,
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
@@ -733,41 +563,32 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[579, 22, 1661, 36, 146, "Input",
+Cell[557, 20, 208, 5, 83, "Input"],
+Cell[768, 27, 944, 18, 133, "Input",
  Evaluatable->False],
-Cell[2243, 60, 492, 10, 60, "Output"],
-Cell[2738, 72, 254, 6, 36, "Output"],
-Cell[2995, 80, 419, 8, 57, "Output"]
-}, Open  ]],
-Cell[3429, 91, 1278, 30, 78, "Input"],
+Cell[1715, 47, 1561, 36, 99, "Input"],
+Cell[3279, 85, 200, 5, 35, "Input"],
 Cell[CellGroupData[{
-Cell[4732, 125, 2161, 47, 120, "Input"],
-Cell[6896, 174, 4852, 98, 580, "Output"]
+Cell[3504, 94, 2014, 45, 141, "Input"],
+Cell[5521, 141, 2505, 50, 389, "Output"]
 }, Open  ]],
-Cell[11763, 275, 444, 11, 57, "Input"],
-Cell[12210, 288, 272, 6, 35, "Input"],
+Cell[8041, 194, 444, 11, 57, "Input"],
+Cell[8488, 207, 739, 18, 78, "Input"],
+Cell[9230, 227, 2787, 78, 162, "Input"],
+Cell[12020, 307, 912, 27, 57, "Input"],
 Cell[CellGroupData[{
-Cell[12507, 298, 420, 9, 36, "Input"],
-Cell[12930, 309, 459, 8, 35, "Output"]
-}, Open  ]],
-Cell[13404, 320, 739, 18, 78, "Input"],
-Cell[14146, 340, 2308, 58, 99, "Input"],
-Cell[16457, 400, 2787, 78, 162, "Input"],
-Cell[19247, 480, 912, 27, 57, "Input"],
-Cell[CellGroupData[{
-Cell[20184, 511, 263, 5, 35, "Input"],
-Cell[20450, 518, 244, 5, 35, "Output"]
+Cell[12957, 338, 263, 5, 35, "Input"],
+Cell[13223, 345, 314, 6, 35, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20731, 528, 658, 18, 57, "Input"],
-Cell[21392, 548, 194, 4, 35, "Output"]
+Cell[13574, 356, 658, 18, 57, "Input"],
+Cell[14235, 376, 265, 5, 35, "Output"]
 }, Open  ]],
-Cell[21601, 555, 232, 5, 36, "Input"],
-Cell[21836, 562, 1032, 30, 57, "Input"],
+Cell[14515, 384, 232, 5, 36, "Input"],
+Cell[14750, 391, 1032, 30, 57, "Input"],
 Cell[CellGroupData[{
-Cell[22893, 596, 398, 8, 36, "Input"],
-Cell[23294, 606, 4501, 108, 161, "Output"]
+Cell[15807, 425, 398, 8, 36, "Input"],
+Cell[16208, 435, 4575, 109, 195, "Output"]
 }, Open  ]]
 }
 ]
