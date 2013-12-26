@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     23029,        601]
-NotebookOptionsPosition[     21985,        563]
-NotebookOutlinePosition[     22372,        580]
-CellTagsIndexPosition[     22329,        577]
+NotebookDataLength[     24494,        637]
+NotebookOptionsPosition[     23449,        599]
+NotebookOutlinePosition[     23836,        616]
+CellTagsIndexPosition[     23793,        613]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -125,6 +125,7 @@ Cell[BoxData[
        RowBox[{
         RowBox[{"Range", "[", 
          RowBox[{"0", ",", "4"}], "]"}], ",", "4"}], "]"}]}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
    RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"Column", "[", 
@@ -161,30 +162,30 @@ Cell[BoxData[
    3.597027045792961*^9}, {3.597027168138825*^9, 3.59702716830407*^9}, {
    3.5970272032573757`*^9, 3.597027207213114*^9}, {3.5970272989895477`*^9, 
    3.597027325866*^9}, {3.5970274219989567`*^9, 3.5970274754496403`*^9}, {
-   3.597027505583886*^9, 3.5970275235351887`*^9}}],
+   3.597027505583886*^9, 3.5970275235351887`*^9}, 3.597028102723918*^9}],
 
 Cell[BoxData[
  DynamicModuleBox[{$CellContext`Wozzeck$$ = {1, 2, 
   3}, $CellContext`Schoenberg$$ = {2, 3, 4}, $CellContext`Strauss$$ = {4, 5, 
-  7}, Random$$ = {2, 4, 0, 1}}, 
+  7}, Random$$ = {4, 1, 0, 3}}, 
   TagBox[
    StyleBox[
-    DynamicModuleBox[{$CellContext`length$$ = 1.2, $CellContext`PCSet$$ = {2, 
-     4, 0, 1}, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    DynamicModuleBox[{$CellContext`length$$ = 1.2, $CellContext`PCSet$$ = {1, 
+     2, 3}, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
      Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
      1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
        Hold[$CellContext`PCSet$$], {{1, 2, 3}, {2, 3, 4}, {4, 5, 
-        7}, {2, 4, 0, 1} -> "Random"}}, {
+        7}, {4, 1, 0, 3} -> "Random"}}, {
        Hold[$CellContext`length$$], 1.2, 3}}, Typeset`size$$ = {
      313., {92.9375, 100.0625}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`PCSet$12491$$ = 
-     False, $CellContext`length$12492$$ = 0}, 
+     Typeset`skipInitDone$$ = True, $CellContext`PCSet$17920$$ = 
+     False, $CellContext`length$17921$$ = 0}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, 
        "Variables" :> {$CellContext`length$$ = 
          1.2, $CellContext`PCSet$$ = {1, 2, 3}}, "ControllerVariables" :> {
-         Hold[$CellContext`PCSet$$, $CellContext`PCSet$12491$$, False], 
-         Hold[$CellContext`length$$, $CellContext`length$12492$$, 0]}, 
+         Hold[$CellContext`PCSet$$, $CellContext`PCSet$17920$$, False], 
+         Hold[$CellContext`length$$, $CellContext`length$17921$$, 0]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -196,7 +197,7 @@ Cell[BoxData[
           $CellContext`PlaySetChord[$CellContext`PCSet$$, \
 $CellContext`length$$]}], 
        "Specifications" :> {{$CellContext`PCSet$$, {{1, 2, 3}, {2, 3, 4}, {4, 
-           5, 7}, {2, 4, 0, 1} -> "Random"}}, {$CellContext`length$$, 1.2, 
+           5, 7}, {4, 1, 0, 3} -> "Random"}}, {$CellContext`length$$, 1.2, 
           3}}, "Options" :> {}, "DefaultOptions" :> {}],
       ImageSizeCache->{368., {163., 170.}},
       SingleEvaluation->True],
@@ -217,7 +218,8 @@ $CellContext`length$$]}],
    3.597026956004691*^9}, 3.5970270052033167`*^9, 3.5970270463421307`*^9, 
    3.597027168770731*^9, {3.597027207697102*^9, 3.5970272197349787`*^9}, {
    3.597027300874856*^9, 3.597027326518364*^9}, {3.597027433304685*^9, 
-   3.597027475852858*^9}, {3.597027514105249*^9, 3.597027537235393*^9}}]
+   3.597027475852858*^9}, {3.597027514105249*^9, 3.597027537235393*^9}, 
+   3.597028353187048*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -424,18 +426,31 @@ Cell[BoxData[{
   RowBox[{"PlaySetChord", "[", 
    RowBox[{"row_", ",", "notelen_"}], "]"}], ":=", 
   RowBox[{"Sound", "[", 
-   RowBox[{"SoundNote", "[", 
+   RowBox[{"Append", "[", 
     RowBox[{
      RowBox[{"Table", "[", 
       RowBox[{
-       RowBox[{"row", "[", 
-        RowBox[{"[", "i", "]"}], "]"}], ",", 
+       RowBox[{"SoundNote", "[", 
+        RowBox[{
+         RowBox[{"row", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"notelen", "/", "2"}]}], "]"}], ",", 
        RowBox[{"{", 
         RowBox[{"i", ",", "1", ",", 
          RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], ",", 
-     "notelen"}], "]"}], "]"}]}]}], "Input",
+     RowBox[{"SoundNote", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"row", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "1", ",", 
+           RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], ",", 
+       "notelen"}], "]"}]}], "]"}], "]"}]}]}], "Input",
  CellChangeTimes->{{3.59637261869578*^9, 3.596372636630069*^9}, {
-  3.596372938039815*^9, 3.596372972061804*^9}}],
+  3.596372938039815*^9, 3.596372972061804*^9}, {3.5970281342419167`*^9, 
+  3.5970283435276213`*^9}}],
 
 Cell[CellGroupData[{
 
@@ -457,9 +472,13 @@ Cell[BoxData[
        {RGBColor[0.5, 0, 0.5], 
         StyleBox[{
           RectangleBox[{0., 0.4438917279327484}, \
-{1.15, 0.45579648983751037`}], 
-          RectangleBox[{0., 0.45579648983751037`}, \
-{1.15, 0.4677012517422721}]},
+{0.57, 0.45579648983751037`}], 
+          RectangleBox[{1.2, 0.4438917279327484}, \
+{2.35, 0.45579648983751037`}], 
+          RectangleBox[{0.6, 0.45579648983751037`}, \
+{1.17, 0.4677012517422721}], 
+          RectangleBox[{1.2, 0.45579648983751037`}, \
+{2.35, 0.4677012517422721}]},
          Antialiasing->True]},
        AspectRatio->NCache[
          Rational[6, 35], 0.17142857142857143`],
@@ -486,7 +505,7 @@ Cell[BoxData[
       TemplateBox[{
        StyleBox[
         "\" | \"", FontSize -> 14, FontColor -> GrayLevel[0.75], StripOnInput -> 
-         False],TemplateBox[{"\"1.2\"", "\" s\""}, "RowDefault"]},
+         False],TemplateBox[{"\"2.4\"", "\" s\""}, "RowDefault"]},
        "RowWithSeparator"], "DialogStyle",
       StripOnInput->False], {355, -159}, Scaled[{1, 0}]], 
     TagBox[
@@ -510,12 +529,25 @@ Cell[BoxData[
                 Sound`MIDIEvent[
                 0, "NoteOn", "Note" -> 61, "Channel" -> 0, "Velocity" -> 127], 
                 Sound`MIDIEvent[
-                0, "NoteOn", "Note" -> 62, "Channel" -> 0, "Velocity" -> 127], 
-                Sound`MIDIEvent[
-                288, "NoteOff", "Note" -> 61, "Channel" -> 0, "Velocity" -> 
+                144, "NoteOff", "Note" -> 61, "Channel" -> 0, "Velocity" -> 
                  0], 
                 Sound`MIDIEvent[
+                144, "NoteOn", "Note" -> 62, "Channel" -> 0, "Velocity" -> 
+                 127], 
+                Sound`MIDIEvent[
                 288, "NoteOff", "Note" -> 62, "Channel" -> 0, "Velocity" -> 
+                 0], 
+                Sound`MIDIEvent[
+                288, "NoteOn", "Note" -> 61, "Channel" -> 0, "Velocity" -> 
+                 127], 
+                Sound`MIDIEvent[
+                288, "NoteOn", "Note" -> 62, "Channel" -> 0, "Velocity" -> 
+                 127], 
+                Sound`MIDIEvent[
+                576, "NoteOff", "Note" -> 61, "Channel" -> 0, "Velocity" -> 
+                 0], 
+                Sound`MIDIEvent[
+                576, "NoteOff", "Note" -> 62, "Channel" -> 0, "Velocity" -> 
                  0]}]}, "DivisionType" -> "PPQ", "Resolution" -> 240]]; 
           Sound`EmitSampledSound[None, "Preemptive"]), PassEventsDown -> 
          Automatic, PassEventsUp -> True}]],
@@ -551,14 +583,18 @@ Cell[BoxData[
    ImageSize->250,
    PlotRange->{{0, 360}, {-164, 0}},
    PlotRangePadding->1],
-  Sound[
-   SoundNote[{1, 2}, 1.2]]]], "Output",
+  Sound[{
+    SoundNote[1, 0.6], 
+    SoundNote[2, 0.6], 
+    SoundNote[{1, 2}, 1.2]}]]], "Output",
  CellChangeTimes->{{3.596372649239047*^9, 3.5963726829561653`*^9}, {
    3.5963728152982283`*^9, 3.596372833235319*^9}, {3.5963729772459583`*^9, 
    3.596373032348447*^9}, {3.596373112679061*^9, 3.5963731218902607`*^9}, 
    3.596373213103611*^9, {3.596374192700714*^9, 3.596374209926078*^9}, 
    3.596541028050064*^9, 3.596559280610084*^9, 3.5966495038054037`*^9, 
-   3.5968475157321978`*^9, 3.597020693665234*^9, 3.597026897577035*^9}]
+   3.5968475157321978`*^9, 3.597020693665234*^9, 3.597026897577035*^9, {
+   3.597028140886793*^9, 3.597028194585229*^9}, 3.597028231177291*^9, 
+   3.59702828589305*^9, {3.597028320369123*^9, 3.5970283456616583`*^9}}]
 }, Open  ]]
 },
 WindowSize->{1035, 838},
@@ -585,23 +621,23 @@ Cell[981, 32, 1215, 27, 319, "Text",
 Cell[2199, 61, 1561, 36, 99, "Input"],
 Cell[3763, 99, 200, 5, 35, "Input"],
 Cell[CellGroupData[{
-Cell[3988, 108, 2576, 55, 162, "Input"],
-Cell[6567, 165, 2970, 54, 353, "Output"]
+Cell[3988, 108, 2625, 56, 183, "Input"],
+Cell[6616, 166, 2993, 55, 387, "Output"]
 }, Open  ]],
-Cell[9552, 222, 444, 11, 57, "Input"],
-Cell[9999, 235, 739, 18, 78, "Input"],
-Cell[10741, 255, 2787, 78, 162, "Input"],
-Cell[13531, 335, 912, 27, 57, "Input"],
+Cell[9624, 224, 444, 11, 57, "Input"],
+Cell[10071, 237, 739, 18, 78, "Input"],
+Cell[10813, 257, 2787, 78, 162, "Input"],
+Cell[13603, 337, 912, 27, 57, "Input"],
 Cell[CellGroupData[{
-Cell[14468, 366, 263, 5, 35, "Input"],
-Cell[14734, 373, 269, 4, 35, "Output"]
+Cell[14540, 368, 263, 5, 35, "Input"],
+Cell[14806, 375, 269, 4, 35, "Output"]
 }, Open  ]],
-Cell[15018, 380, 658, 18, 57, "Input"],
-Cell[15679, 400, 232, 5, 36, "Input"],
-Cell[15914, 407, 1032, 30, 57, "Input"],
+Cell[15090, 382, 658, 18, 57, "Input"],
+Cell[15751, 402, 232, 5, 36, "Input"],
+Cell[15986, 409, 1509, 43, 99, "Input"],
 Cell[CellGroupData[{
-Cell[16971, 441, 398, 8, 36, "Input"],
-Cell[17372, 451, 4597, 109, 161, "Output"]
+Cell[17520, 456, 398, 8, 36, "Input"],
+Cell[17921, 466, 5512, 130, 161, "Output"]
 }, Open  ]]
 }
 ]
