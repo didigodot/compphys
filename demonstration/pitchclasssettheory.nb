@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     28497,        725]
-NotebookOptionsPosition[     27455,        687]
-NotebookOutlinePosition[     27841,        704]
-CellTagsIndexPosition[     27798,        701]
+NotebookDataLength[     28990,        706]
+NotebookOptionsPosition[     28233,        678]
+NotebookOutlinePosition[     28619,        695]
+CellTagsIndexPosition[     28576,        692]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -157,7 +157,8 @@ Cell[BoxData[
        RowBox[{"200", ",", "40"}], "}"}], ",", "Bottom"}], "]"}]}], 
    "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"poss", "[", "i_", "]"}], ":=", "\[IndentingNewLine]", 
+    RowBox[{"poss", "[", 
+     RowBox[{"i_", ",", "tup_"}], "]"}], ":=", "\[IndentingNewLine]", 
     RowBox[{"If", "[", 
      RowBox[{
       RowBox[{
@@ -214,109 +215,35 @@ Cell[BoxData[
      "]"}]}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"ICSet", "[", "ps_", "]"}], ":=", 
-    RowBox[{"Module", "[", 
+    RowBox[{"Table", "[", 
      RowBox[{
-      RowBox[{"{", 
-       RowBox[{"tup", "=", 
-        RowBox[{"Subsets", "[", 
-         RowBox[{"ps", ",", 
-          RowBox[{"{", "2", "}"}]}], "]"}]}], "}"}], ",", 
-      RowBox[{"For", "[", 
+      RowBox[{"Count", "[", 
        RowBox[{
-        RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
-        RowBox[{"i", "<=", 
-         RowBox[{"Length", "[", "tup", "]"}]}], ",", 
-        RowBox[{"i", "++"}], ",", 
-        RowBox[{"If", "[", 
+        RowBox[{"Table", "[", 
          RowBox[{
-          RowBox[{
-           RowBox[{"poss", "[", "i", "]"}], "\[NotEqual]", "0"}], ",", 
-          RowBox[{
-           RowBox[{"j", "[", 
-            RowBox[{"[", "\[IndentingNewLine]", 
-             RowBox[{"poss", "[", "i", "]"}], "]"}], "]"}], "+=", "1"}]}], 
-         "]"}]}], "]"}]}], "]"}]}]}]}]], "Input",
+          RowBox[{"poss", "[", 
+           RowBox[{"i", ",", 
+            RowBox[{"Subsets", "[", 
+             RowBox[{"ps", ",", 
+              RowBox[{"{", "2", "}"}]}], "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", 
+            RowBox[{"Length", "[", 
+             RowBox[{"Subsets", "[", 
+              RowBox[{"ps", ",", 
+               RowBox[{"{", "2", "}"}]}], "]"}], "]"}]}], "}"}]}], "]"}], ",",
+         "j"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "1", ",", "6"}], "}"}]}], "]"}]}]}]}]], "Input",
  CellChangeTimes->{{3.5977852466153793`*^9, 3.597785275873918*^9}, {
   3.597868920840928*^9, 3.597868990843499*^9}, {3.59788612271346*^9, 
   3.597886132911414*^9}, {3.597889236786187*^9, 3.5978892858331137`*^9}, {
-  3.597889320823617*^9, 3.597889321726138*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"j", "=", 
-   RowBox[{"{", 
-    RowBox[{"0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], 
-  ";"}]], "Input",
- CellChangeTimes->{{3.597886579171227*^9, 3.597886588730356*^9}, 
-   3.597888908376*^9}],
-
-Cell[BoxData[
- RowBox[{"ICSet", "[", 
-  RowBox[{"{", 
-   RowBox[{"10", ",", "11", ",", "2", ",", "5"}], "}"}], "]"}]], "Input",
- CellChangeTimes->{{3.597889301658901*^9, 3.5978893104335623`*^9}}],
-
-Cell[CellGroupData[{
-
-Cell[BoxData["j"], "Input",
- CellChangeTimes->{3.597888891151305*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"1", ",", "0", ",", "2", ",", "1", ",", "1", ",", "1"}], 
-  "}"}]], "Output",
- CellChangeTimes->{{3.59788889172044*^9, 3.597888921109333*^9}, 
-   3.597889132732781*^9, 3.597889313110531*^9}]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"j", "[", 
-   RowBox[{"[", "\[IndentingNewLine]", 
-    RowBox[{
-     RowBox[{"If", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"Abs", "[", 
-         RowBox[{
-          RowBox[{"tup", "[", 
-           RowBox[{"[", 
-            RowBox[{"i", ",", "2"}], "]"}], "]"}], "-", 
-          RowBox[{"tup", "[", 
-           RowBox[{"[", 
-            RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "]"}], ">", "6"}], ",", 
-       RowBox[{"Mod", "[", 
-        RowBox[{
-         RowBox[{"Abs", "[", 
-          RowBox[{
-           RowBox[{"tup", "[", 
-            RowBox[{"[", 
-             RowBox[{"i", ",", "2"}], "]"}], "]"}], "-", 
-           RowBox[{"tup", "[", 
-            RowBox[{"[", 
-             RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "]"}], ",", "12"}], 
-        "]"}], ",", 
-       RowBox[{"Abs", "[", 
-        RowBox[{
-         RowBox[{"tup", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "2"}], "]"}], "]"}], "-", 
-         RowBox[{"tup", "[", 
-          RowBox[{"[", 
-           RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "]"}]}], "]"}], "+", 
-     "1"}], "]"}], "]"}], "+=", "1"}]], "Input"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData["j"], "Input",
- CellChangeTimes->{3.5978870660594177`*^9}],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{"11", ",", "10", ",", "6", ",", "4", ",", "0", ",", "2"}], 
-  "}"}]], "Output",
- CellChangeTimes->{3.597887066311254*^9, 3.597887502760363*^9}]
-}, Open  ]],
+  3.597889320823617*^9, 3.597889321726138*^9}, {3.597890083883922*^9, 
+  3.597890086012679*^9}, {3.597890131344578*^9, 3.597890135625618*^9}, {
+  3.5978909057707148`*^9, 3.597890941025403*^9}, {3.5978910626887302`*^9, 
+  3.59789110809494*^9}, {3.597891292622336*^9, 3.597891310566132*^9}, {
+  3.597921273071026*^9, 3.597921311546425*^9}, {3.59792144276007*^9, 
+  3.597921490165641*^9}, {3.597922295495783*^9, 3.597922318858439*^9}}],
 
 Cell[CellGroupData[{
 
@@ -341,6 +268,11 @@ Cell[BoxData[
      RowBox[{"MTriad", "=", 
       RowBox[{"{", 
        RowBox[{"1", ",", "5", ",", "8"}], "}"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{"MScale", "=", 
+      RowBox[{"{", 
+       RowBox[{
+       "0", ",", "1", ",", "3", ",", "5", ",", "6", ",", "8", ",", "10"}], 
+       "}"}]}], ",", "\[IndentingNewLine]", 
      RowBox[{"Random", "=", 
       RowBox[{"RandomSample", "[", 
        RowBox[{
@@ -377,17 +309,17 @@ Cell[BoxData[
                 RowBox[{"PCSet", ",", "1.2"}], "]"}], ",", " ", 
                RowBox[{"EmitSound", "[", 
                 RowBox[{"Sound", "@", 
-                 RowBox[{"PlaySetChord", "[", 
-                  RowBox[{"PCSet", ",", " ", "1.2"}], "]"}]}], "]"}]}], "]"}],
-              ",", "\[IndentingNewLine]", 
+                 RowBox[{"PlaySet", "[", 
+                  RowBox[{"PCSet", ",", " ", ".4"}], "]"}]}], "]"}]}], "]"}], 
+             ",", "\[IndentingNewLine]", 
              RowBox[{"Button", "[", 
               RowBox[{
                RowBox[{"ButtonLabel", "[", 
                 RowBox[{"PCSet", ",", "1.2"}], "]"}], ",", " ", 
                RowBox[{"EmitSound", "[", 
                 RowBox[{"Sound", "@", 
-                 RowBox[{"PlaySetChord", "[", 
-                  RowBox[{"PCSet", ",", " ", "1.2"}], "]"}]}], "]"}]}], 
+                 RowBox[{"PlaySet", "[", 
+                  RowBox[{"PCSet", ",", " ", ".4"}], "]"}]}], "]"}]}], 
               "]"}]}], "}"}], ",", 
            RowBox[{"{", 
             RowBox[{"\"\<Invert\>\"", ",", "\"\<PrimeForm\>\""}], "}"}]}], 
@@ -400,7 +332,7 @@ Cell[BoxData[
        RowBox[{"{", 
         RowBox[{
         "Wozzeck", ",", "Schoenberg", ",", "Strauss", ",", "Major", ",", 
-         "MTriad", ",", 
+         "MTriad", ",", "MScale", ",", 
          RowBox[{"Random", "\[Rule]", "\"\<Random\>\""}]}], "}"}]}], "}"}]}], 
     "]"}]}], "]"}]], "Input",
  CellChangeTimes->{{3.597021862199161*^9, 3.5970218633367157`*^9}, {
@@ -429,13 +361,17 @@ Cell[BoxData[
    3.597869167723785*^9, 3.597869177698106*^9}, {3.5978791383016376`*^9, 
    3.597879187464333*^9}, {3.59788548393533*^9, 3.597885638334324*^9}, {
    3.5978857340388393`*^9, 3.597885780731276*^9}, {3.597885912924794*^9, 
-   3.5978859657020493`*^9}, {3.597885996955361*^9, 3.597886097300259*^9}}],
+   3.5978859657020493`*^9}, {3.597885996955361*^9, 3.597886097300259*^9}, {
+   3.597889747696849*^9, 3.597889748270719*^9}, {3.597922349652714*^9, 
+   3.597922354966466*^9}, {3.597922433065184*^9, 3.597922511987988*^9}, 
+   3.597922569651194*^9, {3.59792262997233*^9, 3.597922725098731*^9}}],
 
 Cell[BoxData[
  DynamicModuleBox[{$CellContext`Wozzeck$$ = {1, 2, 
   3}, $CellContext`Schoenberg$$ = {2, 3, 4}, $CellContext`Strauss$$ = {4, 5, 
-  7}, $CellContext`Major$$ = {1, 3, 5, 6}, $CellContext`MTriad$$ = {1, 5, 8}, 
-  Random$$ = {2, 4, 1, 3}}, 
+  7}, $CellContext`Major$$ = {1, 3, 5, 6}, $CellContext`MTriad$$ = {1, 5, 
+  8}, $CellContext`MScale$$ = {0, 1, 3, 5, 6, 8, 10}, Random$$ = {4, 2, 1, 
+  3}}, 
   TagBox[
    StyleBox[
     DynamicModuleBox[{$CellContext`PCSet$$ = {1, 2, 3}, Typeset`show$$ = True,
@@ -443,13 +379,14 @@ Cell[BoxData[
      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
      "\"untitled\"", Typeset`specs$$ = {{
        Hold[$CellContext`PCSet$$], {{1, 2, 3}, {2, 3, 4}, {4, 5, 7}, {1, 3, 5,
-         6}, {1, 5, 8}, {2, 4, 1, 3} -> "Random"}}}, Typeset`size$$ = {
-     313., {114.4375, 121.5625}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-     Typeset`skipInitDone$$ = True, $CellContext`PCSet$107973$$ = False}, 
+         6}, {1, 5, 8}, {0, 1, 3, 5, 6, 8, 10}, {4, 2, 1, 3} -> "Random"}}}, 
+     Typeset`size$$ = {347., {114.4375, 121.5625}}, Typeset`update$$ = 0, 
+     Typeset`initDone$$, Typeset`skipInitDone$$ = 
+     True, $CellContext`PCSet$247264$$ = False}, 
      DynamicBox[Manipulate`ManipulateBoxes[
       1, StandardForm, "Variables" :> {$CellContext`PCSet$$ = {1, 2, 3}}, 
        "ControllerVariables" :> {
-         Hold[$CellContext`PCSet$$, $CellContext`PCSet$107973$$, False]}, 
+         Hold[$CellContext`PCSet$$, $CellContext`PCSet$247264$$, False]}, 
        "OtherVariables" :> {
         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -469,18 +406,19 @@ Cell[BoxData[
               $CellContext`ButtonLabel[$CellContext`PCSet$$, 1.2], 
               EmitSound[
                Sound[
-                $CellContext`PlaySetChord[$CellContext`PCSet$$, 1.2]]]], 
+                $CellContext`PlaySet[$CellContext`PCSet$$, 0.4]]]], 
              Button[
               $CellContext`ButtonLabel[$CellContext`PCSet$$, 1.2], 
               EmitSound[
                Sound[
-                $CellContext`PlaySetChord[$CellContext`PCSet$$, 1.2]]]]}, {
+                $CellContext`PlaySet[$CellContext`PCSet$$, 0.4]]]]}, {
             "Invert", "PrimeForm"}}], 
           $CellContext`PlaySetChord[$CellContext`PCSet$$, 1.2]}], 
        "Specifications" :> {{$CellContext`PCSet$$, {{1, 2, 3}, {2, 3, 4}, {4, 
-           5, 7}, {1, 3, 5, 6}, {1, 5, 8}, {2, 4, 1, 3} -> "Random"}}}, 
-       "Options" :> {}, "DefaultOptions" :> {}],
-      ImageSizeCache->{368., {168., 175.}},
+           5, 7}, {1, 3, 5, 6}, {1, 5, 8}, {0, 1, 3, 5, 6, 8, 
+           10}, {4, 2, 1, 3} -> "Random"}}}, "Options" :> {}, 
+       "DefaultOptions" :> {}],
+      ImageSizeCache->{402., {168., 175.}},
       SingleEvaluation->True],
      Deinitialization:>None,
      DynamicModuleValues:>{},
@@ -491,20 +429,73 @@ Cell[BoxData[
     StripOnInput->False],
    Manipulate`InterpretManipulate[1]],
   DynamicModuleValues:>{}]], "Output",
- CellChangeTimes->{
-  3.5977850687456827`*^9, {3.5977851047376213`*^9, 3.597785110973159*^9}, 
-   3.597866098358419*^9, {3.597866449479761*^9, 3.5978664783138657`*^9}, {
-   3.597866520242732*^9, 3.597866537930135*^9}, 3.597866929564349*^9, {
-   3.597867454444067*^9, 3.597867466920535*^9}, 3.597868079068027*^9, 
-   3.597868112650506*^9, 3.5978683112166643`*^9, {3.597868609251953*^9, 
-   3.5978686219040956`*^9}, {3.59786899452639*^9, 3.5978690038890467`*^9}, 
-   3.597869044155027*^9, 3.597869098272244*^9, {3.597869169004465*^9, 
-   3.5978691781678467`*^9}, {3.5978791601579847`*^9, 
-   3.5978791878107777`*^9}, {3.597885506689967*^9, 3.5978856388875093`*^9}, {
-   3.597885734992264*^9, 3.5978857780437813`*^9}, {3.59788592314592*^9, 
-   3.597885966877038*^9}, {3.597885998709865*^9, 3.597886013829772*^9}, 
-   3.597886051246531*^9, 3.597886100433223*^9}]
+ CellChangeTimes->{3.5979227757782717`*^9}]
 }, Open  ]],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`Wozzeck$$ = {1, 2, 
+  3}, $CellContext`Schoenberg$$ = {2, 3, 4}, $CellContext`Strauss$$ = {4, 5, 
+  7}, $CellContext`Major$$ = {1, 3, 5, 6}, $CellContext`MTriad$$ = {1, 5, 
+  8}, $CellContext`MScale$$ = {0, 1, 3, 5, 6, 8, 10}, Random$$ = {3, 4, 0, 
+  1}}, 
+  TagBox[
+   StyleBox[
+    DynamicModuleBox[{$CellContext`PCSet$$ = {1, 2, 3}, Typeset`show$$ = True,
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+     "\"untitled\"", Typeset`specs$$ = {{
+       Hold[$CellContext`PCSet$$], {{1, 2, 3}, {2, 3, 4}, {4, 5, 7}, {1, 3, 5,
+         6}, {1, 5, 8}, {0, 1, 3, 5, 6, 8, 10}, {3, 4, 0, 1} -> "Random"}}}, 
+     Typeset`size$$ = {347., {114.4375, 121.5625}}, Typeset`update$$ = 0, 
+     Typeset`initDone$$, Typeset`skipInitDone$$ = 
+     True, $CellContext`PCSet$246161$$ = False}, 
+     DynamicBox[Manipulate`ManipulateBoxes[
+      1, StandardForm, "Variables" :> {$CellContext`PCSet$$ = {1, 2, 3}}, 
+       "ControllerVariables" :> {
+         Hold[$CellContext`PCSet$$, $CellContext`PCSet$246161$$, False]}, 
+       "OtherVariables" :> {
+        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+         Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+         Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> Column[{
+          Grid[{{
+             Text[
+              StringJoin["Cardinal Number: ", 
+               ToString[
+                Length[$CellContext`PCSet$$]]]], 
+             Text[
+              StringJoin["Interval Vector: ", 
+               ToString[
+                $CellContext`ICSet[$CellContext`PCSet$$]]]]}}], 
+          Grid[{{
+             Button[
+              $CellContext`ButtonLabel[$CellContext`PCSet$$, 1.2], 
+              EmitSound[
+               Sound[
+                $CellContext`PlaySet[$CellContext`PCSet$$, 0.4]]]], 
+             Button[
+              $CellContext`ButtonLabel[$CellContext`PCSet$$, 1.2], 
+              EmitSound[
+               Sound[
+                $CellContext`PlaySet[$CellContext`PCSet$$, 0.4]]]]}, {
+            "Invert", "PrimeForm"}}], 
+          $CellContext`PlaySetChord[$CellContext`PCSet$$, 1.2]}], 
+       "Specifications" :> {{$CellContext`PCSet$$, {{1, 2, 3}, {2, 3, 4}, {4, 
+           5, 7}, {1, 3, 5, 6}, {1, 5, 8}, {0, 1, 3, 5, 6, 8, 
+           10}, {3, 4, 0, 1} -> "Random"}}}, "Options" :> {}, 
+       "DefaultOptions" :> {}],
+      ImageSizeCache->{402., {168., 175.}},
+      SingleEvaluation->True],
+     Deinitialization:>None,
+     DynamicModuleValues:>{},
+     SynchronousInitialization->True,
+     UnsavedVariables:>{Typeset`initDone$$},
+     UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+    Deployed->True,
+    StripOnInput->False],
+   Manipulate`InterpretManipulate[1]],
+  DynamicModuleValues:>{}]], "Input",
+ CellChangeTimes->{3.597922770005744*^9}],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -707,26 +698,16 @@ Cell[557, 20, 396, 9, 119, "Input"],
 Cell[956, 31, 1341, 26, 271, "Text",
  Evaluatable->False],
 Cell[2300, 59, 1561, 36, 99, "Input"],
-Cell[3864, 97, 5055, 144, 330, "Input"],
-Cell[8922, 243, 248, 7, 36, "Input"],
-Cell[9173, 252, 195, 4, 35, "Input"],
+Cell[3864, 97, 5387, 148, 330, "Input"],
 Cell[CellGroupData[{
-Cell[9393, 260, 69, 1, 36, "Input"],
-Cell[9465, 263, 229, 5, 35, "Output"]
+Cell[9276, 249, 5730, 117, 414, "Input"],
+Cell[15009, 368, 2974, 63, 397, "Output"]
 }, Open  ]],
-Cell[9709, 271, 1143, 35, 78, "Input"],
-Cell[CellGroupData[{
-Cell[10877, 310, 71, 1, 36, "Input"],
-Cell[10951, 313, 182, 4, 35, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[11170, 322, 5324, 109, 435, "Input"],
-Cell[16497, 433, 3682, 72, 363, "Output"]
-}, Open  ]],
-Cell[20194, 508, 199, 5, 35, "Input"],
-Cell[20396, 515, 919, 17, 256, "Input"],
-Cell[21318, 534, 4058, 117, 246, "Input"],
-Cell[25379, 653, 2072, 32, 711, "Input"]
+Cell[17998, 434, 2971, 63, 363, InheritFromParent],
+Cell[20972, 499, 199, 5, 35, "Input"],
+Cell[21174, 506, 919, 17, 256, "Input"],
+Cell[22096, 525, 4058, 117, 246, "Input"],
+Cell[26157, 644, 2072, 32, 711, "Input"]
 }
 ]
 *)
