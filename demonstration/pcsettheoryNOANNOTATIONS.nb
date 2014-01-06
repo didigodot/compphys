@@ -1,0 +1,968 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     38274,        959]
+NotebookOptionsPosition[     37906,        941]
+NotebookOutlinePosition[     38294,        958]
+CellTagsIndexPosition[     38251,        955]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"generates", " ", "random", " ", 
+    RowBox[{"set", ".", " ", "not"}], " ", "used", " ", "for", " ", 
+    "demonstration", " ", "atm"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"GenerateSet", "[", 
+     RowBox[{"notelen_", ",", "sl_"}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"row", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"Range", "[", 
+           RowBox[{"0", ",", "sl"}], "]"}], ",", "sl"}], "]"}]}], "}"}], ",", 
+      
+      RowBox[{"Sound", "[", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"SoundNote", "[", 
+          RowBox[{
+           RowBox[{"row", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", "notelen"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "1", ",", 
+           RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], "]"}]}], 
+     "]"}]}], "\n", 
+   RowBox[{"(*", 
+    RowBox[{
+     RowBox[{"plays", " ", "a", " ", "set"}], ",", " ", 
+     RowBox[{
+     "arpeggiated", " ", "then", " ", "as", " ", "a", " ", "chord"}]}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PlaySet", "[", 
+     RowBox[{"row_", ",", "notelen_"}], "]"}], ":=", 
+    RowBox[{"Sound", "[", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{"SoundNote", "[", 
+        RowBox[{
+         RowBox[{"row", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", "notelen"}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "1", ",", 
+         RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PlaySetChord", "[", 
+     RowBox[{"row_", ",", "notelen_"}], "]"}], ":=", 
+    RowBox[{"Sound", "[", 
+     RowBox[{"Append", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"SoundNote", "[", 
+          RowBox[{
+           RowBox[{"row", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"notelen", "/", "3"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "1", ",", 
+           RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], ",", 
+       RowBox[{"SoundNote", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"row", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", "1", ",", 
+             RowBox[{"Length", "[", "row", "]"}]}], "}"}]}], "]"}], ",", 
+         "notelen"}], "]"}]}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ButtonLabel", "[", 
+     RowBox[{"ps_", ",", " ", "len_"}], "]"}], ":=", 
+    RowBox[{"ImageCrop", "[", 
+     RowBox[{
+      RowBox[{"Rasterize", "[", 
+       RowBox[{
+        RowBox[{"PlaySet", "[", 
+         RowBox[{"ps", ",", " ", "len"}], "]"}], ",", 
+        RowBox[{"ImageSize", "\[Rule]", "200"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"200", ",", "40"}], "}"}], ",", "Bottom"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"poss", "[", 
+     RowBox[{"i_", ",", "tup_"}], "]"}], ":=", "\[IndentingNewLine]", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Abs", "[", 
+         RowBox[{
+          RowBox[{"tup", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "2"}], "]"}], "]"}], "-", 
+          RowBox[{"tup", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "]"}], ">", "6"}], " ", "&&",
+        " ", 
+       RowBox[{
+        RowBox[{"Abs", "[", 
+         RowBox[{
+          RowBox[{"tup", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "2"}], "]"}], "]"}], "-", 
+          RowBox[{"tup", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "]"}], "<", "12"}]}], 
+      ",", 
+      RowBox[{"Mod", "[", 
+       RowBox[{"12", ",", 
+        RowBox[{"Abs", "[", 
+         RowBox[{
+          RowBox[{"tup", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "2"}], "]"}], "]"}], "-", 
+          RowBox[{"tup", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "]"}]}], "]"}], ",", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Abs", "[", 
+          RowBox[{
+           RowBox[{"tup", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "2"}], "]"}], "]"}], "-", 
+           RowBox[{"tup", "[", 
+            RowBox[{"[", 
+             RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "]"}], "\[NotEqual]", 
+         "0"}], ",", 
+        RowBox[{"Abs", "[", 
+         RowBox[{
+          RowBox[{"tup", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "2"}], "]"}], "]"}], "-", 
+          RowBox[{"tup", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "1"}], "]"}], "]"}]}], "]"}]}], "]"}]}], 
+     "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ICSet", "[", "ps_", "]"}], ":=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Count", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"poss", "[", 
+           RowBox[{"i", ",", 
+            RowBox[{"Subsets", "[", 
+             RowBox[{"ps", ",", 
+              RowBox[{"{", "2", "}"}]}], "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "1", ",", 
+            RowBox[{"Length", "[", 
+             RowBox[{"Subsets", "[", 
+              RowBox[{"ps", ",", 
+               RowBox[{"{", "2", "}"}]}], "]"}], "]"}]}], "}"}]}], "]"}], ",",
+         "j"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "1", ",", "6"}], "}"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Invert", "[", "ps_", "]"}], ":=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Abs", "[", 
+       RowBox[{"12", "-", 
+        RowBox[{"ps", "[", 
+         RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"Length", "[", "ps", "]"}]}], "}"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"cperm", "[", "set_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"st", "=", 
+        RowBox[{"Sort", "[", "set", "]"}]}], "}"}], ",", 
+      RowBox[{"Delete", "[", 
+       RowBox[{
+        RowBox[{"Append", "[", 
+         RowBox[{"st", ",", 
+          RowBox[{"st", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}], "]"}], ",", "1"}], "]"}]}], 
+     "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ordered", "[", "cp_", "]"}], ":=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"i", "\[NotEqual]", "1"}], ",", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"cp", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "<", 
+           RowBox[{"cp", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"cp", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "+", "12"}], ",", 
+          RowBox[{"cp", "[", 
+           RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+        RowBox[{"cp", "[", 
+         RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"Length", "[", "cp", "]"}]}], "}"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"makeCPerm", "[", "pc_", "]"}], ":=", 
+    RowBox[{"ordered", "[", 
+     RowBox[{"cperm", "[", "pc", "]"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"cperms", "[", "s_", "]"}], ":=", 
+    RowBox[{"NestList", "[", 
+     RowBox[{"makeCPerm", ",", "s", ",", 
+      RowBox[{
+       RowBox[{"Length", "[", "s", "]"}], "-", "1"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"normalOrder", "[", "s_", "]"}], ":=", 
+    RowBox[{
+     RowBox[{"Sort", "[", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"s", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", 
+           RowBox[{
+            RowBox[{"s", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", 
+               RowBox[{"Length", "[", "s", "]"}]}], "]"}], "]"}], "-", 
+            RowBox[{"s", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "1"}], "]"}], "]"}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "1", ",", 
+           RowBox[{"Length", "[", "s", "]"}]}], "}"}]}], "]"}], ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#1", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "<", 
+         RowBox[{"#2", "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], "&"}]}], "]"}], "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"primeForm", "[", "s_", "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"t", "=", 
+        RowBox[{"normalOrder", "[", 
+         RowBox[{"cperms", "[", "s", "]"}], "]"}]}], "}"}], ",", 
+      RowBox[{"transpose", "[", 
+       RowBox[{"t", ",", 
+        RowBox[{
+         RowBox[{"-", "1"}], "*", 
+         RowBox[{"t", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}]}], "]"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"transpose", "[", 
+     RowBox[{"s_", ",", "n_"}], "]"}], ":=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"s", "[", 
+        RowBox[{"[", "i", "]"}], "]"}], "+", "n"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"Length", "[", "s", "]"}]}], "}"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"inverse", "[", "s_", "]"}], ":=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Mod", "[", 
+       RowBox[{
+        RowBox[{"12", "-", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", "i", "]"}], "]"}]}], ",", "12"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", "1", ",", 
+        RowBox[{"Length", "[", "s", "]"}]}], "}"}]}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fortenums", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"mTriad", ",", "\"\<3-11\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Wozzeck", ",", "\"\<4-19\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Webern", ",", "\"\<5-7\>\""}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{"Scriabin", ",", "\"\<6-34\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"MScale", "\[Rule]", "\"\<7-35\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Schoenberg", ",", "\"\<8-1\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"Stravinsky", ",", "\"\<9-11\>\""}], "}"}]}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"ForteNumber", "[", "s_", "]"}], ":=", 
+    RowBox[{"If", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "s", "]"}], "<", "10"}], " ", "&&", 
+       RowBox[{
+        RowBox[{"Length", "[", "s", "]"}], ">", "2"}]}], ",", 
+      RowBox[{"fortenums", "[", 
+       RowBox[{"[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Position", "[", 
+           RowBox[{"fortenums", ",", "s"}], "]"}], "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "2"}], "]"}], "]"}], 
+      ",", "\"\<N/A\>\""}], "]"}]}], "\[IndentingNewLine]", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"k1", "=", 
+       RowBox[{"{", "1", "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"k2", "=", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "5"}], "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"mTriad", "=", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "4", ",", "8"}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Wozzeck", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1", ",", "4", ",", "8"}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Webern", "=", 
+       RowBox[{"{", 
+        RowBox[{"2", ",", "3", ",", "7", ",", "8", ",", "9"}], "}"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Scriabin", "=", 
+       RowBox[{"{", 
+        RowBox[{"3", ",", "4", ",", "6", ",", "8", ",", "10", ",", "0"}], 
+        "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"MScale", "=", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "3", ",", "5", ",", "6", ",", "8", ",", "10"}], 
+        "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Schoenberg", "=", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", ",", 
+         "7"}], "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"Stravinsky", "=", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "2", ",", "3", ",", "5", ",", "6", ",", "7", ",", 
+         "9", ",", "10"}], "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"k10", "=", 
+       RowBox[{"Rndom", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"Range", "[", 
+           RowBox[{"0", ",", "11"}], "]"}], ",", "10"}], "]"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"k11", "=", 
+       RowBox[{"RandomSample", "[", 
+        RowBox[{
+         RowBox[{"Range", "[", 
+          RowBox[{"0", ",", "11"}], "]"}], ",", "11"}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Row", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"Column", "[", 
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Text", "[", 
+               RowBox[{"\"\<Forte Number: \>\"", "<>", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"ForteNumber", "[", "PCSet", "]"}], "]"}]}], "]"}], 
+              ",", "16"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Text", "[", 
+               RowBox[{"\"\<Cardinal Number: \>\"", "<>", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"Length", "[", "PCSet", "]"}], "]"}]}], "]"}], ",", 
+              "16"}], "]"}], ",", "\[IndentingNewLine]", "\t", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Text", "[", 
+               RowBox[{"\"\<Interval Vector: \>\"", "<>", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"ICSet", "[", "PCSet", "]"}], "]"}]}], "]"}], ",", 
+              "16"}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"Spacer", "[", "10", "]"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"Panel", "[", 
+          RowBox[{"Grid", "[", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", "\"\<Original set\>\"", "]"}], ",", 
+                 "14"}], "]"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{"ToString", "[", "PCSet", "]"}], "]"}], ",", "12"}],
+                 "]"}], ",", 
+               RowBox[{"PlaySetChord", "[", 
+                RowBox[{"PCSet", ",", "len"}], "]"}]}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{"\"\<Transpose at level \>\"", "<>", 
+                   RowBox[{"ToString", "[", "n", "]"}]}], "]"}], ",", "14"}], 
+                "]"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"transpose", "[", 
+                    RowBox[{"PCSet", ",", "n"}], "]"}], "]"}], "]"}], ",", 
+                 "12"}], "]"}], ",", " ", "\[IndentingNewLine]", 
+               RowBox[{"Button", "[", 
+                RowBox[{
+                 RowBox[{"ButtonLabel", "[", 
+                  RowBox[{
+                   RowBox[{"transpose", "[", 
+                    RowBox[{"PCSet", ",", "n"}], "]"}], ",", "len"}], "]"}], 
+                 ",", " ", 
+                 RowBox[{"EmitSound", "[", 
+                  RowBox[{"Sound", "@", 
+                   RowBox[{"PlaySet", "[", 
+                    RowBox[{
+                    RowBox[{"transpose", "[", 
+                    RowBox[{"PCSet", ",", "n"}], "]"}], ",", " ", 
+                    RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", "\"\<Normal form\>\"", "]"}], ",", 
+                 "14"}], "]"}], ",", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"normalOrder", "[", 
+                    RowBox[{"cperms", "[", 
+                    RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], "]"}], "]"}], 
+                  "]"}], ",", "12"}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"Button", "[", 
+                RowBox[{
+                 RowBox[{"ButtonLabel", "[", 
+                  RowBox[{
+                   RowBox[{"normalOrder", "[", 
+                    RowBox[{"cperms", "[", 
+                    RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], "]"}], ",", 
+                   "len"}], "]"}], ",", " ", 
+                 RowBox[{"EmitSound", "[", 
+                  RowBox[{"Sound", "@", 
+                   RowBox[{"PlaySet", "[", 
+                    RowBox[{
+                    RowBox[{"normalOrder", "[", 
+                    RowBox[{"cperms", "[", 
+                    RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], "]"}], ",", 
+                    " ", 
+                    RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
+              "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", "\"\<Prime form\>\"", "]"}], ",", 
+                 "14"}], "]"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"primeForm", "[", 
+                    RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], "]"}], "]"}], 
+                 ",", "12"}], "]"}], ",", 
+               RowBox[{"Button", "[", 
+                RowBox[{
+                 RowBox[{"ButtonLabel", "[", 
+                  RowBox[{
+                   RowBox[{"primeForm", "[", 
+                    RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], ",", "len"}], 
+                  "]"}], ",", " ", 
+                 RowBox[{"EmitSound", "[", 
+                  RowBox[{"Sound", "@", 
+                   RowBox[{"PlaySet", "[", 
+                    RowBox[{
+                    RowBox[{"primeForm", "[", 
+                    RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], ",", " ", 
+                    RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", "\"\<Inversion\>\"", "]"}], ",", "14"}],
+                 "]"}], ",", " ", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"Text", "[", 
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"Invert", "[", "PCSet", "]"}], "]"}], "]"}], ",", 
+                 "12"}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"Button", "[", 
+                RowBox[{
+                 RowBox[{"ButtonLabel", "[", 
+                  RowBox[{
+                   RowBox[{"Invert", "[", "PCSet", "]"}], ",", "len"}], "]"}],
+                  ",", " ", 
+                 RowBox[{"EmitSound", "[", 
+                  RowBox[{"Sound", "@", 
+                   RowBox[{"PlaySet", "[", 
+                    RowBox[{
+                    RowBox[{"Invert", "[", "PCSet", "]"}], ",", " ", 
+                    RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
+              "}"}]}], "}"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+        "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"PCSet", ",", "Wozzeck", ",", " ", "\"\<Set class\>\""}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"k1", ",", " ", "k2", ",", 
+         RowBox[{"mTriad", "\[Rule]", "\"\<minor triad\>\""}], ",", 
+         RowBox[{"Wozzeck", "\[Rule]", "\"\<Berg - Wozzeck\>\""}], ",", 
+         RowBox[{
+         "Webern", "\[Rule]", 
+          "\"\<Webern - Five Movements for String Quartet Op.5/5\>\""}], ",", 
+         " ", 
+         RowBox[{
+         "Scriabin", "\[Rule]", 
+          "\"\<Scriabin - Seventh Piano Sonata Op. 64\>\""}], ",", "MScale", 
+         ",", 
+         RowBox[{
+         "Schoenberg", "\[Rule]", 
+          "\"\<Schoenberg - Six Short Piano Pieces Op. 19/6\>\""}], ",", 
+         RowBox[{
+         "Stravinsky", "\[Rule]", "\"\<Stravinsky - Rite of Spring\>\""}], 
+         ",", "k10", ",", "k11"}], "}"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"len", ",", "1.2", ",", "\"\<Note length\>\""}], "}"}], ",", 
+       ".6", ",", "1.8"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"n", ",", "0", ",", "\"\<Transpose level\>\""}], "}"}], ",", 
+       "0", ",", "8", ",", "1"}], "}"}], ",", " ", 
+     RowBox[{"ContinuousAction", "\[Rule]", "False"}], ",", 
+     RowBox[{"ContentSize", "\[Rule]", "600"}], ",", " ", 
+     RowBox[{"SaveDefinitions", "\[Rule]", "True"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.597969397582823*^9, 3.5979694249650497`*^9}, {
+   3.597969850197134*^9, 3.5979698516178217`*^9}, {3.598001194063857*^9, 
+   3.5980012341289253`*^9}, {3.598001294657839*^9, 3.5980013840508204`*^9}, {
+   3.598001443795373*^9, 3.5980015314983587`*^9}, {3.598001579524081*^9, 
+   3.59800158125278*^9}, {3.598001623370144*^9, 3.598001637344891*^9}, {
+   3.5980017722074614`*^9, 3.598001936086751*^9}, {3.59800220499343*^9, 
+   3.598002242589324*^9}, {3.598002288324732*^9, 3.598002311320776*^9}, 
+   3.598002344351576*^9, {3.5980024435300426`*^9, 3.598002496808091*^9}, {
+   3.598002579302429*^9, 3.598002651022751*^9}, {3.598002682837646*^9, 
+   3.598002683139943*^9}, {3.598002737836275*^9, 3.598002808998879*^9}, {
+   3.598002903119248*^9, 3.598002929373179*^9}, {3.598003056748416*^9, 
+   3.598003077053405*^9}, {3.5980031143730097`*^9, 3.5980031672918463`*^9}, {
+   3.598003217832396*^9, 3.598003298663519*^9}, {3.5980161802219267`*^9, 
+   3.598016183764244*^9}, {3.59801674471357*^9, 3.598016761676547*^9}, {
+   3.598017144274777*^9, 3.5980171756260567`*^9}, {3.598017440767809*^9, 
+   3.5980174538672943`*^9}, {3.598017616088944*^9, 3.598017676607463*^9}, {
+   3.598018091442439*^9, 3.598018091541224*^9}, {3.5980182284849243`*^9, 
+   3.5980182291984043`*^9}, {3.5980182839494343`*^9, 3.5980182987540817`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`len$$ = 1.2, $CellContext`n$$ = 
+    0, $CellContext`PCSet$$ = {0, 1, 2, 3, 5, 6, 7, 9, 10}, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{1}, {1, 
+       5}, {1, 4, 8} -> "minor triad", {0, 1, 4, 8} -> 
+       "Berg - Wozzeck", {2, 3, 7, 8, 9} -> 
+       "Webern - Five Movements for String Quartet Op.5/5", {3, 4, 6, 8, 10, 
+        0} -> "Scriabin - Seventh Piano Sonata Op. 64", {0, 1, 3, 5, 6, 8, 
+       10}, {0, 1, 2, 3, 4, 5, 6, 7} -> 
+       "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 7, 
+        9, 10} -> "Stravinsky - Rite of Spring", {0, 8, 7, 6, 1, 9, 2, 3, 10, 
+       4}, {2, 11, 6, 3, 5, 9, 4, 7, 1, 8, 10}}}, {{
+       Hold[$CellContext`len$$], 1.2, "Note length"}, 0.6, 1.8}, {{
+       Hold[$CellContext`n$$], 0, "Transpose level"}, 0, 8, 1}}, 
+    Typeset`size$$ = {705.2515869140625, {397., 40.5625}}, Typeset`update$$ = 
+    0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`PCSet$49486$$ = False, $CellContext`len$49487$$ = 
+    0, $CellContext`n$49488$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`len$$ = 1.2, $CellContext`n$$ = 
+        0, $CellContext`PCSet$$ = {0, 1, 4, 8}}, "ControllerVariables" :> {
+        Hold[$CellContext`PCSet$$, $CellContext`PCSet$49486$$, False], 
+        Hold[$CellContext`len$$, $CellContext`len$49487$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$49488$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`k1 = {1}; $CellContext`k2 = {1, 
+         5}; $CellContext`mTriad = {1, 4, 8}; $CellContext`Wozzeck = {0, 1, 4,
+          8}; $CellContext`Webern = {2, 3, 7, 8, 9}; $CellContext`Scriabin = {
+         3, 4, 6, 8, 10, 0}; $CellContext`MScale = {0, 1, 3, 5, 6, 8, 
+         10}; $CellContext`Schoenberg = {0, 1, 2, 3, 4, 5, 6, 
+         7}; $CellContext`Stravinsky = {0, 1, 2, 3, 5, 6, 7, 9, 
+         10}; $CellContext`k10 = ($CellContext`Rndom = RandomSample[
+           Range[0, 11], 10]); $CellContext`k11 = RandomSample[
+          Range[0, 11], 11]; Row[{
+          Column[{
+            Style[
+             Text[
+              StringJoin["Forte Number: ", 
+               ToString[
+                $CellContext`ForteNumber[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Cardinal Number: ", 
+               ToString[
+                Length[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Interval Vector: ", 
+               ToString[
+                $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
+          Spacer[10], 
+          Panel[
+           Grid[{{
+              Style[
+               Text["Original set"], 14], 
+              Style[
+               Text[
+                ToString[$CellContext`PCSet$$]], 12], 
+              $CellContext`PlaySetChord[$CellContext`PCSet$$, \
+$CellContext`len$$]}, {
+              Style[
+               Text[
+                StringJoin["Transpose at level ", 
+                 ToString[$CellContext`n$$]]], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$], $CellContext`len$$/3]]]]}, {
+              Style[
+               Text["Normal form"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`normalOrder[
+                  $CellContext`cperms[
+                   Sort[$CellContext`PCSet$$]]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`normalOrder[
+                 $CellContext`cperms[
+                  Sort[$CellContext`PCSet$$]]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`normalOrder[
+                   $CellContext`cperms[
+                    Sort[$CellContext`PCSet$$]]], $CellContext`len$$/3]]]]}, {
+             
+              Style[
+               Text["Prime form"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`primeForm[
+                  Sort[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`primeForm[
+                 Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`primeForm[
+                   Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+              Style[
+               Text["Inversion"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$/3]]]]}}]]}]), 
+      "Specifications" :> {{{$CellContext`PCSet$$, {0, 1, 4, 8}, 
+          "Set class"}, {{1}, {1, 5}, {1, 4, 8} -> 
+          "minor triad", {0, 1, 4, 8} -> "Berg - Wozzeck", {2, 3, 7, 8, 9} -> 
+          "Webern - Five Movements for String Quartet Op.5/5", {3, 4, 6, 8, 
+           10, 0} -> "Scriabin - Seventh Piano Sonata Op. 64", {0, 1, 3, 5, 6,
+           8, 10}, {0, 1, 2, 3, 4, 5, 6, 7} -> 
+          "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 
+           7, 9, 10} -> "Stravinsky - Rite of Spring", {0, 8, 7, 6, 1, 9, 2, 
+          3, 10, 4}, {2, 11, 6, 3, 5, 9, 4, 7, 1, 8, 
+          10}}}, {{$CellContext`len$$, 1.2, "Note length"}, 0.6, 
+         1.8}, {{$CellContext`n$$, 0, "Transpose level"}, 0, 8, 1}}, 
+      "Options" :> {ContinuousAction -> False, ContentSize -> 600}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{766., {301., 309.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`k1 = {1}, $CellContext`k2 = {1, 
+        5}, $CellContext`mTriad = {1, 4, 8}, $CellContext`Wozzeck = {0, 1, 4, 
+        8}, $CellContext`Webern = {2, 3, 7, 8, 9}, $CellContext`Scriabin = {3,
+         4, 6, 8, 10, 0}, $CellContext`MScale = {0, 1, 3, 5, 6, 8, 
+        10}, $CellContext`Schoenberg = {0, 1, 2, 3, 4, 5, 6, 
+        7}, $CellContext`Stravinsky = {0, 1, 2, 3, 5, 6, 7, 9, 
+        10}, $CellContext`k10 = {0, 8, 7, 6, 1, 9, 2, 3, 10, 
+        4}, $CellContext`Rndom = {0, 8, 7, 6, 1, 9, 2, 3, 10, 
+        4}, $CellContext`k11 = {2, 11, 6, 3, 5, 9, 4, 7, 1, 8, 
+        10}, $CellContext`ForteNumber[
+         Pattern[$CellContext`s, 
+          Blank[]]] := If[
+         And[Length[$CellContext`s] < 10, Length[$CellContext`s] > 2], 
+         Part[$CellContext`fortenums, 
+          Part[
+           Position[$CellContext`fortenums, $CellContext`s], 1, 1], 2], 
+         "N/A"], $CellContext`fortenums = {{{1, 4, 8}, "3-11"}, {{0, 1, 4, 8},
+           "4-19"}, {{2, 3, 7, 8, 9}, "5-7"}, {{3, 4, 6, 8, 10, 0}, 
+          "6-34"}, {{0, 1, 3, 5, 6, 8, 10} -> "7-35"}, {{0, 1, 2, 3, 4, 5, 6, 
+          7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, 
+          "9-11"}}, $CellContext`ICSet[
+         Pattern[$CellContext`ps, 
+          Blank[]]] := Table[
+         Count[
+          Table[
+           $CellContext`poss[$CellContext`i, 
+            Subsets[$CellContext`ps, {2}]], {$CellContext`i, 1, 
+            Length[
+             
+             Subsets[$CellContext`ps, {
+              2}]]}], $CellContext`j], {$CellContext`j, 1, 
+          6}], $CellContext`poss[
+         Pattern[$CellContext`i, 
+          Blank[]], 
+         Pattern[$CellContext`tup, 
+          Blank[]]] := If[
+         And[
+         Abs[Part[$CellContext`tup, $CellContext`i, 2] - 
+            Part[$CellContext`tup, $CellContext`i, 1]] > 6, 
+          Abs[Part[$CellContext`tup, $CellContext`i, 2] - 
+            Part[$CellContext`tup, $CellContext`i, 1]] < 12], 
+         Mod[12, 
+          Abs[
+          Part[$CellContext`tup, $CellContext`i, 2] - 
+           Part[$CellContext`tup, $CellContext`i, 1]]], 
+         If[
+         Abs[Part[$CellContext`tup, $CellContext`i, 2] - 
+            Part[$CellContext`tup, $CellContext`i, 1]] != 0, 
+          Abs[
+          Part[$CellContext`tup, $CellContext`i, 2] - 
+           Part[$CellContext`tup, $CellContext`i, 
+            1]]]], $CellContext`PlaySetChord[
+         Pattern[$CellContext`row, 
+          Blank[]], 
+         Pattern[$CellContext`notelen, 
+          Blank[]]] := Sound[
+         Append[
+          Table[
+           SoundNote[
+            Part[$CellContext`row, $CellContext`i], $CellContext`notelen/
+            3], {$CellContext`i, 1, 
+            Length[$CellContext`row]}], 
+          SoundNote[
+           Table[
+            Part[$CellContext`row, $CellContext`i], {$CellContext`i, 1, 
+             
+             Length[$CellContext`row]}], $CellContext`notelen]]], \
+$CellContext`transpose[
+         Pattern[$CellContext`s, 
+          Blank[]], 
+         Pattern[$CellContext`n, 
+          Blank[]]] := 
+       Table[Part[$CellContext`s, $CellContext`i] + $CellContext`n, \
+{$CellContext`i, 1, 
+          Length[$CellContext`s]}], $CellContext`ButtonLabel[
+         Pattern[$CellContext`ps, 
+          Blank[]], 
+         Pattern[$CellContext`len, 
+          Blank[]]] := ImageCrop[
+         Rasterize[
+          $CellContext`PlaySet[$CellContext`ps, $CellContext`len], ImageSize -> 
+          200], {200, 40}, Bottom], $CellContext`PlaySet[
+         Pattern[$CellContext`row, 
+          Blank[]], 
+         Pattern[$CellContext`notelen, 
+          Blank[]]] := Sound[
+         Table[
+          SoundNote[
+           
+           Part[$CellContext`row, $CellContext`i], $CellContext`notelen], \
+{$CellContext`i, 1, 
+           Length[$CellContext`row]}]], $CellContext`normalOrder[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[
+         Sort[
+          Table[{
+            Part[$CellContext`s, $CellContext`i], 
+            Part[$CellContext`s, $CellContext`i, 
+              Length[$CellContext`s]] - 
+            Part[$CellContext`s, $CellContext`i, 1]}, {$CellContext`i, 1, 
+            Length[$CellContext`s]}], Part[#, 2] < Part[#2, 2]& ], 1, 
+         1], $CellContext`cperms[
+         Pattern[$CellContext`s, 
+          Blank[]]] := 
+       NestList[$CellContext`makeCPerm, $CellContext`s, 
+         Length[$CellContext`s] - 1], $CellContext`makeCPerm[
+         Pattern[$CellContext`pc, 
+          Blank[]]] := $CellContext`ordered[
+         $CellContext`cperm[$CellContext`pc]], $CellContext`ordered[
+         Pattern[$CellContext`cp, 
+          Blank[]]] := Table[
+         If[$CellContext`i != 1, 
+          If[
+          Part[$CellContext`cp, $CellContext`i] < Part[$CellContext`cp, 1], 
+           Part[$CellContext`cp, $CellContext`i] + 12, 
+           Part[$CellContext`cp, $CellContext`i]], 
+          Part[$CellContext`cp, $CellContext`i]], {$CellContext`i, 1, 
+          Length[$CellContext`cp]}], $CellContext`cperm[
+         Pattern[$CellContext`set, 
+          Blank[]]] := Module[{$CellContext`st = Sort[$CellContext`set]}, 
+         Delete[
+          Append[$CellContext`st, 
+           Part[$CellContext`st, 1]], 1]], $CellContext`primeForm[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Module[{$CellContext`t = $CellContext`normalOrder[
+            $CellContext`cperms[$CellContext`s]]}, 
+         $CellContext`transpose[$CellContext`t, -
+          Part[$CellContext`t, 1]]], $CellContext`Invert[
+         Pattern[$CellContext`ps, 
+          Blank[]]] := Table[
+         Abs[
+         12 - Part[$CellContext`ps, $CellContext`i]], {$CellContext`i, 1, 
+          Length[$CellContext`ps]}]}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.5979694288634243`*^9, 3.597969852212874*^9, 3.598001173740769*^9, {
+   3.598001480737344*^9, 3.59800153403568*^9}, 3.598001640229396*^9, 
+   3.5980019370427017`*^9, 3.5980023118522577`*^9, 3.598002500501635*^9, {
+   3.598002640362496*^9, 3.598002652044074*^9}, 3.598002684127928*^9, {
+   3.598002762899763*^9, 3.598002794193911*^9}, {3.59800291091792*^9, 
+   3.598002930290781*^9}, {3.598003071183474*^9, 3.59800307783512*^9}, 
+   3.5980162077719603`*^9, 3.598016763082099*^9, {3.5980171581668987`*^9, 
+   3.598017195907572*^9}, {3.598017450259157*^9, 3.598017454386012*^9}, {
+   3.598017658545878*^9, 3.59801767717735*^9}, 3.5980180077388697`*^9, 
+   3.598018091974278*^9, 3.598018164056198*^9, 3.598018229577442*^9, 
+   3.598018300554633*^9}]
+}, Open  ]]
+},
+WindowSize->{1007, 802},
+WindowMargins->{{Automatic, 159}, {Automatic, 0}},
+Magnification:>1.25 Inherited,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 23581, 608, 1737, "Input"],
+Cell[24163, 632, 13727, 306, 664, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
