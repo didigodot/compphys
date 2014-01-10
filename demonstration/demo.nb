@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     91253,       2316]
-NotebookOptionsPosition[     86732,       2176]
-NotebookOutlinePosition[     88340,       2227]
-CellTagsIndexPosition[     88012,       2215]
+NotebookDataLength[    111998,       2777]
+NotebookOptionsPosition[    107336,       2633]
+NotebookOutlinePosition[    108960,       2684]
+CellTagsIndexPosition[    108624,       2672]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -393,169 +393,222 @@ Cell[CellGroupData[{
 
 Cell["", "ManipulateSection"],
 
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
   RowBox[{
-   RowBox[{"Row", "[", 
-    RowBox[{"{", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"Column", "[", 
-       RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"fortenums", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
         RowBox[{
-         RowBox[{"Style", "[", 
-          RowBox[{"Text", "[", 
-           RowBox[{"\"\<Forte Number:\>\"", ",", "16"}], "]"}], "]"}], ",", 
-         "\[IndentingNewLine]", 
-         RowBox[{"Style", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "7", ",", "2"}], "}"}], ",", "\"\<3-5\>\""}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"0", ",", "1", ",", "4", ",", "8"}], "}"}], ",", 
+         "\"\<4-19\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"3", ",", "4", ",", "7", ",", "10"}], "}"}], ",", 
+         "\"\<4-18\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2", ",", "3", ",", "7", ",", "8", ",", "9"}], "}"}], ",", 
+         "\"\<5-7\>\""}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"3", ",", "4", ",", "6", ",", "8", ",", "10", ",", "0"}], 
+          "}"}], ",", "\"\<6-34\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
           RowBox[{
-           RowBox[{"Text", "[", 
-            RowBox[{"\"\<Cardinal Number: \>\"", "<>", 
-             RowBox[{"ToString", "[", 
-              RowBox[{"Length", "[", "PCSet", "]"}], "]"}]}], "]"}], ",", 
-           "16"}], "]"}], ",", "\[IndentingNewLine]", "\t", 
-         RowBox[{"Style", "[", 
+          "7", ",", "8", ",", "10", ",", "0", ",", "1", ",", "3", ",", "5"}], 
+          "}"}], ",", "\"\<7-35\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
           RowBox[{
-           RowBox[{"Text", "[", 
-            RowBox[{"\"\<Interval Vector: \>\"", "<>", 
-             RowBox[{"ToString", "[", 
-              RowBox[{"ICSet", "[", "PCSet", "]"}], "]"}]}], "]"}], ",", 
-           "16"}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
-      "\[IndentingNewLine]", 
-      RowBox[{"Spacer", "[", "10", "]"}], ",", "\[IndentingNewLine]", 
-      RowBox[{"Panel", "[", 
-       RowBox[{"Grid", "[", 
+          "0", ",", "1", ",", "2", ",", "3", ",", "4", ",", "5", ",", "6", 
+           ",", "7"}], "}"}], ",", "\"\<8-1\>\""}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+          "0", ",", "1", ",", "2", ",", "3", ",", "5", ",", "6", ",", "7", 
+           ",", "9", ",", "10"}], "}"}], ",", "\"\<9-11\>\""}], "}"}]}], 
+      "}"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Row", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Column", "[", 
         RowBox[{"{", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"{", 
+          RowBox[{"Style", "[", 
            RowBox[{
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", "\"\<Original set\>\"", "]"}], ",", "14"}],
+            RowBox[{"Text", "[", 
+             RowBox[{"\"\<Forte Number: \>\"", "<>", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"ForteNumber", "[", "PCSet", "]"}], "]"}]}], "]"}], 
+            ",", "16"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Text", "[", 
+             RowBox[{"\"\<Cardinal Number: \>\"", "<>", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"Length", "[", "PCSet", "]"}], "]"}]}], "]"}], ",", 
+            "16"}], "]"}], ",", "\[IndentingNewLine]", "\t", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Text", "[", 
+             RowBox[{"\"\<Interval Vector: \>\"", "<>", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"ICSet", "[", "PCSet", "]"}], "]"}]}], "]"}], ",", 
+            "16"}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Spacer", "[", "10", "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Panel", "[", 
+        RowBox[{"Grid", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", "\"\<Original set\>\"", "]"}], ",", 
+               "14"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", 
+                RowBox[{"ToString", "[", "PCSet", "]"}], "]"}], ",", "12"}], 
               "]"}], ",", 
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", 
-               RowBox[{"ToString", "[", "PCSet", "]"}], "]"}], ",", "12"}], 
-             "]"}], ",", 
-            RowBox[{"PlaySetChord", "[", 
-             RowBox[{"PCSet", ",", "len"}], "]"}]}], "}"}], ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", 
-               RowBox[{"\"\<Transpose at level \>\"", "<>", 
-                RowBox[{"ToString", "[", "n", "]"}]}], "]"}], ",", "14"}], 
-             "]"}], ",", 
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", 
-               RowBox[{"ToString", "[", 
-                RowBox[{"transpose", "[", 
-                 RowBox[{"PCSet", ",", "n"}], "]"}], "]"}], "]"}], ",", 
-              "12"}], "]"}], ",", " ", "\[IndentingNewLine]", 
-            RowBox[{"Button", "[", 
-             RowBox[{
-              RowBox[{"ButtonLabel", "[", 
-               RowBox[{
-                RowBox[{"transpose", "[", 
-                 RowBox[{"PCSet", ",", "n"}], "]"}], ",", "len"}], "]"}], ",",
-               " ", 
-              RowBox[{"EmitSound", "[", 
-               RowBox[{"Sound", "@", 
-                RowBox[{"PlaySet", "[", 
-                 RowBox[{
-                  RowBox[{"transpose", "[", 
-                   RowBox[{"PCSet", ",", "n"}], "]"}], ",", " ", 
-                  RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
-           "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", "\"\<Normal form\>\"", "]"}], ",", "14"}], 
-             "]"}], ",", " ", 
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", 
-               RowBox[{"ToString", "[", 
-                RowBox[{"fnOrder", "[", 
-                 RowBox[{"PCSet", ",", 
-                  RowBox[{"Length", "[", "PCSet", "]"}]}], "]"}], "]"}], 
-               "]"}], ",", "12"}], "]"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"Button", "[", 
-             RowBox[{
-              RowBox[{"ButtonLabel", "[", 
-               RowBox[{
-                RowBox[{"fnOrder", "[", 
-                 RowBox[{"PCSet", ",", 
-                  RowBox[{"Length", "[", "PCSet", "]"}]}], "]"}], ",", 
-                "len"}], "]"}], ",", " ", 
-              RowBox[{"EmitSound", "[", 
-               RowBox[{"Sound", "@", 
-                RowBox[{"PlaySet", "[", 
-                 RowBox[{
-                  RowBox[{"fnOrder", "[", 
-                   RowBox[{"PCSet", ",", 
-                    RowBox[{"Length", "[", "PCSet", "]"}]}], "]"}], ",", " ", 
-                  
-                  RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
-           "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", "\"\<Prime form\>\"", "]"}], ",", "14"}], 
-             "]"}], ",", 
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", 
-               RowBox[{"ToString", "[", 
-                RowBox[{"primeForm", "[", 
-                 RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], "]"}], "]"}], 
-              ",", "12"}], "]"}], ",", 
-            RowBox[{"Button", "[", 
-             RowBox[{
-              RowBox[{"ButtonLabel", "[", 
-               RowBox[{
-                RowBox[{"primeForm", "[", 
-                 RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], ",", "len"}], 
+             RowBox[{"PlaySetChord", "[", 
+              RowBox[{"PCSet", ",", "len"}], "]"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", 
+                RowBox[{"\"\<Transpose at level \>\"", "<>", 
+                 RowBox[{"ToString", "[", "n", "]"}]}], "]"}], ",", "14"}], 
+              "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"transpose", "[", 
+                  RowBox[{"PCSet", ",", "n"}], "]"}], "]"}], "]"}], ",", 
+               "12"}], "]"}], ",", " ", "\[IndentingNewLine]", 
+             RowBox[{"Button", "[", 
+              RowBox[{
+               RowBox[{"ButtonLabel", "[", 
+                RowBox[{
+                 RowBox[{"transpose", "[", 
+                  RowBox[{"PCSet", ",", "n"}], "]"}], ",", "len"}], "]"}], 
+               ",", " ", 
+               RowBox[{"EmitSound", "[", 
+                RowBox[{"Sound", "@", 
+                 RowBox[{"PlaySet", "[", 
+                  RowBox[{
+                   RowBox[{"transpose", "[", 
+                    RowBox[{"PCSet", ",", "n"}], "]"}], ",", " ", 
+                   RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", "\"\<Normal form\>\"", "]"}], ",", "14"}],
                "]"}], ",", " ", 
-              RowBox[{"EmitSound", "[", 
-               RowBox[{"Sound", "@", 
-                RowBox[{"PlaySet", "[", 
-                 RowBox[{
-                  RowBox[{"primeForm", "[", 
-                   RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], ",", " ", 
-                  RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
-           "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", "\"\<Inversion\>\"", "]"}], ",", "14"}], 
-             "]"}], ",", " ", 
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"Text", "[", 
-               RowBox[{"ToString", "[", 
-                RowBox[{"Invert", "[", "PCSet", "]"}], "]"}], "]"}], ",", 
-              "12"}], "]"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"Button", "[", 
-             RowBox[{
-              RowBox[{"ButtonLabel", "[", 
-               RowBox[{
-                RowBox[{"Invert", "[", "PCSet", "]"}], ",", "len"}], "]"}], 
-              ",", " ", 
-              RowBox[{"EmitSound", "[", 
-               RowBox[{"Sound", "@", 
-                RowBox[{"PlaySet", "[", 
-                 RowBox[{
-                  RowBox[{"Invert", "[", "PCSet", "]"}], ",", " ", 
-                  RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
-           "}"}]}], "}"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
-     "\[IndentingNewLine]", "}"}], "]"}], "\[IndentingNewLine]", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"fnOrder", "[", 
+                  RowBox[{"PCSet", ",", 
+                   RowBox[{"Length", "[", "PCSet", "]"}]}], "]"}], "]"}], 
+                "]"}], ",", "12"}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Button", "[", 
+              RowBox[{
+               RowBox[{"ButtonLabel", "[", 
+                RowBox[{
+                 RowBox[{"fnOrder", "[", 
+                  RowBox[{"PCSet", ",", 
+                   RowBox[{"Length", "[", "PCSet", "]"}]}], "]"}], ",", 
+                 "len"}], "]"}], ",", " ", 
+               RowBox[{"EmitSound", "[", 
+                RowBox[{"Sound", "@", 
+                 RowBox[{"PlaySet", "[", 
+                  RowBox[{
+                   RowBox[{"fnOrder", "[", 
+                    RowBox[{"PCSet", ",", 
+                    RowBox[{"Length", "[", "PCSet", "]"}]}], "]"}], ",", " ", 
+                   
+                   RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", "\"\<Prime form\>\"", "]"}], ",", "14"}], 
+              "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"primeForm", "[", 
+                  RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], "]"}], "]"}], 
+               ",", "12"}], "]"}], ",", 
+             RowBox[{"Button", "[", 
+              RowBox[{
+               RowBox[{"ButtonLabel", "[", 
+                RowBox[{
+                 RowBox[{"primeForm", "[", 
+                  RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], ",", "len"}], 
+                "]"}], ",", " ", 
+               RowBox[{"EmitSound", "[", 
+                RowBox[{"Sound", "@", 
+                 RowBox[{"PlaySet", "[", 
+                  RowBox[{
+                   RowBox[{"primeForm", "[", 
+                    RowBox[{"Sort", "[", "PCSet", "]"}], "]"}], ",", " ", 
+                   RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", "\"\<Inversion\>\"", "]"}], ",", "14"}], 
+              "]"}], ",", " ", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"Text", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"Invert", "[", "PCSet", "]"}], "]"}], "]"}], ",", 
+               "12"}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Button", "[", 
+              RowBox[{
+               RowBox[{"ButtonLabel", "[", 
+                RowBox[{
+                 RowBox[{"Invert", "[", "PCSet", "]"}], ",", "len"}], "]"}], 
+               ",", " ", 
+               RowBox[{"EmitSound", "[", 
+                RowBox[{"Sound", "@", 
+                 RowBox[{"PlaySet", "[", 
+                  RowBox[{
+                   RowBox[{"Invert", "[", "PCSet", "]"}], ",", " ", 
+                   RowBox[{"len", "/", "3"}]}], "]"}]}], "]"}]}], "]"}]}], 
+            "}"}]}], "}"}], "\[IndentingNewLine]", "]"}], "]"}]}], 
+      "\[IndentingNewLine]", "}"}], "]"}]}], "\[IndentingNewLine]", ",", 
    "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
@@ -652,8 +705,328 @@ Cell[BoxData[
    3.598191616450992*^9}, {3.598297335006114*^9, 3.598297360601429*^9}, {
    3.598309956561871*^9, 3.598309957023033*^9}, {3.598310383992049*^9, 
    3.598310387121841*^9}, {3.598311768081547*^9, 3.598311769095998*^9}, {
-   3.598312158055327*^9, 3.598312174079818*^9}},
- CellID->1338191265]
+   3.598312158055327*^9, 3.598312174079818*^9}, {3.598373329910803*^9, 
+   3.598373330281323*^9}, {3.598373387848193*^9, 3.598373391727448*^9}, 
+   3.598373439650525*^9, {3.598373471282113*^9, 3.598373475565926*^9}, {
+   3.598373564607751*^9, 3.598373569674603*^9}, {3.598373611366982*^9, 
+   3.598373628634686*^9}, 3.598373806440015*^9},
+ CellID->1338191265],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`len$$ = 1.2, $CellContext`n$$ = 
+    0, $CellContext`PCSet$$ = {0, 1, 4, 8}, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{7}, {1, 
+       0}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
+       "Berg - Wozzeck", {3, 4, 7, 10} -> 
+       "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
+       "Webern - Five Movements for String Quartet Op.5/5", {3, 4, 6, 8, 10, 
+        0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 1, 3, 
+        5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
+       "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 7, 
+        9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 11, 4,
+        0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 2, 10, 9,
+        4, 7, 3}}}, {{
+       Hold[$CellContext`len$$], 1.2, "Note length"}, 0.6, 1.8}, {{
+       Hold[$CellContext`n$$], 0, "Transpose level"}, 0, 8, 1}}, 
+    Typeset`size$$ = {465.701171875, {320., 31.65625}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`PCSet$28456$$ = False, $CellContext`len$28457$$ = 
+    0, $CellContext`n$28458$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`len$$ = 1.2, $CellContext`n$$ = 
+        0, $CellContext`PCSet$$ = {0, 1, 4, 8}}, "ControllerVariables" :> {
+        Hold[$CellContext`PCSet$$, $CellContext`PCSet$28456$$, False], 
+        Hold[$CellContext`len$$, $CellContext`len$28457$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$28458$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4, 8}, 
+           "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{3, 4,
+            6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 1, 
+           2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, "9-11"}}; 
+       Row[{
+          Column[{
+            Style[
+             Text[
+              StringJoin["Forte Number: ", 
+               ToString[
+                $CellContext`ForteNumber[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Cardinal Number: ", 
+               ToString[
+                Length[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Interval Vector: ", 
+               ToString[
+                $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
+          Spacer[10], 
+          Panel[
+           Grid[{{
+              Style[
+               Text["Original set"], 14], 
+              Style[
+               Text[
+                ToString[$CellContext`PCSet$$]], 12], 
+              $CellContext`PlaySetChord[$CellContext`PCSet$$, \
+$CellContext`len$$]}, {
+              Style[
+               Text[
+                StringJoin["Transpose at level ", 
+                 ToString[$CellContext`n$$]]], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$], $CellContext`len$$/3]]]]}, {
+              Style[
+               Text["Normal form"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`fnOrder[$CellContext`PCSet$$, 
+                  Length[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`fnOrder[$CellContext`PCSet$$, 
+                 Length[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`fnOrder[$CellContext`PCSet$$, 
+                   Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+             
+              Style[
+               Text["Prime form"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`primeForm[
+                  Sort[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`primeForm[
+                 Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`primeForm[
+                   Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+              Style[
+               Text["Inversion"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$/3]]]]}}]]}]), 
+      "Specifications" :> {{{$CellContext`PCSet$$, {0, 1, 4, 8}, 
+          "Set class"}, {{7}, {1, 0}, {1, 7, 2} -> 
+          "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
+          "Berg - Wozzeck", {3, 4, 7, 10} -> 
+          "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
+          "Webern - Five Movements for String Quartet Op.5/5", {3, 4, 6, 8, 
+           10, 0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 
+           1, 3, 5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
+          "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 
+           7, 9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 
+          11, 4, 0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 
+          2, 10, 9, 4, 7, 3}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
+         0.6, 1.8}, {{$CellContext`n$$, 0, "Transpose level"}, 0, 8, 1}}, 
+      "Options" :> {ContinuousAction -> False, ContentSize -> 610}, 
+      "DefaultOptions" :> {ControllerLinking -> True}],
+     ImageSizeCache->{624., {243., 249.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>({$CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4,
+           8}, "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{
+          3, 4, 6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 
+          1, 2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, 
+          "9-11"}}, $CellContext`ForteNumber[
+         Pattern[$CellContext`s, 
+          Blank[]]] := If[
+         And[Length[$CellContext`s] < 10, Length[$CellContext`s] > 2], 
+         Part[$CellContext`fortenums, 
+          Part[
+           Position[$CellContext`fortenums, $CellContext`s], 1, 1], 2], 
+         "N/A"], $CellContext`ICSet[
+         Pattern[$CellContext`ps, 
+          Blank[]]] := Table[
+         Count[
+          Table[
+           $CellContext`poss[$CellContext`i, 
+            Subsets[$CellContext`ps, {2}]], {$CellContext`i, 1, 
+            Length[
+             
+             Subsets[$CellContext`ps, {
+              2}]]}], $CellContext`j], {$CellContext`j, 1, 
+          6}], $CellContext`poss[
+         Pattern[$CellContext`i, 
+          Blank[]], 
+         Pattern[$CellContext`tup, 
+          Blank[]]] := If[
+         And[
+         Abs[Part[$CellContext`tup, $CellContext`i, 2] - 
+            Part[$CellContext`tup, $CellContext`i, 1]] > 6, 
+          Abs[Part[$CellContext`tup, $CellContext`i, 2] - 
+            Part[$CellContext`tup, $CellContext`i, 1]] < 12], 
+         Mod[12, 
+          Abs[
+          Part[$CellContext`tup, $CellContext`i, 2] - 
+           Part[$CellContext`tup, $CellContext`i, 1]]], 
+         If[
+         Abs[Part[$CellContext`tup, $CellContext`i, 2] - 
+            Part[$CellContext`tup, $CellContext`i, 1]] != 0, 
+          Abs[
+          Part[$CellContext`tup, $CellContext`i, 2] - 
+           Part[$CellContext`tup, $CellContext`i, 
+            1]]]], $CellContext`PlaySetChord[
+         Pattern[$CellContext`row, 
+          Blank[]], 
+         Pattern[$CellContext`notelen, 
+          Blank[]]] := Sound[
+         Append[
+          Table[
+           SoundNote[
+            Part[$CellContext`row, $CellContext`i], $CellContext`notelen/
+            3], {$CellContext`i, 1, 
+            Length[$CellContext`row]}], 
+          SoundNote[
+           Table[
+            Part[$CellContext`row, $CellContext`i], {$CellContext`i, 1, 
+             
+             Length[$CellContext`row]}], $CellContext`notelen]]], \
+$CellContext`transpose[
+         Pattern[$CellContext`s, 
+          Blank[]], 
+         Pattern[$CellContext`n, 
+          Blank[]]] := 
+       Table[Part[$CellContext`s, $CellContext`i] + $CellContext`n, \
+{$CellContext`i, 1, 
+          Length[$CellContext`s]}], $CellContext`ButtonLabel[
+         Pattern[$CellContext`ps, 
+          Blank[]], 
+         Pattern[$CellContext`len, 
+          Blank[]]] := ImageCrop[
+         Rasterize[
+          $CellContext`PlaySet[$CellContext`ps, $CellContext`len], ImageSize -> 
+          200], {200, 40}, Bottom], $CellContext`PlaySet[
+         Pattern[$CellContext`row, 
+          Blank[]], 
+         Pattern[$CellContext`notelen, 
+          Blank[]]] := Sound[
+         Table[
+          SoundNote[
+           
+           Part[$CellContext`row, $CellContext`i], $CellContext`notelen], \
+{$CellContext`i, 1, 
+           Length[$CellContext`row]}]], $CellContext`fnOrder[
+         Pattern[$CellContext`s, 
+          Blank[]], 
+         Pattern[$CellContext`l, 
+          Blank[]]] := Part[
+         Fold[$CellContext`normalOrder, 
+          $CellContext`cperms[
+           Sort[$CellContext`s]], 
+          Range[0, $CellContext`l]], 1], $CellContext`normalOrder[
+         Pattern[$CellContext`s, 
+          Blank[]], 
+         Pattern[$CellContext`k, 
+          Blank[]]] := $CellContext`cut[
+         Sort[
+          Table[{
+            Part[$CellContext`s, $CellContext`i], 
+            Part[$CellContext`s, $CellContext`i, Length[
+                Part[$CellContext`s, $CellContext`i]] - $CellContext`k] - 
+            Part[$CellContext`s, $CellContext`i, 1]}, {$CellContext`i, 1, 
+            Length[$CellContext`s]}], Part[#, 2] < 
+          Part[#2, 2]& ]], $CellContext`normalOrder[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[
+         Sort[
+          Table[{
+            Part[$CellContext`s, $CellContext`i], 
+            Part[$CellContext`s, $CellContext`i, 
+              Length[$CellContext`s]] - 
+            Part[$CellContext`s, $CellContext`i, 1]}, {$CellContext`i, 1, 
+            Length[$CellContext`s]}], Part[#, 2] < Part[#2, 2]& ], 1, 
+         1], $CellContext`cut[
+         Pattern[$CellContext`s, 
+          Blank[]]] := 
+       Module[{$CellContext`z = 
+          TakeWhile[$CellContext`s, Part[#, 2] == 
+            Part[$CellContext`s, 1, 2]& ]}, 
+         Table[
+          Part[$CellContext`z, $CellContext`i, 1], {$CellContext`i, 1, 
+           Length[$CellContext`z]}]], $CellContext`cperms[
+         Pattern[$CellContext`s, 
+          Blank[]]] := 
+       NestList[$CellContext`makeCPerm, $CellContext`s, 
+         Length[$CellContext`s] - 1], $CellContext`makeCPerm[
+         Pattern[$CellContext`pc, 
+          Blank[]]] := $CellContext`ordered[
+         $CellContext`cperm[$CellContext`pc]], $CellContext`ordered[
+         Pattern[$CellContext`cp, 
+          Blank[]]] := Table[
+         If[$CellContext`i != 1, 
+          If[
+          Part[$CellContext`cp, $CellContext`i] < Part[$CellContext`cp, 1], 
+           Part[$CellContext`cp, $CellContext`i] + 12, 
+           Part[$CellContext`cp, $CellContext`i]], 
+          Part[$CellContext`cp, $CellContext`i]], {$CellContext`i, 1, 
+          Length[$CellContext`cp]}], $CellContext`cperm[
+         Pattern[$CellContext`set, 
+          Blank[]]] := Module[{$CellContext`st = Sort[$CellContext`set]}, 
+         Delete[
+          Append[$CellContext`st, 
+           Part[$CellContext`st, 1]], 1]], $CellContext`primeForm[
+         Pattern[$CellContext`s, 
+          Blank[]]] := 
+       Module[{$CellContext`t = $CellContext`fnOrder[$CellContext`s, 
+            Length[$CellContext`s]]}, 
+         $CellContext`transpose[$CellContext`t, -
+          Part[$CellContext`t, 1]]], $CellContext`Invert[
+         Pattern[$CellContext`ps, 
+          Blank[]]] := Table[
+         Abs[
+         12 - Part[$CellContext`ps, $CellContext`i]], {$CellContext`i, 1, 
+          Length[$CellContext`ps]}]}; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.598373779442095*^9, 3.598373807032235*^9}},
+ CellID->1719352911]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -702,124 +1075,134 @@ Cell[BoxData[
     True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{1}, {6, 
-       9}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
+       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{7}, {1, 
+       0}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
        "Berg - Wozzeck", {3, 4, 7, 10} -> 
        "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
        "Webern - Five Movements for String Quartet Op.5/5", {3, 4, 6, 8, 10, 
         0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 1, 3, 
         5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
        "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 7, 
-        9, 10} -> "Stravinsky - Rite of Spring", {11, 10, 7, 1, 0, 3, 5, 4, 9,
-        8}, {7, 2, 1, 11, 10, 9, 4, 6, 5, 8, 3}, {7, 2, 6, 0, 10, 4, 11, 1, 9,
-        8, 3, 5}}}, {{
+        9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 11, 4,
+        0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 2, 10, 9,
+        4, 7, 3}}}, {{
        Hold[$CellContext`len$$], 1.2, "Note length"}, 0.6, 1.8}, {{
        Hold[$CellContext`n$$], 0, "Transpose level"}, 0, 8, 1}}, 
-    Typeset`size$$ = {531.701171875, {317., 29.15625}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {531.701171875, {320., 31.65625}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`PCSet$6821$$ = False, $CellContext`len$6822$$ = 
-    0, $CellContext`n$6823$$ = 0}, 
+    False, $CellContext`PCSet$28456$$ = False, $CellContext`len$28457$$ = 
+    0, $CellContext`n$28458$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`len$$ = 1.2, $CellContext`n$$ = 
         0, $CellContext`PCSet$$ = {0, 1, 4, 8}}, "ControllerVariables" :> {
-        Hold[$CellContext`PCSet$$, $CellContext`PCSet$6821$$, False], 
-        Hold[$CellContext`len$$, $CellContext`len$6822$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$6823$$, 0]}, 
+        Hold[$CellContext`PCSet$$, $CellContext`PCSet$28456$$, False], 
+        Hold[$CellContext`len$$, $CellContext`len$28457$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$28458$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Row[{
-         Column[{
-           Style[
-            Text["Forte Number:", 16]], 
-           Style[
-            Text[
-             StringJoin["Cardinal Number: ", 
-              ToString[
-               Length[$CellContext`PCSet$$]]]], 16], 
-           Style[
-            Text[
-             StringJoin["Interval Vector: ", 
-              ToString[
-               $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
-         Spacer[10], 
-         Panel[
-          Grid[{{
-             Style[
-              Text["Original set"], 14], 
-             Style[
-              Text[
-               ToString[$CellContext`PCSet$$]], 12], 
-             $CellContext`PlaySetChord[$CellContext`PCSet$$, \
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4, 8}, 
+           "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{3, 4,
+            6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 1, 
+           2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, "9-11"}}; 
+       Row[{
+          Column[{
+            Style[
+             Text[
+              StringJoin["Forte Number: ", 
+               ToString[
+                $CellContext`ForteNumber[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Cardinal Number: ", 
+               ToString[
+                Length[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Interval Vector: ", 
+               ToString[
+                $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
+          Spacer[10], 
+          Panel[
+           Grid[{{
+              Style[
+               Text["Original set"], 14], 
+              Style[
+               Text[
+                ToString[$CellContext`PCSet$$]], 12], 
+              $CellContext`PlaySetChord[$CellContext`PCSet$$, \
 $CellContext`len$$]}, {
-             Style[
-              Text[
-               StringJoin["Transpose at level ", 
-                ToString[$CellContext`n$$]]], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`transpose[$CellContext`PCSet$$, \
-$CellContext`n$$]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`transpose[$CellContext`PCSet$$, \
-$CellContext`n$$], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+              Style[
+               Text[
+                StringJoin["Transpose at level ", 
+                 ToString[$CellContext`n$$]]], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`transpose[$CellContext`PCSet$$, \
 $CellContext`n$$], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Normal form"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`fnOrder[$CellContext`PCSet$$, 
-                 Length[$CellContext`PCSet$$]]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`fnOrder[$CellContext`PCSet$$, 
-                Length[$CellContext`PCSet$$]], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+              Style[
+               Text["Normal form"], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`fnOrder[$CellContext`PCSet$$, 
-                  Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Prime form"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`primeForm[
-                 Sort[$CellContext`PCSet$$]]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`primeForm[
-                Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+                  Length[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`fnOrder[$CellContext`PCSet$$, 
+                 Length[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`fnOrder[$CellContext`PCSet$$, 
+                   Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+             
+              Style[
+               Text["Prime form"], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`primeForm[
-                  Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Inversion"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`Invert[$CellContext`PCSet$$], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
-                 $CellContext`Invert[$CellContext`PCSet$$], \
-$CellContext`len$$/3]]]]}}]]}], 
+                  Sort[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`primeForm[
+                 Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`primeForm[
+                   Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+              Style[
+               Text["Inversion"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$/3]]]]}}]]}]), 
       "Specifications" :> {{{$CellContext`PCSet$$, {0, 1, 4, 8}, 
-          "Set class"}, {{1}, {6, 9}, {1, 7, 2} -> 
+          "Set class"}, {{7}, {1, 0}, {1, 7, 2} -> 
           "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
           "Berg - Wozzeck", {3, 4, 7, 10} -> 
           "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
@@ -827,17 +1210,28 @@ $CellContext`len$$/3]]]]}}]]}],
            10, 0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 
            1, 3, 5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
           "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 
-           7, 9, 10} -> "Stravinsky - Rite of Spring", {11, 10, 7, 1, 0, 3, 5,
-           4, 9, 8}, {7, 2, 1, 11, 10, 9, 4, 6, 5, 8, 3}, {7, 2, 6, 0, 10, 4, 
-          11, 1, 9, 8, 3, 5}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
+           7, 9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 
+          11, 4, 0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 
+          2, 10, 9, 4, 7, 3}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
          0.6, 1.8}, {{$CellContext`n$$, 0, "Transpose level"}, 0, 8, 1}}, 
       "Options" :> {ContinuousAction -> False, ContentSize -> 610}, 
       "DefaultOptions" :> {ControllerLinking -> True}],
-     ImageSizeCache->{624., {241., 246.}},
+     ImageSizeCache->{624., {243., 249.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
-    Initialization:>({$CellContext`ICSet[
+    Initialization:>({$CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4,
+           8}, "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{
+          3, 4, 6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 
+          1, 2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, 
+          "9-11"}}, $CellContext`ForteNumber[
+         Pattern[$CellContext`s, 
+          Blank[]]] := If[
+         And[Length[$CellContext`s] < 10, Length[$CellContext`s] > 2], 
+         Part[$CellContext`fortenums, 
+          Part[
+           Position[$CellContext`fortenums, $CellContext`s], 1, 1], 2], 
+         "N/A"], $CellContext`ICSet[
          Pattern[$CellContext`ps, 
           Blank[]]] := Table[
          Count[
@@ -985,8 +1379,8 @@ $CellContext`transpose[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.598312178807145*^9},
- CellID->594605143]
+ CellChangeTimes->{{3.598373779442095*^9, 3.598373807032235*^9}},
+ CellID->2041084773]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -997,128 +1391,138 @@ Cell[BoxData[
  TagBox[
   StyleBox[
    DynamicModuleBox[{$CellContext`len$$ = 1.2, $CellContext`n$$ = 
-    0, $CellContext`PCSet$$ = {7, 2, 6, 0, 10, 4, 11, 1, 9, 8, 3, 5}, 
+    0, $CellContext`PCSet$$ = {6, 0, 11, 5, 8, 1, 2, 10, 9, 4, 7, 3}, 
     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
     1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{1}, {6, 
-       9}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
+       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{7}, {1, 
+       0}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
        "Berg - Wozzeck", {3, 4, 7, 10} -> 
        "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
        "Webern - Five Movements for String Quartet Op.5/5", {3, 4, 6, 8, 10, 
         0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 1, 3, 
         5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
        "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 7, 
-        9, 10} -> "Stravinsky - Rite of Spring", {11, 10, 7, 1, 0, 3, 5, 4, 9,
-        8}, {7, 2, 1, 11, 10, 9, 4, 6, 5, 8, 3}, {7, 2, 6, 0, 10, 4, 11, 1, 9,
-        8, 3, 5}}}, {{
+        9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 11, 4,
+        0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 2, 10, 9,
+        4, 7, 3}}}, {{
        Hold[$CellContext`len$$], 1.2, "Note length"}, 0.6, 1.8}, {{
        Hold[$CellContext`n$$], 0, "Transpose level"}, 0, 8, 1}}, 
-    Typeset`size$$ = {567.701171875, {317., 29.15625}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {567.701171875, {320., 31.65625}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`PCSet$6821$$ = False, $CellContext`len$6822$$ = 
-    0, $CellContext`n$6823$$ = 0}, 
+    False, $CellContext`PCSet$28456$$ = False, $CellContext`len$28457$$ = 
+    0, $CellContext`n$28458$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`len$$ = 1.2, $CellContext`n$$ = 
         0, $CellContext`PCSet$$ = {0, 1, 4, 8}}, "ControllerVariables" :> {
-        Hold[$CellContext`PCSet$$, $CellContext`PCSet$6821$$, False], 
-        Hold[$CellContext`len$$, $CellContext`len$6822$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$6823$$, 0]}, 
+        Hold[$CellContext`PCSet$$, $CellContext`PCSet$28456$$, False], 
+        Hold[$CellContext`len$$, $CellContext`len$28457$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$28458$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Row[{
-         Column[{
-           Style[
-            Text["Forte Number:", 16]], 
-           Style[
-            Text[
-             StringJoin["Cardinal Number: ", 
-              ToString[
-               Length[$CellContext`PCSet$$]]]], 16], 
-           Style[
-            Text[
-             StringJoin["Interval Vector: ", 
-              ToString[
-               $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
-         Spacer[10], 
-         Panel[
-          Grid[{{
-             Style[
-              Text["Original set"], 14], 
-             Style[
-              Text[
-               ToString[$CellContext`PCSet$$]], 12], 
-             $CellContext`PlaySetChord[$CellContext`PCSet$$, \
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4, 8}, 
+           "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{3, 4,
+            6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 1, 
+           2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, "9-11"}}; 
+       Row[{
+          Column[{
+            Style[
+             Text[
+              StringJoin["Forte Number: ", 
+               ToString[
+                $CellContext`ForteNumber[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Cardinal Number: ", 
+               ToString[
+                Length[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Interval Vector: ", 
+               ToString[
+                $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
+          Spacer[10], 
+          Panel[
+           Grid[{{
+              Style[
+               Text["Original set"], 14], 
+              Style[
+               Text[
+                ToString[$CellContext`PCSet$$]], 12], 
+              $CellContext`PlaySetChord[$CellContext`PCSet$$, \
 $CellContext`len$$]}, {
-             Style[
-              Text[
-               StringJoin["Transpose at level ", 
-                ToString[$CellContext`n$$]]], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`transpose[$CellContext`PCSet$$, \
-$CellContext`n$$]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`transpose[$CellContext`PCSet$$, \
-$CellContext`n$$], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+              Style[
+               Text[
+                StringJoin["Transpose at level ", 
+                 ToString[$CellContext`n$$]]], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`transpose[$CellContext`PCSet$$, \
 $CellContext`n$$], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Normal form"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`fnOrder[$CellContext`PCSet$$, 
-                 Length[$CellContext`PCSet$$]]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`fnOrder[$CellContext`PCSet$$, 
-                Length[$CellContext`PCSet$$]], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+              Style[
+               Text["Normal form"], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`fnOrder[$CellContext`PCSet$$, 
-                  Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Prime form"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`primeForm[
-                 Sort[$CellContext`PCSet$$]]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`primeForm[
-                Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+                  Length[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`fnOrder[$CellContext`PCSet$$, 
+                 Length[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`fnOrder[$CellContext`PCSet$$, 
+                   Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+             
+              Style[
+               Text["Prime form"], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`primeForm[
-                  Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Inversion"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`Invert[$CellContext`PCSet$$], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
-                 $CellContext`Invert[$CellContext`PCSet$$], \
-$CellContext`len$$/3]]]]}}]]}], 
+                  Sort[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`primeForm[
+                 Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`primeForm[
+                   Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+              Style[
+               Text["Inversion"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$/3]]]]}}]]}]), 
       "Specifications" :> {{{$CellContext`PCSet$$, {0, 1, 4, 8}, 
-          "Set class"}, {{1}, {6, 9}, {1, 7, 2} -> 
+          "Set class"}, {{7}, {1, 0}, {1, 7, 2} -> 
           "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
           "Berg - Wozzeck", {3, 4, 7, 10} -> 
           "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
@@ -1126,17 +1530,28 @@ $CellContext`len$$/3]]]]}}]]}],
            10, 0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 
            1, 3, 5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
           "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 
-           7, 9, 10} -> "Stravinsky - Rite of Spring", {11, 10, 7, 1, 0, 3, 5,
-           4, 9, 8}, {7, 2, 1, 11, 10, 9, 4, 6, 5, 8, 3}, {7, 2, 6, 0, 10, 4, 
-          11, 1, 9, 8, 3, 5}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
+           7, 9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 
+          11, 4, 0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 
+          2, 10, 9, 4, 7, 3}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
          0.6, 1.8}, {{$CellContext`n$$, 0, "Transpose level"}, 0, 8, 1}}, 
       "Options" :> {ContinuousAction -> False, ContentSize -> 610}, 
       "DefaultOptions" :> {ControllerLinking -> True}],
-     ImageSizeCache->{624., {240., 246.}},
+     ImageSizeCache->{624., {243., 248.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
-    Initialization:>({$CellContext`ICSet[
+    Initialization:>({$CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4,
+           8}, "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{
+          3, 4, 6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 
+          1, 2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, 
+          "9-11"}}, $CellContext`ForteNumber[
+         Pattern[$CellContext`s, 
+          Blank[]]] := If[
+         And[Length[$CellContext`s] < 10, Length[$CellContext`s] > 2], 
+         Part[$CellContext`fortenums, 
+          Part[
+           Position[$CellContext`fortenums, $CellContext`s], 1, 1], 2], 
+         "N/A"], $CellContext`ICSet[
          Pattern[$CellContext`ps, 
           Blank[]]] := Table[
          Count[
@@ -1284,8 +1699,8 @@ $CellContext`transpose[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.598312178807145*^9},
- CellID->599816725],
+ CellChangeTimes->{{3.598373779442095*^9, 3.598373807032235*^9}},
+ CellID->973060405],
 
 Cell[BoxData[
  TagBox[
@@ -1295,124 +1710,134 @@ Cell[BoxData[
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{1}, {6, 
-       9}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
+       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{7}, {1, 
+       0}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
        "Berg - Wozzeck", {3, 4, 7, 10} -> 
        "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
        "Webern - Five Movements for String Quartet Op.5/5", {3, 4, 6, 8, 10, 
         0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 1, 3, 
         5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
        "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 7, 
-        9, 10} -> "Stravinsky - Rite of Spring", {11, 10, 7, 1, 0, 3, 5, 4, 9,
-        8}, {7, 2, 1, 11, 10, 9, 4, 6, 5, 8, 3}, {7, 2, 6, 0, 10, 4, 11, 1, 9,
-        8, 3, 5}}}, {{
+        9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 11, 4,
+        0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 2, 10, 9,
+        4, 7, 3}}}, {{
        Hold[$CellContext`len$$], 1.2, "Note length"}, 0.6, 1.8}, {{
        Hold[$CellContext`n$$], 0, "Transpose level"}, 0, 8, 1}}, 
-    Typeset`size$$ = {519.701171875, {317., 29.15625}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {519.701171875, {320., 31.65625}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`PCSet$6821$$ = False, $CellContext`len$6822$$ = 
-    0, $CellContext`n$6823$$ = 0}, 
+    False, $CellContext`PCSet$28456$$ = False, $CellContext`len$28457$$ = 
+    0, $CellContext`n$28458$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`len$$ = 1.2, $CellContext`n$$ = 
         0, $CellContext`PCSet$$ = {0, 1, 4, 8}}, "ControllerVariables" :> {
-        Hold[$CellContext`PCSet$$, $CellContext`PCSet$6821$$, False], 
-        Hold[$CellContext`len$$, $CellContext`len$6822$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$6823$$, 0]}, 
+        Hold[$CellContext`PCSet$$, $CellContext`PCSet$28456$$, False], 
+        Hold[$CellContext`len$$, $CellContext`len$28457$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$28458$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Row[{
-         Column[{
-           Style[
-            Text["Forte Number:", 16]], 
-           Style[
-            Text[
-             StringJoin["Cardinal Number: ", 
-              ToString[
-               Length[$CellContext`PCSet$$]]]], 16], 
-           Style[
-            Text[
-             StringJoin["Interval Vector: ", 
-              ToString[
-               $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
-         Spacer[10], 
-         Panel[
-          Grid[{{
-             Style[
-              Text["Original set"], 14], 
-             Style[
-              Text[
-               ToString[$CellContext`PCSet$$]], 12], 
-             $CellContext`PlaySetChord[$CellContext`PCSet$$, \
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4, 8}, 
+           "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{3, 4,
+            6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 1, 
+           2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, "9-11"}}; 
+       Row[{
+          Column[{
+            Style[
+             Text[
+              StringJoin["Forte Number: ", 
+               ToString[
+                $CellContext`ForteNumber[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Cardinal Number: ", 
+               ToString[
+                Length[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Interval Vector: ", 
+               ToString[
+                $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
+          Spacer[10], 
+          Panel[
+           Grid[{{
+              Style[
+               Text["Original set"], 14], 
+              Style[
+               Text[
+                ToString[$CellContext`PCSet$$]], 12], 
+              $CellContext`PlaySetChord[$CellContext`PCSet$$, \
 $CellContext`len$$]}, {
-             Style[
-              Text[
-               StringJoin["Transpose at level ", 
-                ToString[$CellContext`n$$]]], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`transpose[$CellContext`PCSet$$, \
-$CellContext`n$$]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`transpose[$CellContext`PCSet$$, \
-$CellContext`n$$], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+              Style[
+               Text[
+                StringJoin["Transpose at level ", 
+                 ToString[$CellContext`n$$]]], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`transpose[$CellContext`PCSet$$, \
 $CellContext`n$$], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Normal form"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`fnOrder[$CellContext`PCSet$$, 
-                 Length[$CellContext`PCSet$$]]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`fnOrder[$CellContext`PCSet$$, 
-                Length[$CellContext`PCSet$$]], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+              Style[
+               Text["Normal form"], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`fnOrder[$CellContext`PCSet$$, 
-                  Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Prime form"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`primeForm[
-                 Sort[$CellContext`PCSet$$]]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`primeForm[
-                Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+                  Length[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`fnOrder[$CellContext`PCSet$$, 
+                 Length[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`fnOrder[$CellContext`PCSet$$, 
+                   Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+             
+              Style[
+               Text["Prime form"], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`primeForm[
-                  Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Inversion"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`Invert[$CellContext`PCSet$$], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
-                 $CellContext`Invert[$CellContext`PCSet$$], \
-$CellContext`len$$/3]]]]}}]]}], 
+                  Sort[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`primeForm[
+                 Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`primeForm[
+                   Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+              Style[
+               Text["Inversion"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$/3]]]]}}]]}]), 
       "Specifications" :> {{{$CellContext`PCSet$$, {0, 1, 4, 8}, 
-          "Set class"}, {{1}, {6, 9}, {1, 7, 2} -> 
+          "Set class"}, {{7}, {1, 0}, {1, 7, 2} -> 
           "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
           "Berg - Wozzeck", {3, 4, 7, 10} -> 
           "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
@@ -1420,17 +1845,28 @@ $CellContext`len$$/3]]]]}}]]}],
            10, 0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 
            1, 3, 5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
           "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 
-           7, 9, 10} -> "Stravinsky - Rite of Spring", {11, 10, 7, 1, 0, 3, 5,
-           4, 9, 8}, {7, 2, 1, 11, 10, 9, 4, 6, 5, 8, 3}, {7, 2, 6, 0, 10, 4, 
-          11, 1, 9, 8, 3, 5}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
+           7, 9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 
+          11, 4, 0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 
+          2, 10, 9, 4, 7, 3}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
          0.6, 1.8}, {{$CellContext`n$$, 0, "Transpose level"}, 0, 8, 1}}, 
       "Options" :> {ContinuousAction -> False, ContentSize -> 610}, 
       "DefaultOptions" :> {ControllerLinking -> True}],
-     ImageSizeCache->{624., {240., 246.}},
+     ImageSizeCache->{624., {243., 248.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
-    Initialization:>({$CellContext`ICSet[
+    Initialization:>({$CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4,
+           8}, "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{
+          3, 4, 6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 
+          1, 2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, 
+          "9-11"}}, $CellContext`ForteNumber[
+         Pattern[$CellContext`s, 
+          Blank[]]] := If[
+         And[Length[$CellContext`s] < 10, Length[$CellContext`s] > 2], 
+         Part[$CellContext`fortenums, 
+          Part[
+           Position[$CellContext`fortenums, $CellContext`s], 1, 1], 2], 
+         "N/A"], $CellContext`ICSet[
          Pattern[$CellContext`ps, 
           Blank[]]] := Table[
          Count[
@@ -1578,8 +2014,8 @@ $CellContext`transpose[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.598312178807145*^9},
- CellID->639472970],
+ CellChangeTimes->{{3.598373779442095*^9, 3.598373807032235*^9}},
+ CellID->866281034],
 
 Cell[BoxData[
  TagBox[
@@ -1589,124 +2025,134 @@ Cell[BoxData[
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{1}, {6, 
-       9}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
+       Hold[$CellContext`PCSet$$], {0, 1, 4, 8}, "Set class"}, {{7}, {1, 
+       0}, {1, 7, 2} -> "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
        "Berg - Wozzeck", {3, 4, 7, 10} -> 
        "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
        "Webern - Five Movements for String Quartet Op.5/5", {3, 4, 6, 8, 10, 
         0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 1, 3, 
         5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
        "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 7, 
-        9, 10} -> "Stravinsky - Rite of Spring", {11, 10, 7, 1, 0, 3, 5, 4, 9,
-        8}, {7, 2, 1, 11, 10, 9, 4, 6, 5, 8, 3}, {7, 2, 6, 0, 10, 4, 11, 1, 9,
-        8, 3, 5}}}, {{
+        9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 11, 4,
+        0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 2, 10, 9,
+        4, 7, 3}}}, {{
        Hold[$CellContext`len$$], 1.2, "Note length"}, 0.6, 1.8}, {{
        Hold[$CellContext`n$$], 0, "Transpose level"}, 0, 8, 1}}, 
-    Typeset`size$$ = {465.701171875, {317., 29.15625}}, Typeset`update$$ = 0, 
+    Typeset`size$$ = {567.701171875, {320., 31.65625}}, Typeset`update$$ = 0, 
     Typeset`initDone$$, Typeset`skipInitDone$$ = 
-    False, $CellContext`PCSet$6821$$ = False, $CellContext`len$6822$$ = 
-    0, $CellContext`n$6823$$ = 0}, 
+    False, $CellContext`PCSet$28456$$ = False, $CellContext`len$28457$$ = 
+    0, $CellContext`n$28458$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
       "Variables" :> {$CellContext`len$$ = 1.2, $CellContext`n$$ = 
         0, $CellContext`PCSet$$ = {0, 1, 4, 8}}, "ControllerVariables" :> {
-        Hold[$CellContext`PCSet$$, $CellContext`PCSet$6821$$, False], 
-        Hold[$CellContext`len$$, $CellContext`len$6822$$, 0], 
-        Hold[$CellContext`n$$, $CellContext`n$6823$$, 0]}, 
+        Hold[$CellContext`PCSet$$, $CellContext`PCSet$28456$$, False], 
+        Hold[$CellContext`len$$, $CellContext`len$28457$$, 0], 
+        Hold[$CellContext`n$$, $CellContext`n$28458$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Row[{
-         Column[{
-           Style[
-            Text["Forte Number:", 16]], 
-           Style[
-            Text[
-             StringJoin["Cardinal Number: ", 
-              ToString[
-               Length[$CellContext`PCSet$$]]]], 16], 
-           Style[
-            Text[
-             StringJoin["Interval Vector: ", 
-              ToString[
-               $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
-         Spacer[10], 
-         Panel[
-          Grid[{{
-             Style[
-              Text["Original set"], 14], 
-             Style[
-              Text[
-               ToString[$CellContext`PCSet$$]], 12], 
-             $CellContext`PlaySetChord[$CellContext`PCSet$$, \
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4, 8}, 
+           "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{3, 4,
+            6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 1, 
+           2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, "9-11"}}; 
+       Row[{
+          Column[{
+            Style[
+             Text[
+              StringJoin["Forte Number: ", 
+               ToString[
+                $CellContext`ForteNumber[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Cardinal Number: ", 
+               ToString[
+                Length[$CellContext`PCSet$$]]]], 16], 
+            Style[
+             Text[
+              StringJoin["Interval Vector: ", 
+               ToString[
+                $CellContext`ICSet[$CellContext`PCSet$$]]]], 16]}], 
+          Spacer[10], 
+          Panel[
+           Grid[{{
+              Style[
+               Text["Original set"], 14], 
+              Style[
+               Text[
+                ToString[$CellContext`PCSet$$]], 12], 
+              $CellContext`PlaySetChord[$CellContext`PCSet$$, \
 $CellContext`len$$]}, {
-             Style[
-              Text[
-               StringJoin["Transpose at level ", 
-                ToString[$CellContext`n$$]]], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`transpose[$CellContext`PCSet$$, \
-$CellContext`n$$]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`transpose[$CellContext`PCSet$$, \
-$CellContext`n$$], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+              Style[
+               Text[
+                StringJoin["Transpose at level ", 
+                 ToString[$CellContext`n$$]]], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`transpose[$CellContext`PCSet$$, \
+$CellContext`n$$], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`transpose[$CellContext`PCSet$$, \
 $CellContext`n$$], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Normal form"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`fnOrder[$CellContext`PCSet$$, 
-                 Length[$CellContext`PCSet$$]]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`fnOrder[$CellContext`PCSet$$, 
-                Length[$CellContext`PCSet$$]], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+              Style[
+               Text["Normal form"], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`fnOrder[$CellContext`PCSet$$, 
-                  Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Prime form"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`primeForm[
-                 Sort[$CellContext`PCSet$$]]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`primeForm[
-                Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
+                  Length[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`fnOrder[$CellContext`PCSet$$, 
+                 Length[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`fnOrder[$CellContext`PCSet$$, 
+                   Length[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+             
+              Style[
+               Text["Prime form"], 14], 
+              Style[
+               Text[
+                ToString[
                  $CellContext`primeForm[
-                  Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
-             Style[
-              Text["Inversion"], 14], 
-             Style[
-              Text[
-               ToString[
-                $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
-             Button[
-              $CellContext`ButtonLabel[
-               $CellContext`Invert[$CellContext`PCSet$$], $CellContext`len$$], 
-              EmitSound[
-               Sound[
-                $CellContext`PlaySet[
-                 $CellContext`Invert[$CellContext`PCSet$$], \
-$CellContext`len$$/3]]]]}}]]}], 
+                  Sort[$CellContext`PCSet$$]]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`primeForm[
+                 Sort[$CellContext`PCSet$$]], $CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`primeForm[
+                   Sort[$CellContext`PCSet$$]], $CellContext`len$$/3]]]]}, {
+              Style[
+               Text["Inversion"], 14], 
+              Style[
+               Text[
+                ToString[
+                 $CellContext`Invert[$CellContext`PCSet$$]]], 12], 
+              Button[
+               $CellContext`ButtonLabel[
+                $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$], 
+               EmitSound[
+                Sound[
+                 $CellContext`PlaySet[
+                  $CellContext`Invert[$CellContext`PCSet$$], \
+$CellContext`len$$/3]]]]}}]]}]), 
       "Specifications" :> {{{$CellContext`PCSet$$, {0, 1, 4, 8}, 
-          "Set class"}, {{1}, {6, 9}, {1, 7, 2} -> 
+          "Set class"}, {{7}, {1, 0}, {1, 7, 2} -> 
           "Berg - Altenberg Lieder Op.4/3", {0, 1, 4, 8} -> 
           "Berg - Wozzeck", {3, 4, 7, 10} -> 
           "Schoenberg - George Lieder Op.15/6", {2, 3, 7, 8, 9} -> 
@@ -1714,17 +2160,28 @@ $CellContext`len$$/3]]]]}}]]}],
            10, 0} -> "Scriabin - Seventh Piano Sonata Op. 64", {7, 8, 10, 0, 
            1, 3, 5} -> "Busoni - Second Sonatina", {0, 1, 2, 3, 4, 5, 6, 7} -> 
           "Schoenberg - Six Short Piano Pieces Op. 19/6", {0, 1, 2, 3, 5, 6, 
-           7, 9, 10} -> "Stravinsky - Rite of Spring", {11, 10, 7, 1, 0, 3, 5,
-           4, 9, 8}, {7, 2, 1, 11, 10, 9, 4, 6, 5, 8, 3}, {7, 2, 6, 0, 10, 4, 
-          11, 1, 9, 8, 3, 5}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
+           7, 9, 10} -> "Stravinsky - Rite of Spring", {10, 1, 6, 8, 5, 2, 9, 
+          11, 4, 0}, {10, 4, 5, 8, 11, 0, 1, 3, 9, 6, 7}, {6, 0, 11, 5, 8, 1, 
+          2, 10, 9, 4, 7, 3}}}, {{$CellContext`len$$, 1.2, "Note length"}, 
          0.6, 1.8}, {{$CellContext`n$$, 0, "Transpose level"}, 0, 8, 1}}, 
       "Options" :> {ContinuousAction -> False, ContentSize -> 610}, 
       "DefaultOptions" :> {ControllerLinking -> True}],
-     ImageSizeCache->{624., {241., 246.}},
+     ImageSizeCache->{624., {243., 249.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
-    Initialization:>({$CellContext`ICSet[
+    Initialization:>({$CellContext`fortenums = {{{1, 7, 2}, "3-5"}, {{0, 1, 4,
+           8}, "4-19"}, {{3, 4, 7, 10}, "4-18"}, {{2, 3, 7, 8, 9}, "5-7"}, {{
+          3, 4, 6, 8, 10, 0}, "6-34"}, {{7, 8, 10, 0, 1, 3, 5}, "7-35"}, {{0, 
+          1, 2, 3, 4, 5, 6, 7}, "8-1"}, {{0, 1, 2, 3, 5, 6, 7, 9, 10}, 
+          "9-11"}}, $CellContext`ForteNumber[
+         Pattern[$CellContext`s, 
+          Blank[]]] := If[
+         And[Length[$CellContext`s] < 10, Length[$CellContext`s] > 2], 
+         Part[$CellContext`fortenums, 
+          Part[
+           Position[$CellContext`fortenums, $CellContext`s], 1, 1], 2], 
+         "N/A"], $CellContext`ICSet[
          Pattern[$CellContext`ps, 
           Blank[]]] := Table[
          Count[
@@ -1872,8 +2329,8 @@ $CellContext`transpose[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.598312178807145*^9},
- CellID->1614037202]
+ CellChangeTimes->{{3.598373779442095*^9, 3.598373807032235*^9}},
+ CellID->263571389]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2187,41 +2644,41 @@ StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "Demonstration.nb",
 (*CellTagsOutline
 CellTagsIndex->{
  "AutomaticAnimation"->{
-  Cell[82763, 2063, 1464, 31, 29, "ControlSuggestions",
+  Cell[103367, 2520, 1464, 31, 29, "ControlSuggestions",
    CellTags->"AutomaticAnimation"]},
  "BookmarkAnimation"->{
-  Cell[84230, 2096, 908, 21, 29, "ControlSuggestions",
+  Cell[104834, 2553, 908, 21, 29, "ControlSuggestions",
    CellTags->"BookmarkAnimation"]},
  "CreateAndDeleteLocators"->{
-  Cell[80904, 2012, 637, 15, 29, "ControlSuggestions",
+  Cell[101508, 2469, 637, 15, 29, "ControlSuggestions",
    CellTags->"CreateAndDeleteLocators"]},
  "DragLocators"->{
-  Cell[80561, 1999, 340, 11, 29, "ControlSuggestions",
+  Cell[101165, 2456, 340, 11, 29, "ControlSuggestions",
    CellTags->"DragLocators"]},
  "GamepadControls"->{
-  Cell[82391, 2052, 369, 9, 29, "ControlSuggestions",
+  Cell[102995, 2509, 369, 9, 29, "ControlSuggestions",
    CellTags->"GamepadControls"]},
  "ResizeImages"->{
-  Cell[79525, 1970, 352, 9, 29, "ControlSuggestions",
+  Cell[100129, 2427, 352, 9, 29, "ControlSuggestions",
    CellTags->"ResizeImages"]},
  "RotateAndZoomIn3D"->{
-  Cell[79880, 1981, 678, 16, 29, "ControlSuggestions",
+  Cell[100484, 2438, 678, 16, 29, "ControlSuggestions",
    CellTags->"RotateAndZoomIn3D"]},
  "SliderZoom"->{
-  Cell[81544, 2029, 844, 21, 29, "ControlSuggestions",
+  Cell[102148, 2486, 844, 21, 29, "ControlSuggestions",
    CellTags->"SliderZoom"]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"AutomaticAnimation", 87119, 2188},
- {"BookmarkAnimation", 87236, 2191},
- {"CreateAndDeleteLocators", 87357, 2194},
- {"DragLocators", 87473, 2197},
- {"GamepadControls", 87581, 2200},
- {"ResizeImages", 87688, 2203},
- {"RotateAndZoomIn3D", 87797, 2206},
- {"SliderZoom", 87905, 2209}
+ {"AutomaticAnimation", 107723, 2645},
+ {"BookmarkAnimation", 107841, 2648},
+ {"CreateAndDeleteLocators", 107963, 2651},
+ {"DragLocators", 108080, 2654},
+ {"GamepadControls", 108189, 2657},
+ {"ResizeImages", 108297, 2660},
+ {"RotateAndZoomIn3D", 108407, 2663},
+ {"SliderZoom", 108516, 2666}
  }
 *)
 (*NotebookFileOutline
@@ -2236,86 +2693,90 @@ Cell[935, 32, 11585, 356, 329, "Input",
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[12557, 393, 29, 0, 243, "ManipulateSection"],
-Cell[12589, 395, 10800, 260, 438, "Input",
- CellID->1338191265]
+Cell[CellGroupData[{
+Cell[12611, 397, 13046, 315, 468, "Input",
+ CellID->1338191265],
+Cell[25660, 714, 13633, 313, 504, "Output",
+ CellID->1719352911]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[23426, 660, 36, 0, 181, "ManipulateCaptionSection"],
-Cell[23465, 662, 1934, 27, 71, "ManipulateCaption"]
+Cell[39342, 1033, 36, 0, 181, "ManipulateCaptionSection"],
+Cell[39381, 1035, 1934, 27, 71, "ManipulateCaption"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25436, 694, 28, 0, 179, "ThumbnailSection"],
-Cell[25467, 696, 12476, 292, 499, "Output",
- CellID->594605143]
+Cell[41352, 1067, 28, 0, 179, "ThumbnailSection"],
+Cell[41383, 1069, 13649, 313, 504, "Output",
+ CellID->2041084773]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[37980, 993, 28, 0, 149, "SnapshotsSection"],
-Cell[38011, 995, 12486, 292, 498, "Output",
- CellID->599816725],
-Cell[50500, 1289, 12470, 292, 498, "Output",
- CellID->639472970],
-Cell[62973, 1583, 12461, 292, 499, "Output",
- CellID->1614037202]
+Cell[55069, 1387, 28, 0, 149, "SnapshotsSection"],
+Cell[55100, 1389, 13658, 313, 503, "Output",
+ CellID->973060405],
+Cell[68761, 1704, 13642, 313, 503, "Output",
+ CellID->866281034],
+Cell[82406, 2019, 13632, 313, 504, "Output",
+ CellID->263571389]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75471, 1880, 26, 0, 357, "DetailsSection"],
-Cell[75500, 1882, 1275, 19, 103, "DetailNotes",
+Cell[96075, 2337, 26, 0, 357, "DetailsSection"],
+Cell[96104, 2339, 1275, 19, 103, "DetailNotes",
  CellID->1648748426],
-Cell[76778, 1903, 645, 11, 23, "DetailNotes",
+Cell[97382, 2360, 645, 11, 23, "DetailNotes",
  CellID->2011198299],
-Cell[77426, 1916, 390, 7, 23, "DetailNotes",
+Cell[98030, 2373, 390, 7, 23, "DetailNotes",
  CellID->1862654217],
-Cell[77819, 1925, 490, 9, 23, "DetailNotes",
+Cell[98423, 2382, 490, 9, 23, "DetailNotes",
  CellID->1662629808],
-Cell[78312, 1936, 218, 4, 23, "DetailNotes",
+Cell[98916, 2393, 218, 4, 23, "DetailNotes",
  CellID->9268641],
-Cell[78533, 1942, 345, 9, 23, "DetailNotes",
+Cell[99137, 2399, 345, 9, 23, "DetailNotes",
  CellID->274987741],
-Cell[78881, 1953, 567, 10, 23, "RelatedLinks",
+Cell[99485, 2410, 567, 10, 23, "RelatedLinks",
  CellID->1332838257]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[79485, 1968, 37, 0, 131, "ControlSuggestionsSection"],
-Cell[79525, 1970, 352, 9, 29, "ControlSuggestions",
+Cell[100089, 2425, 37, 0, 131, "ControlSuggestionsSection"],
+Cell[100129, 2427, 352, 9, 29, "ControlSuggestions",
  CellTags->"ResizeImages"],
-Cell[79880, 1981, 678, 16, 29, "ControlSuggestions",
+Cell[100484, 2438, 678, 16, 29, "ControlSuggestions",
  CellTags->"RotateAndZoomIn3D"],
-Cell[80561, 1999, 340, 11, 29, "ControlSuggestions",
+Cell[101165, 2456, 340, 11, 29, "ControlSuggestions",
  CellTags->"DragLocators"],
-Cell[80904, 2012, 637, 15, 29, "ControlSuggestions",
+Cell[101508, 2469, 637, 15, 29, "ControlSuggestions",
  CellTags->"CreateAndDeleteLocators"],
-Cell[81544, 2029, 844, 21, 29, "ControlSuggestions",
+Cell[102148, 2486, 844, 21, 29, "ControlSuggestions",
  CellTags->"SliderZoom"],
-Cell[82391, 2052, 369, 9, 29, "ControlSuggestions",
+Cell[102995, 2509, 369, 9, 29, "ControlSuggestions",
  CellTags->"GamepadControls"],
-Cell[82763, 2063, 1464, 31, 29, "ControlSuggestions",
+Cell[103367, 2520, 1464, 31, 29, "ControlSuggestions",
  CellTags->"AutomaticAnimation"],
-Cell[84230, 2096, 908, 21, 29, "ControlSuggestions",
+Cell[104834, 2553, 908, 21, 29, "ControlSuggestions",
  CellTags->"BookmarkAnimation"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[85175, 2122, 30, 0, 165, "SearchTermsSection"],
-Cell[85208, 2124, 118, 2, 23, "SearchTerms",
+Cell[105779, 2579, 30, 0, 165, "SearchTermsSection"],
+Cell[105812, 2581, 118, 2, 23, "SearchTerms",
  CellID->1722129079],
-Cell[85329, 2128, 115, 2, 23, "SearchTerms",
+Cell[105933, 2585, 115, 2, 23, "SearchTerms",
  CellID->1286838408],
-Cell[85447, 2132, 171, 3, 23, "SearchTerms",
+Cell[106051, 2589, 171, 3, 23, "SearchTerms",
  CellID->1902656173],
-Cell[85621, 2137, 168, 3, 23, "SearchTerms",
+Cell[106225, 2594, 168, 3, 23, "SearchTerms",
  CellID->959727449],
-Cell[85792, 2142, 134, 2, 23, "SearchTerms",
+Cell[106396, 2599, 134, 2, 23, "SearchTerms",
  CellID->2136569288],
-Cell[85929, 2146, 124, 2, 23, "SearchTerms",
+Cell[106533, 2603, 124, 2, 23, "SearchTerms",
  CellID->1245961929]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[86090, 2153, 31, 0, 149, "RelatedLinksSection"],
-Cell[86124, 2155, 404, 9, 23, "RelatedLinks",
+Cell[106694, 2610, 31, 0, 149, "RelatedLinksSection"],
+Cell[106728, 2612, 404, 9, 23, "RelatedLinks",
  CellID->769098806]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[86565, 2169, 25, 0, 149, "AuthorSection"],
-Cell[86593, 2171, 111, 1, 23, "Author"]
+Cell[107169, 2626, 25, 0, 149, "AuthorSection"],
+Cell[107197, 2628, 111, 1, 23, "Author"]
 }, Open  ]]
 }, Open  ]]
 }
