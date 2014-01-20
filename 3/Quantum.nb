@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     22123,        635]
-NotebookOptionsPosition[     20685,        579]
-NotebookOutlinePosition[     21071,        596]
-CellTagsIndexPosition[     21028,        593]
+NotebookDataLength[     22124,        635]
+NotebookOptionsPosition[     20686,        579]
+NotebookOutlinePosition[     21072,        596]
+CellTagsIndexPosition[     21029,        593]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -544,8 +544,8 @@ Cell[BoxData[
       3, Typeset`graph, Typeset`boxes, $CellContext`flag], {
       CachedValue :> Typeset`boxes, SingleEvaluation -> True, 
        SynchronousUpdating -> False, TrackedSymbols :> {$CellContext`flag}},
-      ImageSizeCache->{{12.288984375000002`, 
-       786.9445877605315}, {-210.026928385531, 179.8821599033251}}],
+      ImageSizeCache->{{9.802143882001815, 
+       665.4492189866045}, {-171.0000002366045, 150.00543286111198`}}],
      MouseAppearanceTag["NetworkGraphics"]],
     AllowKernelInitialization->False,
     UnsavedVariables:>{$CellContext`flag}]],
@@ -578,7 +578,7 @@ Cell[BoxData["False"], "Output",
 }, Open  ]]
 },
 WindowSize->{959, 852},
-WindowMargins->{{177, Automatic}, {Automatic, 2}},
+WindowMargins->{{177, Automatic}, {Automatic, 0}},
 Magnification:>1.5 Inherited,
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
@@ -630,11 +630,11 @@ Cell[9259, 282, 517, 16, 64, "Output"]
 Cell[9791, 301, 2952, 80, 283, "Input"],
 Cell[CellGroupData[{
 Cell[12768, 385, 744, 18, 69, "Input"],
-Cell[13515, 405, 6705, 154, 419, "Output"]
+Cell[13515, 405, 6706, 154, 352, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[20257, 564, 325, 8, 43, "Input"],
-Cell[20585, 574, 72, 1, 43, "Output"]
+Cell[20258, 564, 325, 8, 43, "Input"],
+Cell[20586, 574, 72, 1, 43, "Output"]
 }, Open  ]]
 }, Open  ]]
 }
