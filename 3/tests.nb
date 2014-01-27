@@ -1,0 +1,440 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12279,        431]
+NotebookOptionsPosition[     10672,        369]
+NotebookOutlinePosition[     11058,        386]
+CellTagsIndexPosition[     11015,        383]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"\[Theta]", "=", 
+   RowBox[{"20", "Degree"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.599829800697341*^9, 3.59982980880986*^9}}],
+
+Cell["Test 1:", "Text",
+ CellChangeTimes->{{3.599829770238142*^9, 3.599829773761685*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"m", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Upstate", "[", 
+     RowBox[{"0", ",", "0"}], "]"}], ",", " ", 
+    RowBox[{"Upstate", "[", 
+     RowBox[{"\[Theta]", ",", "0"}], "]"}], ",", " ", 
+    RowBox[{"Downstate", "[", 
+     RowBox[{"\[Theta]", ",", "0"}], "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.599826459197282*^9, 3.599826488541705*^9}, {
+  3.599826528891588*^9, 3.59982654220146*^9}, {3.599829814186709*^9, 
+  3.5998298316071873`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}], ",", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"10", " ", "\[Degree]"}], "]"}]}], ",", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.599829832930304*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "3"}], "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.599829863772641*^9, 3.599829877742189*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "3"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5998298785532303`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"GetPs", "[", 
+  RowBox[{"m", ",", "p"}], "]"}]], "Input",
+ CellChangeTimes->{{3.599829858239452*^9, 3.599829883277708*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   SuperscriptBox[
+    RowBox[{"Cos", "[", 
+     RowBox[{"10", " ", "\[Degree]"}], "]"}], "2"], ",", 
+   SuperscriptBox[
+    RowBox[{"Sin", "[", 
+     RowBox[{"10", " ", "\[Degree]"}], "]"}], "2"]}], "}"}]], "Output",
+ CellChangeTimes->{3.5998298837179003`*^9}]
+}, Open  ]],
+
+Cell["Test 2:", "Text",
+ CellChangeTimes->{{3.5998297786007967`*^9, 3.599829780032638*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"m", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Upstate", "[", 
+     RowBox[{"0", ",", "0"}], "]"}], ",", 
+    RowBox[{"Upstate", "[", 
+     RowBox[{
+      FractionBox["\[Theta]", "2"], ",", "0"}], "]"}], ",", 
+    RowBox[{"Downstate", "[", 
+     RowBox[{
+      FractionBox["\[Theta]", "2"], ",", "0"}], "]"}], ",", " ", 
+    RowBox[{"Upstate", "[", 
+     RowBox[{"\[Theta]", ",", "0"}], "]"}], ",", " ", 
+    RowBox[{"Downstate", "[", 
+     RowBox[{"\[Theta]", ",", "0"}], "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.5998297818554583`*^9, 3.5998297872739*^9}, {
+  3.599829902302229*^9, 3.599829948768238*^9}, {3.5998300266667147`*^9, 
+  3.5998300315675097`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{"5", " ", "\[Degree]"}], "]"}], ",", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"5", " ", "\[Degree]"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"5", " ", "\[Degree]"}], "]"}]}], ",", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"5", " ", "\[Degree]"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}], ",", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"10", " ", "\[Degree]"}], "]"}]}], ",", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.59982994979175*^9, 3.599830032006913*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "4"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "5"}], "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.599829952879734*^9, 3.599830000855486*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "5"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5998300013795147`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GetPs", "[", 
+   RowBox[{"m", ",", "p"}], "]"}], "  ", "//", "N"}]], "Input",
+ CellChangeTimes->{{3.599830003936124*^9, 3.599830016136832*^9}, {
+  3.5998300562579803`*^9, 3.5998300573344717`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.007596123493895969`", ",", "0.9848654541043427`", ",", 
+   "0.007538422401761448`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.599830006464344*^9, 3.599830057585598*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Valid", "[", 
+   RowBox[{"GetPs", "[", 
+    RowBox[{"m", ",", "p"}], "]"}], "]"}], " ", "//", "N"}]], "Input",
+ CellChangeTimes->{{3.5998300397283154`*^9, 3.599830047470388*^9}}],
+
+Cell[BoxData["1.`"], "Output",
+ CellChangeTimes->{{3.599830044360458*^9, 3.5998300477031*^9}}]
+}, Open  ]],
+
+Cell["Test 3:", "Text",
+ CellChangeTimes->{{3.5998300703409147`*^9, 3.599830073076239*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"m", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Upstate", "[", 
+     RowBox[{"0", ",", "0"}], "]"}], ",", 
+    RowBox[{"Upstate", "[", 
+     RowBox[{
+      FractionBox["\[Theta]", "3"], ",", "0"}], "]"}], ",", 
+    RowBox[{"Downstate", "[", 
+     RowBox[{
+      FractionBox["\[Theta]", "3"], ",", "0"}], "]"}], ",", 
+    RowBox[{"Upstate", "[", 
+     RowBox[{
+      RowBox[{"2", 
+       FractionBox["\[Theta]", "3"]}], ",", "0"}], "]"}], ",", 
+    RowBox[{"Downstate", "[", 
+     RowBox[{
+      RowBox[{"2", 
+       FractionBox["\[Theta]", "3"]}], ",", "0"}], "]"}], ",", " ", 
+    RowBox[{"Upstate", "[", 
+     RowBox[{"\[Theta]", ",", "0"}], "]"}], ",", " ", 
+    RowBox[{"Downstate", "[", 
+     RowBox[{"\[Theta]", ",", "0"}], "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.599830079265348*^9, 3.599830091461691*^9}, {
+  3.599830130777411*^9, 3.59983019306564*^9}, {3.5998302937568903`*^9, 
+  3.59983029571662*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "0"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      FractionBox[
+       RowBox[{"10", " ", "\[Degree]"}], "3"], "]"}], ",", 
+     RowBox[{"Sin", "[", 
+      FractionBox[
+       RowBox[{"10", " ", "\[Degree]"}], "3"], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       FractionBox[
+        RowBox[{"10", " ", "\[Degree]"}], "3"], "]"}]}], ",", 
+     RowBox[{"Cos", "[", 
+      FractionBox[
+       RowBox[{"10", " ", "\[Degree]"}], "3"], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      FractionBox[
+       RowBox[{"20", " ", "\[Degree]"}], "3"], "]"}], ",", 
+     RowBox[{"Sin", "[", 
+      FractionBox[
+       RowBox[{"20", " ", "\[Degree]"}], "3"], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       FractionBox[
+        RowBox[{"20", " ", "\[Degree]"}], "3"], "]"}]}], ",", 
+     RowBox[{"Cos", "[", 
+      FractionBox[
+       RowBox[{"20", " ", "\[Degree]"}], "3"], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Cos", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}], ",", 
+     RowBox[{"Sin", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"Sin", "[", 
+       RowBox[{"10", " ", "\[Degree]"}], "]"}]}], ",", 
+     RowBox[{"Cos", "[", 
+      RowBox[{"10", " ", "\[Degree]"}], "]"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.599830194320711*^9, 3.599830296016433*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"p", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"1", ",", "3"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "5"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "4", ",", "6"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2", ",", "4", ",", "7"}], "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.599830201559792*^9, 3.599830282843322*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "5"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "4", ",", "6"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "2", ",", "4", ",", "7"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5998302833424997`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"GetPs", "[", 
+   RowBox[{"m", ",", "p"}], "]"}], " ", "//", "N"}]], "Input",
+ CellChangeTimes->{{3.599830285805521*^9, 3.599830300835129*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.0033808211290285058`", ",", "0.003369391177522019`", ",", 
+   "0.9898917878248121`", ",", "0.0033579998686370893`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.599830288225436*^9, 3.599830301099625*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Valid", "[", 
+   RowBox[{"GetPs", "[", 
+    RowBox[{"m", ",", "p"}], "]"}], "]"}], " ", "//", "N"}]], "Input",
+ CellChangeTimes->{{3.599830305325042*^9, 3.59983031314659*^9}}],
+
+Cell[BoxData["0.9999999999999997`"], "Output",
+ CellChangeTimes->{{3.599830311180263*^9, 3.599830313384313*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 702},
+WindowMargins->{{128, Automatic}, {Automatic, 0}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 164, 4, 43, "Input"],
+Cell[724, 26, 89, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[838, 31, 483, 12, 43, "Input"],
+Cell[1324, 45, 571, 18, 69, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1932, 68, 264, 8, 43, "Input"],
+Cell[2199, 78, 215, 7, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2451, 90, 147, 3, 43, "Input"],
+Cell[2601, 95, 301, 9, 50, "Output"]
+}, Open  ]],
+Cell[2917, 107, 91, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[3033, 112, 696, 18, 122, "Input"],
+Cell[3732, 132, 1005, 31, 69, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4774, 168, 350, 10, 43, "Input"],
+Cell[5127, 180, 294, 9, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5458, 194, 231, 5, 43, "Input"],
+Cell[5692, 201, 214, 5, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5943, 211, 213, 5, 43, "Input"],
+Cell[6159, 218, 94, 1, 43, "Output"]
+}, Open  ]],
+Cell[6268, 222, 91, 1, 46, "Text"],
+Cell[CellGroupData[{
+Cell[6384, 227, 948, 26, 168, "Input"],
+Cell[7335, 255, 1637, 52, 209, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9009, 312, 436, 12, 43, "Input"],
+Cell[9448, 326, 383, 11, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9868, 342, 177, 4, 43, "Input"],
+Cell[10048, 348, 246, 5, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10331, 358, 210, 5, 43, "Input"],
+Cell[10544, 365, 112, 1, 77, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
