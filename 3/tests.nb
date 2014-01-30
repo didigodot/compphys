@@ -414,7 +414,7 @@ Cell[5692, 201, 214, 5, 43, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[5943, 211, 213, 5, 43, "Input"],
-Cell[6159, 218, 94, 1, 43, "Output"]
+Cell[6159, 218, 94, 1, 77, "Output"]
 }, Open  ]],
 Cell[6268, 222, 91, 1, 46, "Text"],
 Cell[CellGroupData[{
@@ -431,7 +431,7 @@ Cell[10048, 348, 246, 5, 43, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[10331, 358, 210, 5, 43, "Input"],
-Cell[10544, 365, 112, 1, 77, "Output"]
+Cell[10544, 365, 112, 1, 43, "Output"]
 }, Open  ]]
 }
 ]
